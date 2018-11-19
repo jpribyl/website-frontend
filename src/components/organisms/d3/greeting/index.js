@@ -1,6 +1,5 @@
 //@format
 import React, {Component} from 'react';
-import '../../../../assets/css/App.css';
 
 import Canvas from '../../../../components/molecules/d3/canvas/index';
 
@@ -20,19 +19,37 @@ const styles = {
 class Greeting extends Component {
   constructor(props) {
     super();
+    let width = window.innerWidth * 0.89;
+    let height;
+    if (window.innerWidth > 800) {
+      height = window.innerHeight * 0.75;
+    } else {
+      height = window.innerHeight * 0.6;
+    }
     this.state = {
-      animating: true,
-      numPoints: 80,
-      width: window.innerWidth * 0.85,
-      height: window.innerHeight * 0.8,
+      animate: props.animate,
+      numPoints: 100,
+      duration: 25000,
+      width: width,
+      height: height,
       maxRadius: 20,
       margin: {
         top: 30,
-        right: 30,
+        right: window.innerWidth * 0.02,
         bottom: 30,
-        left: 30
+        left: window.innerWidth * 0.02
       }
     };
+  }
+
+  componentWillReceiveProps(props) {
+    try {
+      if (props.animate !== this.state.animate) {
+        this.setState({animate: props.animate});
+      }
+    } catch (e) {
+      /* handle error */
+    }
   }
 
   render() {
@@ -51,6 +68,8 @@ class Greeting extends Component {
           height={this.state.height}
           maxRadius={this.state.maxRadius}
           margin={this.state.margin}
+          duration={this.state.duration}
+          animate={this.state.animate}
         />
       </svg>
     );

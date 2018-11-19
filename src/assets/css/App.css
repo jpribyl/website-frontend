@@ -37,7 +37,19 @@
     stroke-width: 5;
 }
 
+.star {
+    fill: #ffffff;
+    stroke: #337dff;
+    stroke-width: 5
+}
+
 g.clickable circle.pumpkin:hover {
+    fill: red;
+    stroke: purple;
+    cursor: pointer;
+}
+
+g.clickable circle.star:hover {
     fill: red;
     stroke: purple;
     cursor: pointer;
@@ -49,3 +61,51 @@ g.clickable circle.pumpkin:hover {
     stroke-width: 10;
     transtion: fill 800ms
 }
+
+.greeting {
+  font-family: sans-serif;
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+.signature {
+    margin-top: -20px;
+}
+
+.name {
+    margin-left: -10px;
+}
+
+.title {
+    margin-top: -20px;
+}
+
+
+div.switch {
+    margin-top: -10px;
+}
+
+@media only screen and (min-width: 800px) {
+    .animation.toggle {
+        margin-top: -20px;
+        float: right;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .animation.toggle {
+        margin-top: -20px;
+        float: right;
+    }
+}
+
+#enterSite {
+    float: left;
+}
+
+
+/*#root {*/
+    /*background-color: #17181c;*/
+    /*color: #f8f8ff*/
+/*}*/
+

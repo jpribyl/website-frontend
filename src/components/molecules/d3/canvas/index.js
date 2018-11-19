@@ -1,6 +1,8 @@
 //@format
 import React, {Component} from 'react';
+import ReactDOM from 'react-dom';
 import '../../../../assets/css/App.css';
+import * as d3 from 'd3';
 
 import Circle from '../../../../components/atoms/d3/circles/index';
 
@@ -21,7 +23,6 @@ class Canvas extends Component {
   constructor(props) {
     super();
     this.state = {
-      animating: true,
       data: this._seedData(props)
     };
   }
@@ -41,24 +42,38 @@ class Canvas extends Component {
         x: x,
         y: y,
         r: r,
-        className: 'pumpkin'
+        className: 'star'
       });
     }
     return data;
   };
 
   _animate = () => {
-    console.log('animating...');
     this.setState({
       data: this._seedData(this.props)
     });
   };
 
+  _removePoint = that => {
+    d3.select(ReactDOM.findDOMNode(that))
+      .transition()
+      .duration(500)
+      .style('fill-opacity', '0')
+      .style('stroke-opacity', '0')
+      .remove();
+  };
+
+  componentDidMount() {
+    this._animate();
+    d3.interval(() => {
+      this._animate();
+    }, this.props.duration * 0.9);
+  }
+
   render() {
     return (
       <g
-        className='clickable'
-        onClick={this._animate}
+        className="clickable"
         style={{
           transform:
             'translate(' +
@@ -71,7 +86,12 @@ class Canvas extends Component {
         {this.state.data.map(point => {
           return (
             <Circle
+              onClick={that => {
+                this._removePoint(that);
+              }}
+              animate={this.props.animate}
               className={point.className}
+              duration={this.props.duration}
               x={point.x}
               y={point.y}
               r={point.r}

@@ -19,7 +19,7 @@ class Circle extends React.PureComponent {
     let d = d3.select(this.circleRef.current);
 
     d.transition()
-      .duration(1000)
+      .duration(this.props.duration)
       .attr('cx', this.props.x)
       .attr('cy', this.props.y)
       .attr('r', this.props.r)
@@ -30,6 +30,10 @@ class Circle extends React.PureComponent {
           r: this.props.r
         })
       );
+
+    if (!this.props.animate) {
+      d.interrupt();
+    }
   }
 
   render() {
@@ -38,7 +42,17 @@ class Circle extends React.PureComponent {
     const r = this.state.r;
     const className = this.state.className;
     return (
-      <circle className={className} r={r} cx={x} cy={y} ref={this.circleRef} />
+      <circle
+        onClick={d => {
+          const that = this;
+          this.props.onClick(that);
+        }}
+        className={className}
+        r={r}
+        cx={x}
+        cy={y}
+        ref={this.circleRef}
+      />
     );
   }
 }
