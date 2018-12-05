@@ -39,6 +39,7 @@
 
 .star {
     fill: #ffffff;
+    fill-opacity: 0;
     stroke: #337dff;
     stroke-width: 5
 }
@@ -69,8 +70,10 @@ g.clickable circle.star:hover {
 }
 
 .signature {
-    margin-top: -20px;
+    margin-top: -5px;
+    user-select: none;
 }
+
 
 .name {
     margin-left: -10px;
@@ -87,20 +90,32 @@ div.switch {
 
 @media only screen and (min-width: 800px) {
     .animation.toggle {
-        margin-top: -20px;
+        margin-top: -15px;
         float: right;
     }
 }
 
 @media only screen and (max-width: 800px) {
     .animation.toggle {
-        margin-top: -20px;
+        margin-top: -100px;
         float: right;
     }
 }
 
-#enterSite {
-    float: left;
+@media only screen and (min-width: 800px) {
+    #enterSite {
+        float: left;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    #enterSite {
+        float: left;
+        margin-top: -5px;
+        margin-bottom: 15px;
+    }
 }
 
 
@@ -109,3 +124,149 @@ div.switch {
     /*color: #f8f8ff*/
 /*}*/
 
+
+
+@media only screen and (max-width: 1200px) {
+    #generateGraphicOuter{
+        display: none
+    }
+}
+
+
+#generateGraphicSlider {
+    user-select: none;
+    margin-top: -10px
+}
+
+#generateGraphicButton {
+    margin-top: 15px;
+}
+
+.slider {
+    margin-bottom: 15px;
+}
+
+.padForMenu {
+    margin-top: -10px;
+    margin-left: 60px;
+    padding: 10px;
+}
+
+i.faicon {
+    margin: 10px;
+    font-size: 28px;
+}
+
+.headerLabel {
+    fill-opacity: .4;
+}
+
+.headerTextBox {
+    font: bold 80px sans-serif;
+    stroke: white;
+    stroke-width: 5px;
+    stroke-opacity: 1;
+}
+
+
+@media only screen and (min-width: 800px) {
+    .headerTextBox {
+        font: bold 80px sans-serif;
+        stroke: white;
+        stroke-width: 5px;
+        stroke-opacity: 1;
+        transform: translate(0px,20px);
+    }
+
+    .headerText {
+        font: bold 80px sans-serif;
+        transform: translate(0px,20px);
+    }
+}
+
+
+@media only screen and (max-width: 800px) {
+    .headerTextBox {
+        font: bold 30px sans-serif;
+        stroke: white;
+        stroke-width: 5px;
+        stroke-opacity: 1;
+    }
+    .headerText {
+        font: bold 30px sans-serif;
+    }
+}
+
+.hrLarge {
+    height: 2px;
+    border: none;
+    background-color: #999;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: -10px;
+}
+
+.padForGrid {
+    margin: 17px;
+}
+
+.centered {
+    margin: auto;
+}
+
+p.bigText {
+    font-size: 25px;
+    margin: 10px;
+}
+
+ul {
+    font-size: 15px;
+}
+
+@media only screen and (max-width: 600px) {
+    .card {
+        margin-left: -25px;
+        margin-right: -25px;
+    }
+    .well {
+        margin-left: -5px;
+        margin-right: -5px;
+    }
+}
+
+.list-group-item:hover {
+    cursor: pointer;
+    /*background-color: #ffa300 !important;*/
+}
+
+.list-group-item {
+    border-radius: 5px;
+    box-shadow: 0px 1px 1px #00000055;
+    margin: 2px;
+}
+
+/*professional interests selected styles*/
+html body div#root div div.container-fluid div.well div.padForGrid.row div.col-md-6.col-xs-12 div.card div.content div.profInterests button.list-group-item.active {
+    background-color: #bbbbeb  !important;
+    border-color: #bbbbeb !important;
+    color: black !important;
+    background-image: none !important;
+}
+
+/*technical stack selected styles*/
+html body div#root div div.container-fluid div.well div.padForGrid.row div.col-md-6.col-xs-12 div.card div.content div button.list-group-item.active {
+    background-color: #bbebbb  !important;
+    border-color: #bbebbb !important;
+    color: black !important;
+    background-image: none !important;
+
+}
+
+.dropdownIcon {
+    float: right;
+    font-size: 18px;
+}
+
+.expandedListText {
+    margin: 10px;
+}

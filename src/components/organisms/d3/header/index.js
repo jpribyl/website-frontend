@@ -50,7 +50,7 @@ class Greeting extends Component {
   render() {
     return (
       <svg
-        className="greeter d3svg"
+        className="bio d3svg"
         style={{
           width:
             this.state.width + this.state.margin.right + this.state.margin.left,
@@ -66,6 +66,12 @@ class Greeting extends Component {
           duration={this.state.duration}
           animate={this.state.animate}
         />
+        <text x={20} y={60} className="bio headerTextBox">
+          {this.props.text}
+        </text>
+        <text x={20} y={60} className="bio headerText">
+          {this.props.text}
+        </text>
       </svg>
     );
   }

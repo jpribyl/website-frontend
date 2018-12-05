@@ -7,11 +7,18 @@ import {Provider} from 'react-redux';
 import {createStore, applyMiddleware} from 'redux';
 import reduxThunk from 'redux-thunk';
 
+import Greeting from './views/greeting';
 import indexRoutes from './routes';
 import './assets/css/index.css';
 import './assets/css/App.css';
 import './assets/css/toggle-switch.css';
 import './assets/css/awesome-button.css';
+import './assets/css/rc-slider.css';
+import './assets/css/rc-tooltip.css';
+import './assets/css/sidebar.css';
+import './assets/css/card.css';
+import './fontawesome';
+
 import reducers from './reducers';
 import * as serviceWorker from './serviceWorker';
 
@@ -23,7 +30,14 @@ ReactDOM.render(
         {indexRoutes.map((prop, key) => {
           console.log(prop);
           console.log(key);
-          return <Route to={prop.path} component={prop.component} key={key} />;
+          return (
+            <Route
+              exact
+              path={prop.path}
+              component={prop.component}
+              key={key}
+            />
+          );
         })}
       </Switch>
     </HashRouter>

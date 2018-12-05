@@ -54,8 +54,8 @@ class Canvas extends Component {
     });
   };
 
-  _removePoint = that => {
-    d3.select(ReactDOM.findDOMNode(that))
+  _removePoint = d => {
+    d3.select(ReactDOM.findDOMNode(d))
       .transition()
       .duration(500)
       .style('fill-opacity', '0')
@@ -73,7 +73,7 @@ class Canvas extends Component {
   render() {
     return (
       <g
-        className="clickable"
+        className="clickable canvas"
         style={{
           transform:
             'translate(' +
@@ -86,8 +86,8 @@ class Canvas extends Component {
         {this.state.data.map(point => {
           return (
             <Circle
-              onClick={that => {
-                this._removePoint(that);
+              onClick={d => {
+                this._removePoint(d);
               }}
               animate={this.props.animate}
               className={point.className}
