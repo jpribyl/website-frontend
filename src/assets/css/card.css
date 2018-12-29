@@ -3,6 +3,8 @@
   box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.10), 0 0 0 1px rgba(63, 63, 68, 0.1);
   background-color: #FFFFFF;
   margin-bottom: 30px; }
+
+
   .card .image {
     width: 100%;
     overflow: hidden;
@@ -48,7 +50,8 @@
   .card label {
     font-size: 14px;
     font-weight: 400;
-    color: #9A9A9A;
+    /*color: #9A9A9A;*/
+    color: black;
     margin-bottom: 0px; }
     .card .category i,
     .card label i {
@@ -59,7 +62,8 @@
     text-transform: uppercase; }
   .card .title {
     margin: 0;
-    color: #333333;
+    /*color: #333333;*/
+    color: black;
     font-weight: 300; }
   .card .avatar {
     width: 30px;
@@ -170,3 +174,24 @@
   .card-stats .numbers p {
     margin: 0; }
 
+
+
+
+
+
+.card.link:hover {
+  background-color: #262626;
+  opacity: .9;
+}
+  .card.link:hover .category {
+    font-size: 14px;
+    font-weight: 400;
+    /*color: #9A9A9A;*/
+    color: white !important;
+    margin-bottom: 0px; }
+
+  .card.link:hover .title {
+    margin: 0;
+    /*color: #333333;*/
+    color: white !important;
+    font-weight: 300; }

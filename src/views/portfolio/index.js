@@ -1,6 +1,7 @@
 //@format
 import React, {Component} from 'react';
 import {Grid, Row, Image} from 'react-bootstrap';
+import {Link} from 'react-router-dom';
 
 import Header from '../../components/organisms/d3/header';
 import Sidebar from '../../components/atoms/sidebar';
@@ -65,24 +66,35 @@ class PortfolioView extends Component {
           </Row>
           <h2>Live Apps</h2>
           <Row className="well padForGrid">
-            <Card
-              category="A web app which scrapes the web looking for events with free snacks. User data helps train a neural network to make the app better..."
-              title="Daily Soup"
-              xs={4}
-              content={
-                <Image className="centered" src={soopLogo} rounded responsive />
-              }
-            />
+            <Link to="/soop">
+              <Card
+                className="link"
+                category="This app scrapes the web to find public events with free snacks. User likes and dislikes help a neural network categorize events."
+                title="Daily Soup"
+                xs={12}
+                md={4}
+                content={
+                  <Image
+                    className="centered"
+                    src={soopLogo}
+                    rounded
+                    responsive
+                  />
+                }
+              />
+            </Link>
             <Card
               category="just a test"
               title="test"
-              xs={4}
+              xs={12}
+              md={4}
               content={<div>asdf</div>}
             />
             <Card
               category="just a test"
               title="test"
-              xs={4}
+              xs={12}
+              md={4}
               content={<div>asdf</div>}
             />
           </Row>

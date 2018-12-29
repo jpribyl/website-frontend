@@ -4,6 +4,8 @@
 import Bio from '../views/bio'
 import Portfolio from '../views/portfolio'
 import Greeting from '../views/greeting'
+import Soop from '../views/greeting'
+
 var indexRoutes = [
     { 
         path: "/", 
