@@ -283,6 +283,10 @@ span.soopHeader {
     font-weight: normal;
 }
 
+.soopHeaderTitle {
+    margin-bottom: 15px;
+}
+
 .list-group-item.active div.col-xs-8 div.soopHeader span.soopHeader {
     color: white;
 }

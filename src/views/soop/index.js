@@ -8,6 +8,7 @@ import Sidebar from '../../components/atoms/sidebar';
 import Card from '../../components/atoms/card';
 import Profile from '../../assets/img/profile.jpg';
 import TechStack from '../../components/molecules/techstack/';
+import DayBar from '../../components/molecules/daybar/';
 import ProfInterests from '../../components/molecules/profinterests/';
 import ExpandableList from '../../components/atoms/expandablelist/';
 
@@ -55,11 +56,21 @@ class SoopView extends Component {
         .map(row => {
           row.name = (
             <div className="soopHeader">
-              <Col xs={12}>{row.title}</Col>
-              <Col xs={12} sm={2}>Food: <span className="soopHeader">{row.food}</span></Col>
-              <Col xs={12} sm={3}>Location: <span className="soopHeader">{row.location}</span></Col>
-              <Col xs={12} sm={2}>Time: <span className="soopHeader">{row.when}</span></Col>
-              <Col xs={12} sm={2}>Score: <span className="soopHeader">{row.score}</span></Col>
+              <Col xs={12} className="soopHeaderTitle">
+                {row.title}
+              </Col>
+              <Col xs={12} sm={2}>
+                Food: <span className="soopHeader">{row.food}</span>
+              </Col>
+              <Col xs={12} sm={3}>
+                Location: <span className="soopHeader">{row.location}</span>
+              </Col>
+              <Col xs={12} sm={4}>
+                Time: <span className="soopHeader">{row.when}</span>
+              </Col>
+              <Col xs={12} sm={2}>
+                Score: <span className="soopHeader">{row.score}</span>
+              </Col>
             </div>
           );
           row.expandedText = row.details;
@@ -98,7 +109,17 @@ class SoopView extends Component {
               <Card
                 title="Event List"
                 xs={12}
-                content={<ExpandableList listData={soop} logoSize={0} />}
+                content={
+                  <Col>
+                    <DayBar
+                      activeKey={this.state.day}
+                      handleSelect={day => {
+                        this.setState({day: day});
+                      }}
+                    />
+                    <ExpandableList listData={soop} logoSize={0} />
+                  </Col>
+                }
               />
             </Row>
           </div>
