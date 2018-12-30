@@ -270,3 +270,11 @@ html body div#root div div.container-fluid div.well div.padForGrid.row div.col-m
 .expandedListText {
     margin: 10px;
 }
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1000px
+) !default;
