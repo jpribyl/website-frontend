@@ -9,6 +9,7 @@ import Card from '../../components/atoms/card';
 import Profile from '../../assets/img/profile.jpg';
 import TechStack from '../../components/molecules/techstack/';
 import ProfInterests from '../../components/molecules/profinterests/';
+import ExpandableList from '../../components/atoms/expandablelist/';
 
 class SoopView extends Component {
   constructor(props) {
@@ -25,7 +26,10 @@ class SoopView extends Component {
       numPoints = 15;
     }
 
+    let day = new Date().toLocaleDateString();
+
     this.state = {
+      day: day,
       headerText: 'DAILY SOUP',
       animate: false,
       numPoints: numPoints,
@@ -42,6 +46,34 @@ class SoopView extends Component {
   }
 
   render() {
+    let soop;
+    if (this.props.soop.allSoop) {
+      soop = this.props.soop.allSoop
+        .filter(row => {
+          return row.day === this.state.day;
+        })
+        .map(row => {
+          row.name = (
+            <div className="soopHeader">
+              <Col xs={12}>{row.title}</Col>
+              <Col xs={12} sm={2}>Food: <span className="soopHeader">{row.food}</span></Col>
+              <Col xs={12} sm={3}>Location: <span className="soopHeader">{row.location}</span></Col>
+              <Col xs={12} sm={2}>Time: <span className="soopHeader">{row.when}</span></Col>
+              <Col xs={12} sm={2}>Score: <span className="soopHeader">{row.score}</span></Col>
+            </div>
+          );
+          row.expandedText = row.details;
+          row.id = row.id.toString();
+          return row;
+        });
+    } else {
+      soop = [
+        {
+          name: 'loading...'
+        }
+      ];
+    }
+
     return (
       <div>
         <Sidebar />
@@ -63,7 +95,11 @@ class SoopView extends Component {
           </Row>
           <div className="well">
             <Row className="padForGrid">
-              <Card title="Event List" xs={12} content={<TechStack />} />
+              <Card
+                title="Event List"
+                xs={12}
+                content={<ExpandableList listData={soop} logoSize={0} />}
+              />
             </Row>
           </div>
         </Grid>
@@ -74,7 +110,7 @@ class SoopView extends Component {
 
 function mapStateToProps(state) {
   return {
-    auth: state.auth
+    soop: state.soop
   };
 }
 

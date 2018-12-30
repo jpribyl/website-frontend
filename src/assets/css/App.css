@@ -271,10 +271,18 @@ html body div#root div div.container-fluid div.well div.padForGrid.row div.col-m
     margin: 10px;
 }
 
-$grid-breakpoints: (
-  xs: 0,
-  sm: 576px,
-  md: 768px,
-  lg: 992px,
-  xl: 1000px
-) !default;
+
+div.soopHeader {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+span.soopHeader {
+    font-size: 18px;
+    margin-left: 5px;
+    font-weight: normal;
+}
+
+.list-group-item.active div.col-xs-8 div.soopHeader span.soopHeader {
+    color: white;
+}

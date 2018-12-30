@@ -19,6 +19,17 @@ export class ExpandableList extends Component {
   };
 
   render() {
+      let logoSize, nameSize, dropdownSize;
+      if (this.props.logoSize != null) {
+          logoSize = this.props.logoSize
+          dropdownSize = 2
+          nameSize = 12 - logoSize - dropdownSize
+      } else {
+          logoSize = 2
+          dropdownSize = 2
+          nameSize = 8
+      }
+
     return this.props.listData.map((row, index) => {
       const active = this.state.active === row.id;
       return (
@@ -27,11 +38,11 @@ export class ExpandableList extends Component {
             active={active}
             id={row.id}
             onClick={this._handleClick}>
-            <Col xs={2}>
+            <Col xs={logoSize}>
               <Image src={row.logo} rounded responsive />
             </Col>
-            <Col xs={8}>{row.name}</Col>
-            <Col xs={2}>
+            <Col xs={nameSize}>{row.name}</Col>
+            <Col xs={dropdownSize}>
               <FontAwesomeIcon className="dropdownIcon" icon="caret-down" />
             </Col>
           </ListGroupItem>
