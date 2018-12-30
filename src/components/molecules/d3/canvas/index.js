@@ -83,12 +83,13 @@ class Canvas extends Component {
             'px)'
         }}>
         >
-        {this.state.data.map(point => {
+        {this.state.data.map((point, index) => {
           return (
             <Circle
               onClick={d => {
                 this._removePoint(d);
               }}
+              key={'canvas_' + index}
               animate={this.props.animate}
               className={point.className}
               duration={this.props.duration}

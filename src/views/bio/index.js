@@ -70,6 +70,7 @@ class BioView extends Component {
                 xl={2}
                 md={3}
                 xs={12}
+                no_separator
                 content={
                   <Image
                     className="centered"

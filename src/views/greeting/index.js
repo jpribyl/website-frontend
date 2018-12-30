@@ -3,13 +3,15 @@ import React, {Component} from 'react';
 import Switch from 'react-toggle-switch';
 import {AwesomeButton} from 'react-awesome-button';
 import {Grid, Row, Col} from 'react-bootstrap';
-import * as d3 from 'd3';
+import {connect} from 'react-redux';
+import {bindActionCreators} from 'redux';
+import {Link} from 'react-router-dom';
 
 import Greeting from '../../components/organisms/d3/greeting';
 import UserGeneratedGreeting from '../../components/organisms/d3/userPickGreeting/';
-import {Link} from 'react-router-dom';
+import {getAuthRead} from '../../actions/auth';
 
-class GreetingView extends Component {
+export default class GreetingView extends Component {
   constructor(props) {
     super();
 
@@ -36,9 +38,11 @@ class GreetingView extends Component {
       }
     };
   }
+
   _togglAnimate = () => {
     this.setState({animate: !this.state.animate});
   };
+
   _enterSite = () => {};
 
   render() {
@@ -97,4 +101,3 @@ class GreetingView extends Component {
     );
   }
 }
-export default GreetingView;

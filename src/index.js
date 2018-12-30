@@ -1,5 +1,5 @@
 //@format
-import React, {Component} from 'react';
+import React from 'react';
 import {HashRouter, Route, Switch} from 'react-router-dom';
 import ReactDOM from 'react-dom';
 
@@ -7,8 +7,8 @@ import {Provider} from 'react-redux';
 import {createStore, applyMiddleware} from 'redux';
 import reduxThunk from 'redux-thunk';
 
-import Greeting from './views/greeting';
 import indexRoutes from './routes';
+import portfolioRoutes from './routes/portfolio';
 import './assets/css/index.css';
 import './assets/css/App.css';
 import './assets/css/toggle-switch.css';
@@ -22,23 +22,14 @@ import './fontawesome';
 import reducers from './reducers';
 import * as serviceWorker from './serviceWorker';
 
+import App from './app';
+
 const createStoreWithMiddleware = applyMiddleware(reduxThunk)(createStore);
 ReactDOM.render(
   <Provider store={createStoreWithMiddleware(reducers)}>
     <HashRouter>
       <Switch>
-        {indexRoutes.map((prop, key) => {
-          console.log(prop);
-          console.log(key);
-          return (
-            <Route
-              exact
-              path={prop.path}
-              component={prop.component}
-              key={key}
-            />
-          );
-        })}
+        <Route component={App} />
       </Switch>
     </HashRouter>
   </Provider>,

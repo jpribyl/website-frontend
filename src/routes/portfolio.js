@@ -1,9 +1,6 @@
-//greeting needs to be an exact path... 
-//import Greeting from '../views/greeting'
+import Soop from '../views/soop'
 
-import Soop from '../views/greeting'
-
-var indexRoutes = [
+var portfolioRoutes = [
     { 
         path: "/soop", 
         name: "soop", 
@@ -12,4 +9,4 @@ var indexRoutes = [
     },
 ];
 
-export default indexRoutes;
+export default portfolioRoutes;

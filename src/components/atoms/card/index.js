@@ -3,13 +3,19 @@ import { Col } from 'react-bootstrap';
 
 export class Card extends Component {
   render() {
+      let separator
+      if (!this.props.no_separator) {
+          separator = <hr/>
+      } else{
+          separator = <span></span>
+      }
     return (
 
         <Col xl={this.props.xl} lg={this.props.lg} md={this.props.md} sm={this.props.sm} xs={this.props.xs}>
       <div className={"card" + (this.props.plain ? " card-plain" : "") + ' ' + this.props.className}>
         <div className={"header" + (this.props.hCenter ? " text-center" : "")}>
           <h2 className="title">{this.props.title}</h2>
-          <hr/>
+          {separator}
           <p className="category">{this.props.category}</p>
         </div>
         <div

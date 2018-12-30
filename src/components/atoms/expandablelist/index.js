@@ -19,10 +19,10 @@ export class ExpandableList extends Component {
   };
 
   render() {
-    return this.props.listData.map(row => {
+    return this.props.listData.map((row, index) => {
       const active = this.state.active === row.id;
       return (
-        <div className={this.props.className}>
+        <div className={this.props.className} key={'expandablelist_' + index}>
           <ListGroupItem
             active={active}
             id={row.id}

@@ -16,9 +16,9 @@ class Sidebar extends React.Component {
           <h1 className="name">john pribyl</h1>
           <h2 className="title">data scientist</h2>
         </div>
-        {indexRoutes.map(route => {
+        {indexRoutes.map((route, index) => {
           return (
-            <Link to={route.path}>
+            <Link to={route.path} key={'sidebar_' + index}>
               <i className="faicon">
                 <FontAwesomeIcon icon={route.faicon} />
               </i>
