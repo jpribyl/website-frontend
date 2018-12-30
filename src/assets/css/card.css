@@ -179,19 +179,19 @@
 
 
 
-.card.link:hover {
-  background-color: #262626;
-  opacity: .9;
-}
-  .card.link:hover .category {
-    font-size: 14px;
-    font-weight: 400;
-    /*color: #9A9A9A;*/
-    color: white !important;
-    margin-bottom: 0px; }
+/*.card.link:hover {*/
+  /*background-color: #262626;*/
+  /*opacity: .6;*/
+/*}*/
+  /*.card.link:hover .category {*/
+    /*font-size: 14px;*/
+    /*font-weight: 400;*/
+    /*[>color: #9A9A9A;<]*/
+    /*color: white !important;*/
+    /*margin-bottom: 0px; }*/
 
-  .card.link:hover .title {
-    margin: 0;
-    /*color: #333333;*/
-    color: white !important;
-    font-weight: 300; }
+  /*.card.link:hover .title {*/
+    /*margin: 0;*/
+    /*[>color: #333333;<]*/
+    /*color: white !important;*/
+    /*font-weight: 300; }*/
