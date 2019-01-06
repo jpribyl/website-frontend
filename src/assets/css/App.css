@@ -326,3 +326,11 @@ span.soopHeader {
 .hoveringOnTopOfDimmer {
     z-index:2;
 }
+
+.soopButtonCol {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.soopList {
+    margin-bottom: 75px;
+}

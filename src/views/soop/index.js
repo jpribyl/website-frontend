@@ -1,6 +1,6 @@
 //@format
 import React, {Component} from 'react';
-import {Grid, Row, Col, Image} from 'react-bootstrap';
+import {Grid, Row, Col, Image, Button} from 'react-bootstrap';
 import {connect} from 'react-redux';
 
 import Header from '../../components/organisms/d3/header';
@@ -59,21 +59,34 @@ class SoopView extends Component {
               <Col xs={12} className="soopHeaderTitle">
                 {row.title}
               </Col>
-              <Col xs={12} sm={2}>
-                Food: <span className="soopHeader">{row.food}</span>
+              <Col xs={12} sm={5}>
+                Keywords: <span className="soopHeader">{row.food}</span>
               </Col>
-              <Col xs={12} sm={3}>
-                Location: <span className="soopHeader">{row.location}</span>
-              </Col>
-              <Col xs={12} sm={4}>
-                Time: <span className="soopHeader">{row.when}</span>
-              </Col>
-              <Col xs={12} sm={2}>
-                Score: <span className="soopHeader">{row.score}</span>
+              <Col xs={12} sm={5}>
+                Event Score: <span className="soopHeader">{row.score}</span>
               </Col>
             </div>
           );
-          row.expandedText = row.details;
+          row.expandedText = (
+            <div>
+              <h4>Summary:</h4>
+              {row.details}
+              <hr />
+              <div>
+                <Col xs={12} sm={9} className="soopButtonCol">
+                  <Button bsStyle="warning" href={row.outUrl}>
+                    Event Link (external)
+                  </Button>
+                </Col>
+                <Col xs={3} sm={1} className="soopButtonCol">
+                  <Button bsStyle="success">Like</Button>
+                </Col>
+                <Col xs={3} sm={2} className="soopButtonCol">
+                  <Button bsStyle="danger">Dislike</Button>
+                </Col>
+              </div>
+            </div>
+          );
           row.id = row.id.toString();
           return row;
         });
@@ -117,7 +130,11 @@ class SoopView extends Component {
                         this.setState({day: day});
                       }}
                     />
-                    <ExpandableList listData={soop} logoSize={0} />
+                    <ExpandableList
+                      className="soopList"
+                      listData={soop}
+                      logoSize={0}
+                    />
                   </Col>
                 }
               />

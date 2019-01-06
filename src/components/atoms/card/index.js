@@ -28,7 +28,6 @@ export class Card extends Component {
         let overlay = document.getElementById('dimOverlay').classList;
         overlay.remove('active');
         overlay.remove(target);
-        console.log(target);
         setTimeout(() => {
           if (!overlay.contains('active') || !overlay.contains(target)) {
             setTimeout(() => {
