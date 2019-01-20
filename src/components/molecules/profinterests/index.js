@@ -1,3 +1,4 @@
+//@format
 import React, {Component} from 'react';
 import ExpandableList from '../../../components/atoms/expandablelist/';
 import Climbing from '../../../assets/img/icons/climbing.png';
@@ -10,45 +11,38 @@ const profInterests = [
   {
     name: 'Climbing',
     id: 'climbing',
-      logo: Climbing,
-    expandedText: (
-      <div>
-      </div>
-    )
+    logo: Climbing,
+    expandedText: <div />
   },
   {
     name: 'Emergency Medicine',
     id: 'medical',
     logo: Medical,
-    expandedText: (
-      <div>
-      </div>
-    )
+    expandedText: <div />
   },
   {
     name: 'Teaching',
     id: 'teaching',
-      logo: Teaching,
-    expandedText: (
-      <div>
-      </div>
-    )
+    logo: Teaching,
+    expandedText: <div />
   },
   {
     name: 'Rafting',
     id: 'rafting',
-      logo: Rafting
+    logo: Rafting
   },
   {
     name: 'Coaching',
     id: 'coaching',
-      logo: Coaching
+    logo: Coaching
   }
 ];
 
 class ProfInterests extends Component {
   render() {
-    return <ExpandableList listData={profInterests} className={'profInterests'}/>;
+    return (
+      <ExpandableList listData={profInterests} className={'profInterests'} />
+    );
   }
 }
 

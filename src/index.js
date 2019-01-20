@@ -15,6 +15,7 @@ import './assets/css/toggle-switch.css';
 import './assets/css/awesome-button.css';
 import './assets/css/rc-slider.css';
 import './assets/css/rc-tooltip.css';
+import './assets/css/react-table.css';
 import './assets/css/sidebar.css';
 import './assets/css/card.css';
 import './fontawesome';

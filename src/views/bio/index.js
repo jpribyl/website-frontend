@@ -7,7 +7,9 @@ import Sidebar from '../../components/atoms/sidebar';
 import Card from '../../components/atoms/card';
 import Profile from '../../assets/img/profile.jpg';
 import TechStack from '../../components/molecules/techstack/';
+import TechStackTable from '../../components/molecules/techstacktable/';
 import ProfInterests from '../../components/molecules/profinterests/';
+import ProfInterestsTable from '../../components/molecules/profintereststable/';
 
 class BioView extends Component {
   constructor(props) {
@@ -86,7 +88,7 @@ class BioView extends Component {
                 md={9}
                 xs={12}
                 content={
-                  <div>
+                  <div className="padText">
                     <p>
                       I <b>grew up in Houston</b>, Texas before heading out to
                       Montana for school. I got a <b>degree in Physics</b> from
@@ -119,13 +121,21 @@ class BioView extends Component {
                 title="Technical Stack"
                 xs={12}
                 md={6}
-                content={<TechStack />}
+                content={<TechStackTable />}
               />
+              {
+                //<Card
+                //title="Other Interests"
+                //xs={12}
+                //md={6}
+                //content={<ProfInterests />}
+                ///>
+              }
               <Card
                 title="Other Interests"
                 xs={12}
                 md={6}
-                content={<ProfInterests />}
+                content={<ProfInterestsTable />}
               />
             </Row>
           </div>

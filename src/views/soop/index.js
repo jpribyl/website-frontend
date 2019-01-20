@@ -1,16 +1,16 @@
 //@format
 import React, {Component} from 'react';
-import {Grid, Row, Col, Image, Button} from 'react-bootstrap';
+import {Grid, Row, Col} from 'react-bootstrap';
+import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 
 import Header from '../../components/organisms/d3/header';
 import Sidebar from '../../components/atoms/sidebar';
 import Card from '../../components/atoms/card';
-import Profile from '../../assets/img/profile.jpg';
-import TechStack from '../../components/molecules/techstack/';
 import DayBar from '../../components/molecules/daybar/';
-import ProfInterests from '../../components/molecules/profinterests/';
-import ExpandableList from '../../components/atoms/expandablelist/';
+import SoopList from '../../components/molecules/sooplist';
+import SoopListTable from '../../components/molecules/sooplisttable';
+import {likeSoop, dislikeSoop} from '../../actions/soop';
 
 class SoopView extends Component {
   constructor(props) {
@@ -47,56 +47,34 @@ class SoopView extends Component {
   }
 
   render() {
-    let soop;
-    if (this.props.soop.allSoop) {
-      soop = this.props.soop.allSoop
-        .filter(row => {
-          return row.day === this.state.day;
-        })
-        .map(row => {
-          row.name = (
-            <div className="soopHeader">
-              <Col xs={12} className="soopHeaderTitle">
-                {row.title}
-              </Col>
-              <Col xs={12} sm={5}>
-                Keywords: <span className="soopHeader">{row.food}</span>
-              </Col>
-              <Col xs={12} sm={5}>
-                Event Score: <span className="soopHeader">{row.score}</span>
-              </Col>
-            </div>
-          );
-          row.expandedText = (
-            <div>
-              <h4>Summary:</h4>
-              {row.details}
-              <hr />
-              <div>
-                <Col xs={12} sm={9} className="soopButtonCol">
-                  <Button bsStyle="warning" href={row.outUrl}>
-                    Event Link (external)
-                  </Button>
-                </Col>
-                <Col xs={3} sm={1} className="soopButtonCol">
-                  <Button bsStyle="success">Like</Button>
-                </Col>
-                <Col xs={3} sm={2} className="soopButtonCol">
-                  <Button bsStyle="danger">Dislike</Button>
-                </Col>
-              </div>
-            </div>
-          );
-          row.id = row.id.toString();
-          return row;
+    const _selectSoopRow = e => {
+      const id = e.target.id;
+      if (this.state.activeSoop === id) {
+        this.setState({
+          activeSoop: -1
         });
-    } else {
-      soop = [
-        {
-          name: 'loading...'
-        }
-      ];
-    }
+      } else {
+        this.setState({
+          activeSoop: id
+        });
+      }
+    };
+
+    const _dislikeSoop = e => {
+      const data = {
+        user_id: 0,
+        object_id: e.id
+      };
+      this.props.actions.dislikeSoop.apply(this.props.auth, data);
+    };
+
+    const _likeSoop = e => {
+      const data = {
+        user_id: 0,
+        object_id: e.id
+      };
+      this.props.actions.likeSoop.apply(this.props.auth, data);
+    };
 
     return (
       <div>
@@ -130,10 +108,11 @@ class SoopView extends Component {
                         this.setState({day: day});
                       }}
                     />
-                    <ExpandableList
-                      className="soopList"
-                      listData={soop}
-                      logoSize={0}
+                    <SoopListTable
+                      listData={this.props.soop}
+                      day={this.state.day}
+                      onLike={_likeSoop}
+                      onDislike={_dislikeSoop}
                     />
                   </Col>
                 }
@@ -148,8 +127,21 @@ class SoopView extends Component {
 
 function mapStateToProps(state) {
   return {
+    auth: state.auth,
     soop: state.soop
   };
 }
 
-export default connect(mapStateToProps)(SoopView);
+function mapDispatchToProps(dispatch) {
+  return {
+    actions: {
+      likeSoop: bindActionCreators({apply: likeSoop}, dispatch),
+      dislikeSoop: bindActionCreators({apply: dislikeSoop}, dispatch)
+    }
+  };
+}
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(SoopView);
