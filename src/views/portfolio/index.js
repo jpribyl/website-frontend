@@ -6,7 +6,9 @@ import Header from '../../components/organisms/d3/header';
 import Sidebar from '../../components/atoms/sidebar';
 import Card from '../../components/atoms/card';
 
-import soopLogo from '../../assets/img/icons/soop_dino.png';
+//import soopLogo from '../../assets/img/icons/soop_dino.png';
+import soopBowl from '../../assets/img/icons/soop_bowl.png';
+import atomSimple from '../../assets/img/icons/atom-512.png';
 
 class PortfolioView extends Component {
   constructor(props) {
@@ -69,51 +71,32 @@ class PortfolioView extends Component {
               dim={true}
               className="link"
               id="soopLink"
-              category="This app scrapes the web to find public events with free snacks. User likes and dislikes help a neural network categorize events."
+              category="This app scrapes the web to find public events with free snacks. User likes and dislikes help train a neural network to categorize future events."
               title="Daily Soup"
               xs={12}
               md={4}
               to="/soop"
               content={
-                <Image className="centered" src={soopLogo} rounded responsive />
+                <Image className="centered" src={soopBowl} rounded responsive />
               }
-            />
-            <Card
-              dim={true}
-              id="testLink"
-              category="just a test"
-              title="test"
-              xs={12}
-              md={4}
-              content={<div>asdf</div>}
-            />
-            <Card
-              category="just a test"
-              title="test"
-              xs={12}
-              md={4}
-              content={<div>asdf</div>}
             />
           </Row>
           <h2>Blog Posts</h2>
           <Row className="well padForGrid">
             <Card
-              category="just a test"
-              title="test"
+              dim={true}
+              id={'simpleNeutronStars'}
+              category="Using Mathematica to model neutron stars with a polytropic equation of state"
+              title="Simple Neutron Stars"
               xs={4}
-              content={<div>asdf</div>}
-            />
-            <Card
-              category="just a test"
-              title="test"
-              xs={4}
-              content={<div>asdf</div>}
-            />
-            <Card
-              category="just a test"
-              title="test"
-              xs={4}
-              content={<div>asdf</div>}
+              content={
+                <Image
+                  className="centered"
+                  src={atomSimple}
+                  rounded
+                  responsive
+                />
+              }
             />
           </Row>
         </Grid>
