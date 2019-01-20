@@ -9,15 +9,16 @@ import Soop from '../views/greeting'
 var indexRoutes = [
     { 
         path: "/", 
-        name: "home", 
+        name: "greeting", 
         component: Greeting ,
-        faicon: 'home'
+        faicon: 'dot-circle',
+        fastyle: 'regular'
     },
     { 
         path: "/bio", 
         name: "bio", 
         component: Bio,
-        faicon: 'book'
+        faicon: 'home'
     },
     { 
         path: "/portfolio", 

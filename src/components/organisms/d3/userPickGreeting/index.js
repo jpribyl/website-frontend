@@ -114,14 +114,15 @@ class UserGeneratedGreeting extends Component {
   };
 
   _setNumPoints = e => {
-    this.setState({numPoints: e, waitForApply: true});
+    this.setState({numPoints: e, waitForApply: true, disableButton: false});
   };
 
   _setAnimationSpeed = e => {
     this.setState({
       animationSpeed: e,
       animationDuration: this.props.duration * 0.5 * (100 / e),
-      waitForApply: true
+      waitForApply: true,
+      disableButton: false
     });
   };
 
@@ -142,6 +143,9 @@ class UserGeneratedGreeting extends Component {
               <SliderTooltip
                 className="slider numPointsSlider"
                 max={100}
+                onBeforeChange={() => {
+                  this.setState({disableButton: true});
+                }}
                 onAfterChange={this._setNumPoints}
                 defaultValue={this.state.numPoints}
               />
@@ -150,6 +154,9 @@ class UserGeneratedGreeting extends Component {
               Animation Speed:
               <SliderTooltip
                 className="slider animationSpeedSlider"
+                onBeforeChange={() => {
+                  this.setState({disableButton: true});
+                }}
                 onAfterChange={this._setAnimationSpeed}
                 defaultValue={this.state.animationSpeed}
               />
@@ -160,6 +167,7 @@ class UserGeneratedGreeting extends Component {
           <div id="generateGraphicButton">
             <AwesomeButton
               id="generateGraphicButton"
+              disabled={this.state.disableButton}
               type="primary"
               bubbles={true}
               action={this._generateGraphic}>

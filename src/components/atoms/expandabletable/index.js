@@ -3,33 +3,43 @@ import React, {Component} from 'react';
 import ReactTable from 'react-table';
 
 export default class ExpandableTable extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
-      expanded: null
+      expanded: props.expanded
     };
   }
 
-  expand_row(row) {
-    //there is a bug in this package... row index resets per page..
-    //so if you expand the n'th row on page 1 then it will stay expanded on
-    //page 2. To fix this, I use viewIndex (relative index) and the
-    //onPageChange to collapse all rows on page change
-    //console.log('row: ', row);
-    var expanded = {...this.state.expanded};
-    if (expanded[row.viewIndex]) {
-      expanded[row.viewIndex] = !expanded[row.viewIndex];
-    } else {
-      expanded[row.viewIndex] = true;
+  componentWillReceiveProps(props) {
+    if (props.expanded) {
+      this.setState({expanded: props.expanded});
     }
+  }
 
-    this.setState({
-      expanded: expanded
-    });
+  expand_row(row) {
+    if (this.props.handleExpand) {
+      this.props.handleExpand(row);
+    } else {
+      //there is a bug in this package... row index resets per page..
+      //so if you expand the n'th row on page 1 then it will stay expanded on
+      //page 2. To fix this, I use viewIndex (relative index) and the
+      //onPageChange to collapse all rows on page change
+      //console.log('row: ', row);
+      var expanded = {...this.state.expanded};
+      if (expanded[row.viewIndex]) {
+        expanded[row.viewIndex] = !expanded[row.viewIndex];
+      } else {
+        expanded[row.viewIndex] = true;
+      }
+
+      this.setState({
+        expanded: expanded
+      });
+    }
   }
 
   render() {
-    //console.log('state: ', this.state);
+    console.log('state: ', this.state, 'props: ', this.props);
     let noDataText;
     if (this.props.loading) {
       noDataText = '';

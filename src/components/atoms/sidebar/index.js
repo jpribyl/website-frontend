@@ -20,7 +20,7 @@ class Sidebar extends React.Component {
           return (
             <Link to={route.path} key={'sidebar_' + index}>
               <i className="faicon">
-                <FontAwesomeIcon icon={route.faicon} />
+                <FontAwesomeIcon icon={route.faicon}/>
               </i>
               {route.name}
             </Link>

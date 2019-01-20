@@ -130,11 +130,30 @@
     .ReactTable .rt-tbody .rt-tr-group {
       border-bottom: solid 1px rgba(0, 0, 0, 0.05);
       border-radius: 4px;
-      box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
+      box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.25);
       border: 0px solid #99999985;
       margin-top: 3px; }
-      .ReactTable .rt-tbody .rt-tr-group:hover {
-        border: 1px solid #1dc7ea; }
+
+.ReactTable .rt-tr#inactive:hover {
+    /*border: 1px solid #1dc7ea; */
+    border: 3px solid #eee; 
+    background-color: #eee;
+    cursor: pointer;
+}
+
+.ReactTable .rt-tr#active:hover {
+    /*border: 1px solid #1dc7ea; */
+    border: 3px solid #eee; 
+    background-color: #eee;
+    cursor: pointer;
+}
+
+.ReactTable .rt-tr#active {
+    /*border: 1px solid #1dc7ea; */
+    border: 0px;
+    box-shadow: 0px 0px 0px 0px rgba(0,0,0,0)
+}
+
     .ReactTable .rt-tbody .rt-td {
       border-right: 0px solid rgba(0, 0, 0, 0.02); }
       .ReactTable .rt-tbody .rt-td:last-child {
@@ -434,5 +453,5 @@ input {
  div.ReactTable.reactTableStyle.soopListTable div.rt-table div.rt-tbody div.rt-tr-group div#active {
     border-radius: 4px;
       border: 1px solid #99999985;
-    background-color: #bbbbeb  !important;
+    background-color: #bbbbbe  !important;
 }

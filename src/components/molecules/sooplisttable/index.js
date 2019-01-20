@@ -20,7 +20,15 @@ const soopColumns = [
 ];
 
 export default class SoopListTable extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      expanded: props.expanded
+    };
+  }
+
   render() {
+    console.log('state: ', this.state);
     let soop;
     if (this.props.listData.allSoop) {
       soop = this.props.listData.allSoop
@@ -58,6 +66,8 @@ export default class SoopListTable extends Component {
                 <Col xs={3} sm={1} className="soopButtonCol">
                   <Button
                     bsStyle="success"
+                    disabled={this.props.likeDisabled.includes(row.id)}
+                    ref={'like' + row.id}
                     onClick={() => this.props.onLike(row)}>
                     Like
                   </Button>
@@ -65,7 +75,10 @@ export default class SoopListTable extends Component {
                 <Col xs={3} sm={2} className="soopButtonCol">
                   <Button
                     bsStyle="danger"
-                    onClick={() => this.props.onDislike(row)}>
+                    disabled={this.props.dislikeDisabled.includes(row.id)}
+                    onClick={e => {
+                      this.props.onDislike(row);
+                    }}>
                     Dislike
                   </Button>
                 </Col>
@@ -85,6 +98,8 @@ export default class SoopListTable extends Component {
 
     return (
       <ExpandableTable
+        expanded={this.props.expanded}
+        handleExpand={this.props.handleExpand}
         showPagination={false}
         className="soopListTable"
         columns={soopColumns}

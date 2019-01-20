@@ -30,8 +30,11 @@ import {
   faGlobeAsia,
   faUserCircle,
   faUserPlus,
-  faBeer
+  faBeer,
+    faDotCircle
 } from '@fortawesome/free-solid-svg-icons';
+
+//import { faCircle } from '@fortawesome/free-regular-svg-icons';
 //import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 library.add(
@@ -57,5 +60,6 @@ library.add(
   faCaretSquareDown,
   faCaretDown,
   faUserPlus,
-  faBeer
+  faBeer,
+  faDotCircle
 );

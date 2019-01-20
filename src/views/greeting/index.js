@@ -18,9 +18,9 @@ export default class GreetingView extends Component {
     let width = window.innerWidth * 0.89;
     let height;
     if (window.innerWidth > 800) {
-      height = window.innerHeight * 0.71;
+      height = window.innerHeight * 0.7;
     } else {
-      height = window.innerHeight * 0.6;
+      height = window.innerHeight * 0.59;
     }
 
     this.state = {

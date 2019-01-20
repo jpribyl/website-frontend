@@ -42,7 +42,10 @@ class SoopView extends Component {
         right: window.innerWidth * 0.02,
         bottom: 30,
         left: window.innerWidth * 0.02
-      }
+      },
+      dislikeDisabled: [],
+      likeDisabled: [],
+      expanded: null
     };
   }
 
@@ -66,6 +69,10 @@ class SoopView extends Component {
         object_id: e.id
       };
       this.props.actions.dislikeSoop.apply(this.props.auth, data);
+
+      var dislikeDisabled = this.state.dislikeDisabled;
+      dislikeDisabled.push(e.id);
+      this.setState({dislikeDisabled: dislikeDisabled});
     };
 
     const _likeSoop = e => {
@@ -74,6 +81,23 @@ class SoopView extends Component {
         object_id: e.id
       };
       this.props.actions.likeSoop.apply(this.props.auth, data);
+
+      var likeDisabled = this.state.likeDisabled;
+      likeDisabled.push(e.id);
+      this.setState({likeDisabled: likeDisabled});
+    };
+
+    const _handleExpand = row => {
+      var expanded = {...this.state.expanded};
+      if (expanded[row.viewIndex]) {
+        expanded[row.viewIndex] = !expanded[row.viewIndex];
+      } else {
+        expanded[row.viewIndex] = true;
+      }
+
+      this.setState({
+        expanded: expanded
+      });
     };
 
     return (
@@ -110,6 +134,10 @@ class SoopView extends Component {
                     />
                     <SoopListTable
                       listData={this.props.soop}
+                      expanded={this.state.expanded}
+                      handleExpand={_handleExpand}
+                      dislikeDisabled={this.state.dislikeDisabled}
+                      likeDisabled={this.state.likeDisabled}
                       day={this.state.day}
                       onLike={_likeSoop}
                       onDislike={_dislikeSoop}
