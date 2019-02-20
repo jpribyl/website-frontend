@@ -207,8 +207,8 @@ i.faicon {
 }
 
 .padForGrid {
-    /*margin: 17px;*/
-    margin: 0;
+    margin: 1%;
+    /*margin: 0;*/
 }
 
 .centered {
@@ -345,3 +345,5 @@ span.soopHeader {
 .padText {
     padding-left: 10px;
 }
+
+

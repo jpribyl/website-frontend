@@ -129,7 +129,7 @@ class SoopView extends Component {
                     <DayBar
                       activeKey={this.state.day}
                       handleSelect={day => {
-                        this.setState({day: day});
+                        this.setState({day: day, expanded: null});
                       }}
                     />
                     <SoopListTable
