@@ -3,6 +3,7 @@ import React, {Component} from 'react';
 import {Col, Button} from 'react-bootstrap';
 import ExpandableTable from '../../../components/atoms/expandabletable/';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {Helpers} from '../../../utils.js';
 
 const soopColumns = [
   {
@@ -29,9 +30,17 @@ export default class SoopListTable extends Component {
 
   render() {
     console.log('state: ', this.state);
+
+    const _compareObjArray = (a, b, key) => {
+      if (a[key] > b[key]) return -1;
+      if (a[key] < b[key]) return 1;
+      return 0;
+    };
+
     let soop;
     if (this.props.listData.allSoop) {
       soop = this.props.listData.allSoop
+        .sort((a, b) => Helpers.compareObjArray(a, b, 'score'))
         .filter(row => {
           return row.day === this.props.day;
         })

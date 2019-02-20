@@ -181,6 +181,7 @@ class PortfolioView extends Component {
               }
             />
           </Row>
+              <h2>Possible Future Blog Post Style</h2>
           <Row className="well padForGrid">
             <Carousel />
           </Row>
