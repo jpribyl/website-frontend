@@ -15,7 +15,7 @@ import soopBowl from '../../assets/img/icons/soop_bowl.png';
 import atomSimple from '../../assets/img/icons/atom-512.png';
 import blackHole from '../../assets/img/icons/black_hole.png';
 import taylorExpand from '../../assets/img/icons/taylor_series.png';
-import flappyBird from '../../assets/img/icons/flapp_bird.jpg';
+import flappyBird from '../../assets/img/icons/flapp_bird.png';
 import antenna from '../../assets/img/icons/antenna.png';
 
 class PortfolioView extends Component {
