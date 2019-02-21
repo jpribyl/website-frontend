@@ -182,9 +182,8 @@ const techStackData = [
       <div>
         <p>
           Javascript is a language which has really grown on me in the last
-          year. Although it does have a lot of quirks, it also has a kind of
-          elegance. There are SO many npm modules that I have used, but here is
-          a highlight reel.
+          year. It has a lot of quirks, but it also has an elegance. I have used
+          too many npm modules to count, but here is a highlight reel.
         </p>
         <hr />
         <p>
@@ -271,8 +270,8 @@ const techStackData = [
         <p>
           I do not use Mathematica very much anymore, but it will always hold a
           special place in my heart. It was the first introduction to
-          programming that I ever had and I would not have been able to graduate
-          with a physics degree without learning how to use it.
+          programming that I ever had. It was incredibly valuable during my
+          undergraduate physics program.
         </p>
         <hr />
         <ul>
