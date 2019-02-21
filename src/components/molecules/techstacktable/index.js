@@ -5,6 +5,7 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import ExpandableTable from '../../../components/atoms/expandabletable/';
 import Python from '../../../assets/img/icons/800px-Python-logo-notext.png';
 import Bash from '../../../assets/img/icons/bash.png';
+import Tux from '../../../assets/img/icons/220px-Tux.png';
 import Aws from '../../../assets/img/icons/2000px-Amazon_Web_Services_Logo.png';
 import Mathematica from '../../../assets/img/icons/2000px-Mathematica_Logo.png';
 import Javascript from '../../../assets/img/icons/JavaScript-logo.png';
@@ -144,6 +145,27 @@ const techStackData = [
             dashboard in very little time
           </li>
         </ul>
+        <hr />
+        <p>
+          Last but not least, I am a firm believer in test driven development.
+          Although deadlines can make it difficult, it is much harder to operate
+          at scale if you never took the time to write tests. Some of my
+          production projects have fallen victim to this fate, but I am militant
+          about it on personal projects.
+        </p>
+        <ul>
+          <li>
+            <b>Pytest</b> is my favorite python testing library. I have paired
+            it with the requests library to test api's and selenium to test
+            webapps.{' '}
+            <a href="https://blog.daftcode.pl/the-cleaning-hand-of-pytest-28f434f4b684">
+              This
+            </a>{' '}
+            article compares a couple of different testing frameworks in python.
+            I found it very helpful when selecting a library for my own
+            projects.
+          </li>
+        </ul>
       </div>
     )
   },
@@ -175,8 +197,9 @@ const techStackData = [
         <hr />
         <p>
           I have the most experience with basic CRUD and joins, but I did get
-          into stored procedures / transactions / etc while taking the courses
-          and would really enjoy picking up where I left off on those if there was a professional need
+          into stored procedures and transactions while taking the Udemy
+          courses. I would really enjoy picking up where I left off on those if
+          there was a professional need.
         </p>
       </div>
     )
@@ -292,11 +315,13 @@ const techStackData = [
             less painful.
           </li>
           <li>
-            <b>Data import/export/manipulation</b> when I was collaborating with
-            Princeton for research, we had to pass data sets back and forth
+            <b>Data import/export/manipulation</b> When I was collaborating with
+            Princeton for research, we had to pass data sets back and forth.
+            Nothing too serious, but I did start to think about I/O early in my
+            programming career
           </li>
           <li>
-            <b>Plotting</b> before I learned how to use more powerful plotting
+            <b>Plotting</b> Before I learned how to use more powerful plotting
             libraries, I LOVED mathematica's plotting. It is incredibly easy to
             bootstrap a graphical representation to your solution for a problem.
             This can help determine it's validity (IE does it pass the smell
@@ -307,35 +332,148 @@ const techStackData = [
     )
   },
   {
+    title: 'Linux Ecosystem ',
+    logo: Tux,
+    subcomponent: (
+      <div>
+        <p>
+          I am very passionate about open source software and I can't get enough
+          of linux. Watching my computer boot into Arch still gives me
+          goosebumps.
+        </p>
+        <hr />
+        <p>General Tools</p>
+        <ul>
+          <li>
+            <b>Arch linux</b> I have been running arch on all of my machines for
+            a while now and outside of the context of iOS app development, I do
+            not think that I will ever use another OS. I LOVE the rolling
+            release structure and being close enough to my computer to
+            understand why things aren't working.
+          </li>
+          <li>
+            <b>Vim</b> I adore vim. I have spent more time than was strictly
+            necessary reading blog posts and watching vimcasts. My top plugins
+            are jedi, ale, vim-surround, vimux, and ranger.vim. I love vim
+            enough to install vimium on my girlfriend's computer and to
+            read/write emails in neomutt.
+          </li>
+          <li>
+            <b>I3wm</b> tiling window managers are lots of fun. I3 has a very
+            straightforward conf file that lets you control almost everything
+            about how your computer functions.
+          </li>
+          <li>
+            <b>Xfce</b> Although I don't load very many of xfce's features I do
+            appreciate letting a lightweight version of it control my power
+            settings.
+          </li>
+          <li>
+            <b>Ranger</b> There has never been a better file browser.
+          </li>
+          <li>
+            <b>LibreOffice</b> Without the hard work that these guys have done,
+            it would be much more difficult to use linux as a primary operating
+            system
+          </li>
+        </ul>
+      </div>
+    )
+  },
+  {
     title: 'Bash',
     logo: Bash,
     subcomponent: (
       <div>
-        <p>general</p>
+        <p>
+          Along with the linux ecosystem, I really enjoy writing bash scripts.
+        </p>
+        <hr />
+        <p>Text Manipulation</p>
         <ul>
-          <li>running arch linux</li>
-          text manipulation
-          <li>grep</li>
-          <li>sed</li>
-          <li>awk</li>
+          <li>
+            <b>grep</b> is a simple tool that lets you search an entire codebase
+            without having to leave your terminal. I have aliased gi to `grep
+            -ri` because I use it so often
+          </li>
+          <li>
+            <b>sed</b> functions very nicely with grep. I love to pipe `grep
+            -ril` into `sed -s` for a quick recursive renaming of variables.{' '}
+            <a href="https://devpost.com/software/sed-pathfinder">Here</a> is a
+            fun article about a maze-solver written entirely in sed.
+          </li>
+          <li>
+            <b>awk</b> Whenever grep and sed are insufficient, you can ALWAYS do
+            it with awk. My only regret about awk is that I have not yet used it
+            frequently enough to hit a real flow with the syntax
+          </li>
         </ul>
-        <p>networking</p>
+        <hr />
+        <p>
+          I learned about quite a few networking tools when I was setting up our
+          home wifi (blog post in the works) - here are some that stick out to
+          me
+        </p>
         <ul>
-          <li>squid</li>
-          <li>openVPN</li>
-          <li>iptables</li>
-          <li>wpa_supplicant</li>
-          <li>dhcpcd</li>
-          <li>nmap</li>
-          <li>iw</li>
-          <li>ip</li>
-          <li>ifconfig</li>
-          <li>wget/axel with a webserver</li>
+          <li>
+            <b>iptables</b> My dad says that writing iptables will "put hair on
+            my chest" - whatever that means. I have used iptables primarily to
+            control which ports go where and who can ssh into what from where.
+          </li>
+          <li>
+            <b>wpa_supplicant</b> is a wpa key negotiator which is actually much
+            easier to troubleshoot than many of the higher level GUI's
+          </li>
+          <li>
+            <b>dhcpcd</b> or "dynamic host configuration protocol" talks to a
+            dhcp server and together they take care of assigning ip addresses to
+            clients
+          </li>
+          <li>
+            <b>dnsmasq</b> I am running a home-brew wifi as wan router off of a
+            pi and use dnsmasq to run the dhcp server. I do not actually use
+            it's dns lookup because I have a pi-hole sitting in the cloud
+            upstream.
+          </li>
+          <li>
+            <b>nmap</b> is more useful for pen-testing but also for running
+            network wide scans without having to log into the router
+          </li>
+          <li>
+            <b>iw / ip / ifconfig</b> are what I use "in the trenches" - IE if
+            my network is down and I want to poke at it to see why, I might try
+            using ip to set a device down/up or iw to check the link or ifconfig
+            to set a static ip.
+          </li>
+          <li>
+            <b>wget/axel</b> paired with a python webserver provides an
+            incredibly efficient method to transfer files between computers on
+            my vpn. I can hit 5-10Mb/s or more with these tools
+          </li>
+          <li>
+            <b>Squid and openVPN</b> Although not actually bash, they are
+            controlled by systemd. Our bandwidth is not always fast so I set up
+            a transparent caching proxy on our local network to help with http
+            requests. Additionally, I set up a server in the cloud running
+            openVPN to protect our network requests from anyone else on the
+            public hotspot.
+          </li>
         </ul>
-        <p>system management</p>
+        <hr />
+        <p>For general collecting of system processes, I have two favorites</p>
         <ul>
-          <li>systemd</li>
-          <li>cron</li>
+          <li>
+            <b>systemd</b> is what I use for any sort of daemon. It's really
+            nice to be able to check status with something as simple as
+            `systemctl status` and have the logging taken care of by journalctl
+          </li>
+          <li>
+            <b>cron</b> is more for recurring jobs. I have had some issues with
+            cron in the past. It is not a great choice for jobs that NEED to run
+            even when a computer is offline. And, it can be tricky to get access
+            to the right environment variables. But, there is a reason that cron
+            has been around for as long as it has.
+          </li>
         </ul>
       </div>
     )
@@ -345,14 +483,93 @@ const techStackData = [
     logo: Aws,
     subcomponent: (
       <div>
+        <p>
+          I have experience with Heroku, Digital Ocean, and AWS. Out of those, I
+          have found AWS to typically feature the lowest server cost as well as
+          the most customizability. This comes at the cost of more maintenance
+          and (sometimes) longer implementation.
+        </p>
+        <hr />
+        <p>Here are some of the AWS tools that I have found the most helpful</p>
         <ul>
-          <li>api gateway</li>
-          <li>lambda</li>
-          <li>cognito</li>
-          <li>ebs</li>
-          <li>rds</li>
-          <li>ec2</li>
-          <li>s3</li>
+          <li>
+            <b>api gateway</b> functions very nicely with lambda. I recently
+            learned about the lambda proxy integration which will let you almost
+            fake a server by assigning a lambda listener that directs incoming
+            requests
+          </li>
+          <li>
+            <b>lambda</b> is the future. Or at least, that's what everyone says.
+            Sometimes it can be harder to test, and if you're not careful it
+            will return 200s when it should return 500s but in the right setting
+            server costs can drop by 90% or more. And, once you write a decent
+            deploy script it is not very hard to get your app online.
+          </li>
+          <li>
+            <b>cognito</b> is a remarkably low hassel way to handle
+            authentication. In the past I have struggled with implementing an
+            auth sequence that is simple but not insecure, but now I don't even
+            have to think about it!
+          </li>
+          <li>
+            <b>ebs</b> Before learning how to use lambda functions, I deployed
+            several personal web apps through elastic beanstalk.
+          </li>
+          <li>
+            <b>rds</b> Even when going serverless, it is often still very
+            helpful (or even essential) to have a server running your database.
+            For my personal projects I tend to use one free tier rds instance
+            running a postgres server.
+          </li>
+          <li>
+            <b>ec2</b> is useful for just about everything! I have even used it
+            in conjunction with Bees With Machine Guns (look it up) to run an
+            open source load test on our production app prior to launch.
+          </li>
+          <li>
+            <b>s3</b> is another essential piece of the infrastructure. Without
+            s3, it would be much more difficult to run a static site able to
+            render content in a timely fashion.
+          </li>
+        </ul>
+        <hr />
+        <p>And, some of the things that I have done on heroku</p>
+        <ul>
+          <li>
+            <b>Webpack Integration</b> In order to save some money on server
+            costs, I was able to bundle the application logic and the frontend
+            for one of our production dashboards. This means that I only needed
+            one server to handle frontend and backend for a django/react web
+            app.
+          </li>
+          <li>
+            <b>Redis Cache/Queue</b> When load times for our production
+            dashboard started getting a little high, I was able to cut them down
+            by 75% or more with the introduction of a redis cache. Additionally,
+            I introduced a queue to handle long running processes (like push
+            notifications).
+          </li>
+          <li>
+            <b>Deploy Hooks</b> Although we have yet to fully complete our test
+            suite / deploy hooks - it is possible to link heroku into a github
+            account. Then, you can require all tests to pass before
+            automatically deploying a rolling upate to the app.
+          </li>
+        </ul>
+        <hr />
+        <p>
+          I have the least amount of experience with digital ocean, but it is
+          also the only server for which I am currently paying.
+        </p>
+        <ul>
+          <li>
+            <b>OpenVPN</b> VPN providers have a terribly history with regards to
+            user privacy. So, I decided to spin up my own homebrewed VPN server
+            in the cloud. I chose digital ocean because their entry level
+            droplet costs $5 a month and allows up to 1Tb of throughput. This is
+            incredibly cheap. The same amount of bandwidth on AWS would cost
+            around $150!
+          </li>
         </ul>
       </div>
     )
