@@ -11,6 +11,7 @@ import DayBar from '../../components/molecules/daybar/';
 import SoopList from '../../components/molecules/sooplist';
 import SoopListTable from '../../components/molecules/sooplisttable';
 import {likeSoop, dislikeSoop} from '../../actions/soop';
+import {Helpers} from '../../utils.js';
 
 class SoopView extends Component {
   constructor(props) {
@@ -135,7 +136,9 @@ class SoopView extends Component {
                     <SoopListTable
                       listData={this.props.soop}
                       expanded={this.state.expanded}
-                      handleExpand={_handleExpand}
+                      handleExpand={row =>
+                        Helpers.handleExpand(this, row, 'expanded')
+                      }
                       dislikeDisabled={this.state.dislikeDisabled}
                       likeDisabled={this.state.likeDisabled}
                       day={this.state.day}

@@ -39,7 +39,7 @@ export default class ExpandableTable extends Component {
   }
 
   render() {
-    console.log('state: ', this.state, 'props: ', this.props);
+    //console.log('state: ', this.state, 'props: ', this.props);
     let noDataText;
     if (this.props.loading) {
       noDataText = '';

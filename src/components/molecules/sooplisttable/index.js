@@ -29,13 +29,7 @@ export default class SoopListTable extends Component {
   }
 
   render() {
-    console.log('state: ', this.state);
-
-    const _compareObjArray = (a, b, key) => {
-      if (a[key] > b[key]) return -1;
-      if (a[key] < b[key]) return 1;
-      return 0;
-    };
+    //console.log('state: ', this.state);
 
     let soop;
     if (this.props.listData.allSoop) {

@@ -217,6 +217,11 @@ i.faicon {
     margin: auto;
 }
 
+.profilePic {
+    padding: 10px;
+    margin: auto;
+}
+
 p.bigText {
     font-size: 25px;
     margin: 10px;

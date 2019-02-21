@@ -10,6 +10,7 @@ import TechStack from '../../components/molecules/techstack/';
 import TechStackTable from '../../components/molecules/techstacktable/';
 import ProfInterests from '../../components/molecules/profinterests/';
 import ProfInterestsTable from '../../components/molecules/profintereststable/';
+import {Helpers} from '../../utils.js';
 
 class BioView extends Component {
   constructor(props) {
@@ -38,7 +39,9 @@ class BioView extends Component {
         right: window.innerWidth * 0.02,
         bottom: 30,
         left: window.innerWidth * 0.02
-      }
+      },
+      techStackExpanded: null,
+      profInterestsExpanded: null
     };
   }
   _togglAnimate = () => {
@@ -75,7 +78,7 @@ class BioView extends Component {
                 no_separator
                 content={
                   <Image
-                    className="centered"
+                    className="profilePic"
                     src={Profile}
                     rounded
                     responsive
@@ -121,7 +124,14 @@ class BioView extends Component {
                 title="Technical Stack"
                 xs={12}
                 md={6}
-                content={<TechStackTable />}
+                content={
+                  <TechStackTable
+                    expanded={this.state.techStackExpanded}
+                    handleExpand={row =>
+                      Helpers.handleExpand(this, row, 'techStackExpanded')
+                    }
+                  />
+                }
               />
               {
                 //<Card
@@ -135,7 +145,14 @@ class BioView extends Component {
                 title="Other Interests"
                 xs={12}
                 md={6}
-                content={<ProfInterestsTable />}
+                content={
+                  <ProfInterestsTable
+                    expanded={this.state.profInterestsExpanded}
+                    handleExpand={row =>
+                      Helpers.handleExpand(this, row, 'profInterestsExpanded')
+                    }
+                  />
+                }
               />
             </Row>
           </div>

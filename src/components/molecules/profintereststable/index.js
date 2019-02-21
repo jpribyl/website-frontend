@@ -62,6 +62,8 @@ export default class ProfInterestsTable extends Component {
   render() {
     return (
       <ExpandableTable
+        expanded={this.props.expanded}
+        handleExpand={this.props.handleExpand}
         columns={profInterestsColumns}
         showPagination={false}
         data={profInterestsData}

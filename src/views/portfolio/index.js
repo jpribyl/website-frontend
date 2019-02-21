@@ -92,9 +92,9 @@ class PortfolioView extends Component {
           <h2>Blog Posts</h2>
           <Row className="well padForGrid">
             <Card
-              dim={true}
+              dim={false}
               id={'homeNetwork'}
-              category="Coupling a long range antenna receiver with a raspberry pi, a Digital Ocean droplet running openVPN and Pi-Hole, and a Squid caching proxy makes it possible to have a reliable, secure, and free home network"
+              category="Coupling a long range antenna with a raspberry pi, a Digital Ocean droplet running openVPN and Pi-Hole, and a local Squid caching proxy makes it possible to have a reliable, secure, and free home network"
               title="Public WiFi at Home"
               xs={12}
               md={4}
@@ -103,7 +103,7 @@ class PortfolioView extends Component {
               }
             />
             <Card
-              dim={true}
+              dim={false}
               id="soopBlog"
               category="This post accompanies the live app and highlights the technologies involved."
               title="Daily Soup Writeup"
@@ -114,7 +114,7 @@ class PortfolioView extends Component {
               }
             />
             <Card
-              dim={true}
+              dim={false}
               id={'analogFlappyBird'}
               category='This looks at using an Arduino and C++ to drive a laser projecting an analog version of the popular "Flappy Bird" game onto a wall'
               title="Flappy Bird"
@@ -133,7 +133,7 @@ class PortfolioView extends Component {
           <Row />
           <Row className="well padForGrid">
             <Card
-              dim={true}
+              dim={false}
               id={'neutronStarCore'}
               category="Using a taylor expansion to estimate density and pressure at the center of a neutron star."
               title="Neutron Star Core"
@@ -149,7 +149,7 @@ class PortfolioView extends Component {
               }
             />
             <Card
-              dim={true}
+              dim={false}
               id={'moreSophStars'}
               category="We do not know exactly what physics contols the inner workings of neutron stars. However, people from around the world have tried to guess at the solutions to an unknown equation of state. This post highlights a collaboration with Princeton's Kent Yagi to model some ofthese solutions"
               title="More Sophisticated Stars"
@@ -165,7 +165,7 @@ class PortfolioView extends Component {
               }
             />
             <Card
-              dim={true}
+              dim={false}
               id={'simpleNeutronStars'}
               category="Using Mathematica to model neutron stars with a naively simple polytropic equation of state"
               title="Simple Neutron Stars"
@@ -181,7 +181,7 @@ class PortfolioView extends Component {
               }
             />
           </Row>
-              <h2>Possible Future Blog Post Style</h2>
+          <h2>Possible Future Blog Post Style</h2>
           <Row className="well padForGrid">
             <Carousel />
           </Row>
