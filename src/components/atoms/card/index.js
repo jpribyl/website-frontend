@@ -4,6 +4,9 @@ import {Col} from 'react-bootstrap';
 import {Link} from 'react-router-dom';
 
 export class Card extends Component {
+  shouldComponentUpdate() {
+    return this.props.shouldComponentUpdate || true;
+  }
   render() {
     let separator;
     if (!this.props.no_separator) {
