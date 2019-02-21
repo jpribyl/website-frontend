@@ -172,6 +172,12 @@ const techStackData = [
             <b>SQLite</b>
           </li>
         </ul>
+        <hr />
+        <p>
+          I have the most experience with basic CRUD and joins, but I did get
+          into stored procedures / transactions / etc while taking the courses
+          and would really enjoy picking up where I left off on those if there was a professional need
+        </p>
       </div>
     )
   },
