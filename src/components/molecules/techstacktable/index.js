@@ -157,9 +157,10 @@ const techStackData = [
           Although most of the production projects that I have worked on lately
           are using some form of nosql, I LOVE writing sql for personal
           projects. Plus, the newest version of pgAdmin (4) has an awesome
-          interface. So far, I have worked with these flavors of relational
-          databases:
+          interface.
         </p>
+        <hr />
+        <p>So far, I have worked with these flavors of relational databases:</p>
         <ul>
           <li>
             <b>PostgreSQL</b>
@@ -179,29 +180,78 @@ const techStackData = [
     logo: Javascript,
     subcomponent: (
       <div>
-        Visualization:
+        <p>
+          Javascript is a language which has really grown on me in the last
+          year. Although it does have a lot of quirks, it also has a kind of
+          elegance. There are SO many npm modules that I have used, but here is
+          a highlight reel.
+        </p>
+        <hr />
+        <p>
+          When designing the look and feel of a web app, these two libraries
+          have come in super handy:
+        </p>
         <ul>
-          <li>D3</li>
-          <li>Bootstrap</li>
+          <li>
+            <b>D3</b> is the most fun that I have ever had building graphics. It
+            is so much more than a plotting library. I have used it in
+            production as well as personal projects.
+          </li>
+          <li>
+            <b>Bootstrap</b> paved the way for much of the modern web. Although
+            many bootstrap sites have a cookie-cutter feel to them, it continues
+            to be one of the libraries that I could not live without.
+          </li>
         </ul>
-        Frontend:
+        <hr />
+        <p>Designing a production web app:</p>
         <ul>
-          <li>React</li>
-          <li>Redux</li>
+          <li>
+            <b>React</b> is my framework of choice. I have never been on a
+            project that used Angular or Vue, so I can't speak to those two --
+            however, I really like the information flow in react.
+          </li>
+          <li>
+            <b>Redux</b> allows for simple state management and almost feels
+            like a part of react at this point. There are lots of awesome
+            middleware options to make it even better.
+          </li>
         </ul>
-        Backend:
+        <hr />
+        <p>Full stack javascript requires a few backend tools as well:</p>
         <ul>
-          <li>Hapi</li>
-          <li>Node</li>
+          <li>
+            <b>Node</b> is node. Without node there is no javascript. Although I
+            have never written an app entirely in node, it is the foundation of
+            almost every javascript project that I have done.
+          </li>
+          <li>
+            <b>Hapi</b> provides the server framework for node. It lets you skip
+            out on a lot of boiler plate code and focus on the logic.
+          </li>
         </ul>
-        Utilities:
+        <hr />
+        <p>
+          Although vanilla js has come a long way, there are some basic utility
+          libraries that it has not fully replaced:
+        </p>
         <ul>
-          <li>Webpack</li>
-          <li>Lodash</li>
-          <li>Bluebird</li>
+          <li>
+            <b>Lodash</b> I am actually a big fan of the native filter map and
+            reduce methods for taming objects in js.. but every once in a while
+            you can save yourself a lot of effort with something like lodash's
+            array chunk method.
+          </li>
+          <li>
+            <b>Bluebird</b> lets you turn almost anything into a promise.
+          </li>
           <li>Async</li>
           <li>Axios</li>
           <li>Ajax</li>
+          <li>
+            <b>Webpack</b> for bundling and delivering content. I am still
+            shocked that this actually works.
+          </li>
         </ul>
       </div>
     )
