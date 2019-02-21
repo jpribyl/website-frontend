@@ -188,9 +188,8 @@ const techStackData = [
       <div>
         <p>
           Javascript is a language which has really grown on me in the last
-          year. Although it does have a lot of quirks, it also has a kind of
-          elegance. There are SO many npm modules that I have used, but here is
-          a highlight reel.
+          year. It has a lot of quirks, but it also has an elegance. I have used
+          too many npm modules to count, but here is a highlight reel.
         </p>
         <hr />
         <p>
@@ -251,9 +250,16 @@ const techStackData = [
           <li>
             <b>Bluebird</b> lets you turn almost anything into a promise.
           </li>
-          <li>Async</li>
-          <li>Axios</li>
-          <li>Ajax</li>
+          <li>
+            <b>Async</b> is now part of vanilla js, but some of the projects
+            that I have worked on are old enough that it had to be imported. I
+            still find the auto method incredibly helpful for making lots of
+            http requests efficiently.
+          </li>
+          <li>
+            <b>Axios</b> is my go to for making promise based http requests.
+            It's similar to the requests library in python
+          </li>
           <li>
             <b>Webpack</b> for bundling and delivering content. I am still
             shocked that this actually works.
@@ -267,11 +273,35 @@ const techStackData = [
     logo: Mathematica,
     subcomponent: (
       <div>
+        <p>
+          I do not use Mathematica very much anymore, but it will always hold a
+          special place in my heart. It was the first introduction to
+          programming that I ever had. It was incredibly valuable during my
+          undergraduate physics program.
+        </p>
+        <hr />
         <ul>
-          <li>NDSolve</li>
-          <li>Taylor Expansions</li>
-          <li>Data import/export/manipulation</li>
-          <li>Plotting</li>
+          <li>
+            <b>NDSolve</b> might be the most powerful tool in Mathematica. It is
+            a numerical differential equation solver that has support for
+            several different methods and types of problem (shooting, ivps, etc)
+          </li>
+          <li>
+            <b>Taylor Expansions</b> were one of the things that I did almost
+            daily during my undergraduate studies. Mathematica makes them much
+            less painful.
+          </li>
+          <li>
+            <b>Data import/export/manipulation</b> when I was collaborating with
+            Princeton for research, we had to pass data sets back and forth
+          </li>
+          <li>
+            <b>Plotting</b> before I learned how to use more powerful plotting
+            libraries, I LOVED mathematica's plotting. It is incredibly easy to
+            bootstrap a graphical representation to your solution for a problem.
+            This can help determine it's validity (IE does it pass the smell
+            test)
+          </li>
         </ul>
       </div>
     )
@@ -281,15 +311,16 @@ const techStackData = [
     logo: Bash,
     subcomponent: (
       <div>
+        <p>general</p>
         <ul>
-          general
           <li>running arch linux</li>
-          text
-          <li>grep/sed/awk</li>
+          text manipulation
+          <li>grep</li>
           <li>sed</li>
           <li>awk</li>
-          networking
-          <li>squid/openVPN/iptables/wpa_supplicant/iw/ip/ifconfig</li>
+        </ul>
+        <p>networking</p>
+        <ul>
           <li>squid</li>
           <li>openVPN</li>
           <li>iptables</li>
@@ -300,9 +331,10 @@ const techStackData = [
           <li>ip</li>
           <li>ifconfig</li>
           <li>wget/axel with a webserver</li>
-          system management
+        </ul>
+        <p>system management</p>
+        <ul>
           <li>systemd</li>
-          <li>cron</li>
           <li>cron</li>
         </ul>
       </div>
