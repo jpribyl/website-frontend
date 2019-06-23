@@ -72,6 +72,7 @@ class BioView extends Component {
           <div className="well">
             <Row className="padForGrid">
               <Card
+                shouldComponentUpdate={false}
                 xl={2}
                 md={3}
                 xs={12}
