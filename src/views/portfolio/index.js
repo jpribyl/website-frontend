@@ -17,6 +17,15 @@ import blackHole from '../../assets/img/icons/black_hole.png';
 import taylorExpand from '../../assets/img/icons/taylor_series.png';
 import flappyBird from '../../assets/img/icons/flapp_bird.png';
 import antenna from '../../assets/img/icons/antenna.png';
+import webServer from '../../assets/img/icons/servers.svg';
+import intelNuc from '../../assets/img/icons/minipc.png';
+import lightbulb from '../../assets/img/icons/lightbulb.svg';
+import videoRec from '../../assets/img/icons/videoRec.png';
+import cnn from '../../assets/img/icons/cnnetwork.png';
+import dataVis from '../../assets/img/icons/dataVis.png';
+import textSummary from '../../assets/img/icons/summarize-icon-9.jpg.png';
+import mathModel from '../../assets/img/icons/mathModel.png';
+import speechToText from '../../assets/img/icons/speechToText.png';
 
 class PortfolioView extends Component {
   constructor(props) {
@@ -73,14 +82,112 @@ class PortfolioView extends Component {
             </div>
             <hr className="hrLarge" />
           </Row>
-          <h2>Live Apps</h2>
+          <h2>Data Wrangling</h2>
+          <Row className="well padForGrid">
+            <Row>
+              <Card
+                dim={false}
+                id="commitRecEngine"
+                category="One of Triple Tree's projects features a Digital Library. I was tasked with building a recommendation engine to help users find videos that match their interests."
+                title="Recommending Videos"
+                xs={12}
+                md={4}
+                content={
+                  <Image
+                    className="centered"
+                    src={videoRec}
+                    rounded
+                    responsive
+                  />
+                }
+              />
+              <Card
+                dim={false}
+                id={'gravityCnn'}
+                category="During my time as an undergrad, I worked with Neil Cornish to build a convolutional neural network capable of classifying glitches in gravitational wave data."
+                title="CNN Glitch Classification"
+                xs={12}
+                md={4}
+                content={
+                  <Image className="centered" src={cnn} rounded responsive />
+                }
+              />
+              <Card
+                dim={false}
+                id={'pintpassDataVis'}
+                category="This post looks at using the D3.js in order to render live, interactive stats on a production app"
+                title="Visualizing Live Data"
+                xs={12}
+                md={4}
+                content={
+                  <Image
+                    className="centered"
+                    src={dataVis}
+                    rounded
+                    responsive
+                  />
+                }
+              />
+            </Row>
+            <Row>
+              <Card
+                dim={false}
+                id={'textSummarization'}
+                category=""
+                title="Text Summarization"
+                xs={12}
+                md={4}
+                content={
+                  <Image
+                    className="centered"
+                    src={textSummary}
+                    rounded
+                    responsive
+                  />
+                }
+              />
+              <Card
+                dim={false}
+                id={'mathModelStars'}
+                category=""
+                title="Modeling Neutron Stars"
+                xs={12}
+                md={4}
+                content={
+                  <Image
+                    className="centered"
+                    src={mathModel}
+                    rounded
+                    responsive
+                  />
+                }
+              />
+              <Card
+                dim={false}
+                id={'spkrDiarization'}
+                category=""
+                title="Speaker Diarization"
+                xs={12}
+                md={4}
+                content={
+                  <Image
+                    className="centered"
+                    src={speechToText}
+                    rounded
+                    responsive
+                  />
+                }
+              />
+            </Row>
+          </Row>
+          <h2>Free Stuff</h2>
           <Row className="well padForGrid">
             <Card
               dim={true}
               className="link"
               id="soopLink"
               category="This app scrapes the web to find public events with free snacks. User likes and dislikes help train a neural network to categorize future events."
-              title="Daily Soup"
+              title="Free Food"
               xs={12}
               md={4}
               to="/soop"
@@ -88,14 +195,11 @@ class PortfolioView extends Component {
                 <Image className="centered" src={soopBowl} rounded responsive />
               }
             />
-          </Row>
-          <h2>Blog Posts</h2>
-          <Row className="well padForGrid">
             <Card
               dim={false}
               id={'homeNetwork'}
-              category="Coupling a long range antenna with a raspberry pi, a Digital Ocean droplet running openVPN and Pi-Hole, and a local Squid caching proxy makes it possible to have a reliable, secure, and free home network"
-              title="Public WiFi at Home"
+              category="Coupling a long range antenna with a raspberry pi, a Digital Ocean droplet running openVPN and Pi-Hole, and a local Squid caching proxy makes it possible to have a reliable, secure, and free home network."
+              title="Free WiFi"
               xs={12}
               md={4}
               content={
@@ -104,20 +208,44 @@ class PortfolioView extends Component {
             />
             <Card
               dim={false}
-              id="soopBlog"
-              category="This post accompanies the live app and highlights the technologies involved."
-              title="Daily Soup Writeup"
+              id={'webHosting'}
+              category="For a long time, I hosted this page with Bluehost. However, a recent post on Hacker News taught me that it is possible to host a static site for free through GitHub Pages."
+              title="Free Webhosting"
               xs={12}
               md={4}
               content={
-                <Image className="centered" src={soopBowl} rounded responsive />
+                <Image
+                  className="centered"
+                  src={webServer}
+                  rounded
+                  responsive
+                />
+              }
+            />
+          </Row>
+          <h2>Hardware</h2>
+          <Row className="well padForGrid">
+            <Card
+              dim={false}
+              id="smartHome"
+              title="Unix Based Smart Home"
+              category="I want to use smart technology while protecting my privacy. So, I built a webserver that allows me to control my home appliances. Then I locked down the appliances to prevent them from 'phoning home' to Google or anyone else."
+              xs={12}
+              md={4}
+              content={
+                <Image
+                  className="centered"
+                  src={lightbulb}
+                  rounded
+                  responsive
+                />
               }
             />
             <Card
               dim={false}
               id={'analogFlappyBird'}
-              category='This looks at using an Arduino and C++ to drive a laser projecting an analog version of the popular "Flappy Bird" game onto a wall'
-              title="Flappy Bird"
+              category='This looks at using an Arduino and C++ to drive a laser projecting an analog version of the popular "Flappy Bird" game onto a wall.'
+              title="Analog Flappy Bird"
               xs={12}
               md={4}
               content={
@@ -129,20 +257,32 @@ class PortfolioView extends Component {
                 />
               }
             />
+            <Card
+              dim={false}
+              id="desktopBuild"
+              category="The computer that I use every day at work is a fanless Intel NUC that dual boots Windows 10 and Arch linux. So far I have been very happy with the build. This post discusses the components that I used."
+              title="Building a Mini PC"
+              xs={12}
+              md={4}
+              content={
+                <Image className="centered" src={intelNuc} rounded responsive />
+              }
+            />
           </Row>
           <Row />
+          <h2>Physics</h2>
           <Row className="well padForGrid">
             <Card
               dim={false}
-              id={'neutronStarCore'}
-              category="Using a taylor expansion to estimate density and pressure at the center of a neutron star."
-              title="Neutron Star Core"
+              id={'simpleNeutronStars'}
+              category="Using Mathematica to model neutron stars with a naively simple polytropic equation of state"
+              title="Simple Neutron Stars"
               xs={12}
               md={4}
               content={
                 <Image
                   className="centered"
-                  src={taylorExpand}
+                  src={atomSimple}
                   rounded
                   responsive
                 />
@@ -166,24 +306,20 @@ class PortfolioView extends Component {
             />
             <Card
               dim={false}
-              id={'simpleNeutronStars'}
-              category="Using Mathematica to model neutron stars with a naively simple polytropic equation of state"
-              title="Simple Neutron Stars"
+              id={'neutronStarCore'}
+              category="Using a taylor expansion to estimate density and pressure at the center of a neutron star."
+              title="Neutron Star Core"
               xs={12}
               md={4}
               content={
                 <Image
                   className="centered"
-                  src={atomSimple}
+                  src={taylorExpand}
                   rounded
                   responsive
                 />
               }
             />
-          </Row>
-          <h2>Possible Future Blog Post Style</h2>
-          <Row className="well padForGrid">
-            <Carousel />
           </Row>
         </Grid>
       </div>
