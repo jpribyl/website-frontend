@@ -1,5 +1,5 @@
 # base image
-FROM node:11.12.0
+FROM arm32v7/node:11.12.0
 
 # set working directory
 RUN mkdir /app
