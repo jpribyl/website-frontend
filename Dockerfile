@@ -15,7 +15,13 @@ ENV PUBLIC_URL /jpribyl/
 # install and cache app dependencies
 COPY package.json /app/package.json
 RUN npm install
-RUN npm install -g serve
+RUN npm install serve
+
+#installing global npm package
+#ENV NPM_CONFIG_PREFIX=/home/node/.npm-global
+# optionally if you want to run npm global bin without specifying path
+#ENV PATH=$PATH:/home/node/.npm-global/bin 
+#RUN npm install -g serve
 
 COPY . .
 
