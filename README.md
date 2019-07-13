@@ -1,3 +1,42 @@
+## Deployment
+
+In order to deploy, this script is pipelined from gh-->dh-->k8s.  Because we
+are using an arm image and docker hub uses amd, we need to virtualize the
+docker hub environment or the build will fail. We can do this with qemu. If the
+image is not available, pull it with this and keep it in the home directory:
+
+```
+curl -L https://github.com/balena-io/qemu/releases/download/v3.0.0%2Bresin/qemu-3.0.0+resin-arm.tar.gz | tar zxvf - -C . && mv qemu-3.0.0+resin-arm/qemu-arm-static .
+```
+
+
+At present, the "serve" npm package seems to be installing globally without the
+-g flag. If that stops working you may need to follow these guidelines in the
+dockerfile in order to get the build to work
+
+```
+#installing global npm package
+ENV NPM_CONFIG_PREFIX=/home/node/.npm-global
+# optionally if you want to run npm global bin without specifying path
+ENV PATH=$PATH:/home/node/.npm-global/bin 
+RUN npm install -g serve
+```
+
+At the end of the day, if running on k8s cluster
+```
+git push origin master
+```
+will build and deploy
+
+Or, if running on gh-pages, then use
+````
+npm run deploy
+```
+to deploy
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
