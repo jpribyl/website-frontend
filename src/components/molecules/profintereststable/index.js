@@ -1,13 +1,21 @@
 //@format
 import React, {Component} from 'react';
-import {Image} from 'react-bootstrap';
+import {Grid, Row, Col, Image} from 'react-bootstrap';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+
 import ExpandableTable from '../../../components/atoms/expandabletable/';
+import ClickModal from '../../../components/atoms/clickmodal';
+
 import Climbing from '../../../assets/img/icons/climbing.png';
 import Coaching from '../../../assets/img/icons/coaching.png';
 import Medical from '../../../assets/img/icons/medical.png';
 import Rafting from '../../../assets/img/icons/rafting.png';
 import Teaching from '../../../assets/img/icons/teaching.png';
+
+import fugitive from '../../../assets/img/gallery/website1.jpg';
+import haystack from '../../../assets/img/gallery/website4.jpg';
+import newyosemite from '../../../assets/img/gallery/website13.jpg';
+import nrgorge from '../../../assets/img/gallery/website14.jpg';
 
 const profInterestsColumns = [
   {
@@ -33,12 +41,40 @@ const profInterestsColumns = [
     width: 40
   }
 ];
-
+const styles = {
+  images: {
+    left: {float: 'left', width: '49%', marginTop: '1%', marginBottom: '1%'},
+    right: {float: 'right', width: '49%', marginTop: '1%', marginBottom: '1%'}
+  }
+};
 const profInterestsData = [
   {
     title: 'Climbing',
     logo: Climbing,
-    subcomponent: <div>climbing...</div>
+    subcomponent: (
+      <>
+        <div style={{...styles.images.left}}>
+          <ClickModal>
+            <Image responsive rounded src={fugitive} />
+          </ClickModal>
+        </div>
+        <div style={{...styles.images.right}}>
+          <ClickModal>
+            <Image responsive rounded src={haystack} />
+          </ClickModal>
+        </div>
+        <div style={{...styles.images.left}}>
+          <ClickModal>
+            <Image responsive rounded src={nrgorge} />
+          </ClickModal>
+        </div>
+        <div style={{...styles.images.right}}>
+          <ClickModal>
+            <Image responsive rounded src={newyosemite} />
+          </ClickModal>
+        </div>
+      </>
+    )
   },
   {
     title: 'Rafting',
