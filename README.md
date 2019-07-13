@@ -9,6 +9,10 @@ image is not available, pull it with this and keep it in the home directory:
 curl -L https://github.com/balena-io/qemu/releases/download/v3.0.0%2Bresin/qemu-3.0.0+resin-arm.tar.gz | tar zxvf - -C . && mv qemu-3.0.0+resin-arm/qemu-arm-static .
 ```
 
+For more details on this check out this blog post:
+```
+https://www.balena.io/blog/building-arm-containers-on-any-x86-machine-even-dockerhub/
+```
 
 At present, the "serve" npm package seems to be installing globally without the
 -g flag. If that stops working you may need to follow these guidelines in the
