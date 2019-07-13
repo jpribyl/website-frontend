@@ -563,7 +563,7 @@ const techStackData = [
         </p>
         <ul>
           <li>
-            <b>OpenVPN</b> VPN providers have a terribly history with regards to
+            <b>OpenVPN</b> VPN providers have a terrible history with regards to
             user privacy. So, I decided to spin up my own homebrewed VPN server
             in the cloud. I chose digital ocean because their entry level
             droplet costs $5 a month and allows up to 1Tb of throughput. This is

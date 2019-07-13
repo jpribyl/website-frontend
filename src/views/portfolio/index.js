@@ -26,6 +26,12 @@ import dataVis from '../../assets/img/icons/dataVis.png';
 import textSummary from '../../assets/img/icons/summarize-icon-9.jpg.png';
 import mathModel from '../../assets/img/icons/mathModel.png';
 import speechToText from '../../assets/img/icons/speechToText.png';
+import openVPN from '../../assets/img/icons/openvpn.png';
+import k8s from '../../assets/img/icons/kubernetes.png';
+import route53 from '../../assets/img/icons/route53.png';
+import sentiment from '../../assets/img/icons/sentimentanalysis.png';
+import rpi from '../../assets/img/icons/rpi.png';
+import Latex from 'react-latex';
 
 class PortfolioView extends Component {
   constructor(props) {
@@ -82,13 +88,73 @@ class PortfolioView extends Component {
             </div>
             <hr className="hrLarge" />
           </Row>
+
+          <h2>Cloud Work & Dev Ops</h2>
+          <Row className="well padForGrid">
+            <Row>
+              <Card
+                dim={false}
+                id="baremetalk8s"
+                category="This may be the coolest project that I have ever done. I ordered a bunch of hardware with my roommate and built a kubernetes cluster out of raspberry pi's. So far we have 3 workers. We are using Weave as a network policy controller and Traeffik to handle ingress / load balancing."
+                title="Bare Metal Kubernetes"
+                xs={12}
+                content={
+                  <Image className="centered" src={rpi} rounded responsive />
+                }
+              />
+              <Card
+                dim={false}
+                id="opnvpnDO"
+                category="VPN providers are notoriously nefarious. However, VPNs are incredibly useful. For this project, I followed an arstechnica guide on rolling out an OpenVPN server to a Digital Ocean Droplet"
+                title="Roll Your Own VPN"
+                xs={12}
+                md={4}
+                content={
+                  <Image
+                    className="centered"
+                    src={openVPN}
+                    rounded
+                    responsive
+                  />
+                }
+              />
+              <Card
+                dim={false}
+                id={'k8sDeployment'}
+                category="This looks using automated builds, tests, and webhooks to kick off a bare metal kubernetes deployment with a git push. Different repositories may correspond to different pipelines."
+                title="Kubernetes Pipelines"
+                xs={12}
+                md={4}
+                content={
+                  <Image className="centered" src={k8s} rounded responsive />
+                }
+              />
+              <Card
+                dim={false}
+                id={'canaryRls'}
+                category="Sometimes you only want to release a new feature to a small percentage of users. Here, we will use AWS's Route 53 to accomplish this through weighted DNS resolution."
+                title="Canary Releases in AWS"
+                xs={12}
+                md={4}
+                content={
+                  <Image
+                    className="centered"
+                    src={route53}
+                    rounded
+                    responsive
+                  />
+                }
+              />
+            </Row>
+          </Row>
+
           <h2>Data Wrangling</h2>
           <Row className="well padForGrid">
             <Row>
               <Card
                 dim={false}
                 id="commitRecEngine"
-                category="One of Triple Tree's projects features a Digital Library. I was tasked with building a recommendation engine to help users find videos that match their interests."
+                category="One project that I am working on features a video library. So, I built a simple recommendation engine to help users find videos matching their interests."
                 title="Recommending Videos"
                 xs={12}
                 md={4}
@@ -115,7 +181,7 @@ class PortfolioView extends Component {
               <Card
                 dim={false}
                 id={'pintpassDataVis'}
-                category="This post looks at using the D3.js in order to render live, interactive stats on a production app"
+                category="This post looks at using the D3.js in order to render live, interactive stats on a production app."
                 title="Visualizing Live Data"
                 xs={12}
                 md={4}
@@ -133,7 +199,7 @@ class PortfolioView extends Component {
               <Card
                 dim={false}
                 id={'textSummarization'}
-                category=""
+                category="Python has some really amazing text processing libraries. I was able to leverage NLTK, Pandas, and SKLearn in order to build a summarizer that intelligently segments text before running a tfidf based summarization algorithm."
                 title="Text Summarization"
                 xs={12}
                 md={4}
@@ -149,14 +215,14 @@ class PortfolioView extends Component {
               <Card
                 dim={false}
                 id={'mathModelStars'}
-                category=""
+                category="This is a non-techincal introduction to the cutting edge of science. We will discuss the ways that physics has changed in the past 100 years and why everyone is so excited about gravity these days."
                 title="Modeling Neutron Stars"
                 xs={12}
                 md={4}
                 content={
                   <Image
                     className="centered"
-                    src={mathModel}
+                    src={atomSimple}
                     rounded
                     responsive
                   />
@@ -164,15 +230,15 @@ class PortfolioView extends Component {
               />
               <Card
                 dim={false}
-                id={'spkrDiarization'}
-                category=""
-                title="Speaker Diarization"
+                id={'sntAnlysis'}
+                category="There are some very large open datasets containing categorized free form text. I used SKLearn to train a simple model on one of these datasets and used it to categorize text inputs collected from a production app."
+                title="Sentiment Analysis"
                 xs={12}
                 md={4}
                 content={
                   <Image
                     className="centered"
-                    src={speechToText}
+                    src={sentiment}
                     rounded
                     responsive
                   />
@@ -275,14 +341,25 @@ class PortfolioView extends Component {
             <Card
               dim={false}
               id={'simpleNeutronStars'}
-              category="Using Mathematica to model neutron stars with a naively simple polytropic equation of state"
+              category={
+                <div>
+                  Here, I use Mathematica to model stars with a simple
+                  polytropic equation of state of the form:
+                  <h5 style={{textAlign: 'center'}}>
+                    <Latex>{'$$ P = K \\rho^{\\frac{n+1}{n}} $$'}</Latex>
+                  </h5>
+                  Where P is pressure, K is a proportionality constant,
+                  <Latex>$\rho$</Latex> is density, and n is the polytropic
+                  index.
+                </div>
+              }
               title="Simple Neutron Stars"
               xs={12}
               md={4}
               content={
                 <Image
                   className="centered"
-                  src={atomSimple}
+                  src={mathModel}
                   rounded
                   responsive
                 />
@@ -307,7 +384,7 @@ class PortfolioView extends Component {
             <Card
               dim={false}
               id={'neutronStarCore'}
-              category="Using a taylor expansion to estimate density and pressure at the center of a neutron star."
+              category="Even after guessing at the equations of state, we do not know what happens at the very center of a star. Our estimates break down more as we get closer and closer to the center. In order to avoid this problem, we may use a taylor expansion to estimate density and pressure."
               title="Neutron Star Core"
               xs={12}
               md={4}
