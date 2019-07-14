@@ -32,6 +32,19 @@ class UserGeneratedGreeting extends Component {
 
     let data = [];
     for (var i = 0, len = numPoints; i < len; i++) {
+      var colorClass = Math.random();
+      let className;
+      if (colorClass > 0.7) {
+        className = 'greenStar';
+      } else if (colorClass > 0.4) {
+        className = 'blueStar';
+      } else if (colorClass > 0.2) {
+        className = 'yellowStar';
+      } else if (colorClass > 0.001) {
+        className = 'redStar';
+      } else {
+        className = 'settingSun';
+      }
       var x = Math.random() * width;
       var y = Math.random() * height;
       var r = Math.random() * maxRadius;
@@ -39,7 +52,7 @@ class UserGeneratedGreeting extends Component {
         x: x,
         y: y,
         r: r,
-        className: 'star clickable canvas'
+        className: `${className} clickable canvas`
       });
     }
     return data;

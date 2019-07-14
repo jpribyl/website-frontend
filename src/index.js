@@ -18,6 +18,7 @@ import './assets/css/rc-tooltip.css';
 import './assets/css/react-table.css';
 import './assets/css/sidebar.css';
 import './assets/css/card.css';
+import './assets/css/metismenu.css';
 import './fontawesome';
 
 import reducers from './reducers';

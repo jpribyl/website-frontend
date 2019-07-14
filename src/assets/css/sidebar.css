@@ -31,7 +31,9 @@
 
 /* Color/shape of burger icon bars */
 .bm-burger-bars {
-  background: #00ad57;
+  /*background: #00ad57;*/
+    /*background: #47a607*/
+    background: #337dff
     /*background: black;*/
 }
 
@@ -45,7 +47,8 @@
 /* Color/shape of close button cross */
 .bm-cross {
   /*background: #57c5f7;*/
-  background: #00ad57;
+  /*background: #00ad57;*/
+    background: #47a607
 }
 
 /* General sidebar styles */

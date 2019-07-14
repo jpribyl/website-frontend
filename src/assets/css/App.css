@@ -1,3 +1,6 @@
+div.d3svg {
+    overflow: hidden
+}
 .App {
   text-align: center;
 }
@@ -37,22 +40,56 @@
     stroke-width: 5;
 }
 
-.star {
+.greenStar {
     fill: #ffffff;
     fill-opacity: 0;
-    stroke: #337dff;
+    stroke: #47a607;
+    /*stroke: #337dff;*/
     stroke-width: 5
 }
 
-g.clickable circle.pumpkin:hover {
+.purpleStar {
+    fill: #ffffff;
+    fill-opacity: 0;
+    stroke: #763d7c;
+    stroke-width: 5
+}
+
+.yellowStar {
+    fill: #ffffff;
+    fill-opacity: 0;
+    stroke: #ffa300;
+    stroke-width: 5
+}
+
+.redStar {
+    fill: #ffffff;
+    fill-opacity: 0;
+    stroke: #ff005c;
+    stroke-width: 5
+}
+
+g.clickable circle.greenStar:hover {
     fill: red;
-    stroke: purple;
+    stroke: #a60747;
     cursor: pointer;
 }
 
-g.clickable circle.star:hover {
+g.clickable circle.redStar:hover {
     fill: red;
-    stroke: purple;
+    stroke: #a60747;
+    cursor: pointer;
+}
+
+g.clickable circle.blueStar:hover {
+    fill: red;
+    stroke: #a60747;
+    cursor: pointer;
+}
+
+g.clickable circle.yellowStar:hover {
+    fill: red;
+    stroke: #a60747;
     cursor: pointer;
 }
 

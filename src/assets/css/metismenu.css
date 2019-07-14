@@ -1,0 +1,45 @@
+
+@media only screen and (min-width: 800px) {
+.metismenu {
+  position: fixed;
+  width: var(--side-menu-width);
+  padding: 25px;
+  bottom: 0;
+  left: 0;
+  top: 0;
+  /*background-color: #5b3d7c;*/
+  background-color: #0762a6;
+}
+
+
+.metismenuGridPad {
+    margin-left: var(--side-menu-width)
+}
+
+#slideMenu {
+    display: none
+}
+
+.blueStar {
+    fill: #ffffff;
+    fill-opacity: 0;
+    stroke: #337dff;
+    stroke-width: 5
+}
+
+}
+
+
+@media only screen and (max-width: 800px) {
+#metisMenu{
+    display: none
+}
+
+.blueStar {
+    fill: #ffffff;
+    fill-opacity: 0;
+    stroke: #763d7c;
+    stroke-width: 5
+}
+}
+

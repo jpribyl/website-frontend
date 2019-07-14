@@ -19,7 +19,7 @@ class BioView extends Component {
     let height, width, numPoints;
     if (window.innerWidth > 800) {
       height = window.innerHeight * 0.2;
-      width = window.innerWidth * 0.89;
+      width = (window.innerWidth - 200) * 0.88;
       numPoints = 40;
     } else {
       height = window.innerHeight * 0.1;
@@ -36,9 +36,9 @@ class BioView extends Component {
       maxRadius: 20,
       margin: {
         top: 30,
-        right: window.innerWidth * 0.02,
+        right: (window.innerWidth - 200) * 0.02,
         bottom: 30,
-        left: window.innerWidth * 0.02
+        left: (window.innerWidth - 200) * 0.02
       },
       techStackExpanded: null,
       profInterestsExpanded: null
@@ -53,7 +53,7 @@ class BioView extends Component {
     return (
       <div>
         <Sidebar />
-        <Grid fluid={true}>
+        <Grid fluid={true} className="metismenuGridPad">
           <Row>
             <div className="padForMenu">
               <Header

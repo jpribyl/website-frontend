@@ -9,6 +9,7 @@ import Header from '../../components/organisms/d3/header';
 import Sidebar from '../../components/atoms/sidebar';
 import Card from '../../components/atoms/card';
 import Carousel from '../../components/atoms/carousel/';
+import {MENU_WIDTH} from '../../config.js';
 
 //import soopLogo from '../../assets/img/icons/soop_dino.png';
 import soopBowl from '../../assets/img/icons/soop_bowl.png';
@@ -40,7 +41,7 @@ class PortfolioView extends Component {
     let height, width, numPoints;
     if (window.innerWidth > 800) {
       height = window.innerHeight * 0.2;
-      width = window.innerWidth * 0.89;
+      width = (window.innerWidth - MENU_WIDTH) * 0.88;
       numPoints = 40;
     } else {
       height = window.innerHeight * 0.1;
@@ -57,9 +58,9 @@ class PortfolioView extends Component {
       maxRadius: 20,
       margin: {
         top: 30,
-        right: window.innerWidth * 0.02,
+        right: (window.innerWidth - MENU_WIDTH) * 0.02,
         bottom: 30,
-        left: window.innerWidth * 0.02
+        left: (window.innerWidth - MENU_WIDTH) * 0.02
       }
     };
   }
@@ -72,7 +73,7 @@ class PortfolioView extends Component {
     return (
       <div>
         <Sidebar />
-        <Grid fluid={true}>
+        <Grid fluid={true} className="metismenuGridPad">
           <Row>
             <div className="padForMenu">
               <Header
@@ -88,7 +89,10 @@ class PortfolioView extends Component {
             </div>
             <hr className="hrLarge" />
           </Row>
-
+          <h4>
+            Here are some of the projects that I have worked on. I have
+            separated them somewhat arbitrarily into categories.
+          </h4>
           <h2>Cloud Work & Dev Ops</h2>
           <Row className="well padForGrid">
             <Row>
@@ -147,8 +151,7 @@ class PortfolioView extends Component {
               />
             </Row>
           </Row>
-
-          <h2>Data Wrangling</h2>
+          <h2>Data Science</h2>
           <Row className="well padForGrid">
             <Row>
               <Card
@@ -173,9 +176,27 @@ class PortfolioView extends Component {
                 category="During my time as an undergrad, I worked with Neil Cornish to build a convolutional neural network capable of classifying glitches in gravitational wave data."
                 title="CNN Glitch Classification"
                 xs={12}
-                md={4}
+                md={8}
                 content={
                   <Image className="centered" src={cnn} rounded responsive />
+                }
+              />
+            </Row>
+            <Row>
+              <Card
+                dim={false}
+                id={'textSummarization'}
+                category="Python has some really amazing text processing libraries. I was able to leverage NLTK, Pandas, and SKLearn in order to build a summarizer that intelligently segments text before running a tfidf based summarization algorithm."
+                title="Text Summarization"
+                xs={12}
+                md={8}
+                content={
+                  <Image
+                    className="centered"
+                    src={textSummary}
+                    rounded
+                    responsive
+                  />
                 }
               />
               <Card
@@ -198,27 +219,11 @@ class PortfolioView extends Component {
             <Row>
               <Card
                 dim={false}
-                id={'textSummarization'}
-                category="Python has some really amazing text processing libraries. I was able to leverage NLTK, Pandas, and SKLearn in order to build a summarizer that intelligently segments text before running a tfidf based summarization algorithm."
-                title="Text Summarization"
-                xs={12}
-                md={4}
-                content={
-                  <Image
-                    className="centered"
-                    src={textSummary}
-                    rounded
-                    responsive
-                  />
-                }
-              />
-              <Card
-                dim={false}
                 id={'mathModelStars'}
                 category="This is a non-techincal introduction to the cutting edge of science. We will discuss the ways that physics has changed in the past 100 years and why everyone is so excited about gravity these days."
                 title="Modeling Neutron Stars"
                 xs={12}
-                md={4}
+                md={6}
                 content={
                   <Image
                     className="centered"
@@ -234,7 +239,7 @@ class PortfolioView extends Component {
                 category="There are some very large open datasets containing categorized free form text. I used SKLearn to train a simple model on one of these datasets and used it to categorize text inputs collected from a production app."
                 title="Sentiment Analysis"
                 xs={12}
-                md={4}
+                md={6}
                 content={
                   <Image
                     className="centered"
@@ -249,27 +254,27 @@ class PortfolioView extends Component {
           <h2>Free Stuff</h2>
           <Row className="well padForGrid">
             <Card
+              dim={false}
+              id={'homeNetwork'}
+              category="Coupling a long range antenna with a raspberry pi, a Digital Ocean droplet running openVPN and Pi-Hole, and a local Squid caching proxy makes it possible to have a reliable, secure, and free home network."
+              title="Free WiFi"
+              xs={12}
+              md={12}
+              content={
+                <Image className="centered" src={antenna} rounded responsive />
+              }
+            />
+            <Card
               dim={true}
               className="link"
               id="soopLink"
               category="This app scrapes the web to find public events with free snacks. User likes and dislikes help train a neural network to categorize future events."
               title="Free Food"
               xs={12}
-              md={4}
+              md={6}
               to="/soop"
               content={
                 <Image className="centered" src={soopBowl} rounded responsive />
-              }
-            />
-            <Card
-              dim={false}
-              id={'homeNetwork'}
-              category="Coupling a long range antenna with a raspberry pi, a Digital Ocean droplet running openVPN and Pi-Hole, and a local Squid caching proxy makes it possible to have a reliable, secure, and free home network."
-              title="Free WiFi"
-              xs={12}
-              md={4}
-              content={
-                <Image className="centered" src={antenna} rounded responsive />
               }
             />
             <Card
@@ -278,7 +283,7 @@ class PortfolioView extends Component {
               category="For a long time, I hosted this page with Bluehost. However, a recent post on Hacker News taught me that it is possible to host a static site for free through GitHub Pages."
               title="Free Webhosting"
               xs={12}
-              md={4}
+              md={6}
               content={
                 <Image
                   className="centered"
@@ -297,7 +302,7 @@ class PortfolioView extends Component {
               title="Unix Based Smart Home"
               category="I want to use smart technology while protecting my privacy. So, I built a webserver that allows me to control my home appliances. Then I locked down the appliances to prevent them from 'phoning home' to Google or anyone else."
               xs={12}
-              md={4}
+              md={12}
               content={
                 <Image
                   className="centered"
@@ -313,7 +318,7 @@ class PortfolioView extends Component {
               category='This looks at using an Arduino and C++ to drive a laser projecting an analog version of the popular "Flappy Bird" game onto a wall.'
               title="Analog Flappy Bird"
               xs={12}
-              md={4}
+              md={7}
               content={
                 <Image
                   className="centered"
@@ -329,7 +334,7 @@ class PortfolioView extends Component {
               category="The computer that I use every day at work is a fanless Intel NUC that dual boots Windows 10 and Arch linux. So far I have been very happy with the build. This post discusses the components that I used."
               title="Building a Mini PC"
               xs={12}
-              md={4}
+              md={5}
               content={
                 <Image className="centered" src={intelNuc} rounded responsive />
               }

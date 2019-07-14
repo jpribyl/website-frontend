@@ -49,30 +49,36 @@ class Greeting extends Component {
 
   render() {
     return (
-      <svg
-        className="bio d3svg"
-        style={{
-          width:
-            this.state.width + this.state.margin.right + this.state.margin.left,
-          height:
-            this.state.height + this.state.margin.top + this.state.margin.bottom
-        }}>
-        <Canvas
-          numPoints={this.state.numPoints}
-          width={this.state.width}
-          height={this.state.height}
-          maxRadius={this.state.maxRadius}
-          margin={this.state.margin}
-          duration={this.state.duration}
-          animate={this.state.animate}
-        />
-        <text x={20} y={60} className="bio headerTextBox">
-          {this.props.text}
-        </text>
-        <text x={20} y={60} className="bio headerText">
-          {this.props.text}
-        </text>
-      </svg>
+      <div className="d3svg">
+        <svg
+          className="bio d3svg"
+          style={{
+            width:
+              this.state.width +
+              this.state.margin.right +
+              this.state.margin.left,
+            height:
+              this.state.height +
+              this.state.margin.top +
+              this.state.margin.bottom
+          }}>
+          <Canvas
+            numPoints={this.state.numPoints}
+            width={this.state.width}
+            height={this.state.height}
+            maxRadius={this.state.maxRadius}
+            margin={this.state.margin}
+            duration={this.state.duration}
+            animate={this.state.animate}
+          />
+          <text x={20} y={60} className="bio headerTextBox">
+            {this.props.text}
+          </text>
+          <text x={20} y={60} className="bio headerText">
+            {this.props.text}
+          </text>
+        </svg>
+      </div>
     );
   }
 }
