@@ -80,7 +80,7 @@ class Canvas extends Component {
     this._animate();
     d3.interval(() => {
       this._animate();
-    }, this.props.duration * 0.99);
+    }, this.props.duration * 0.92);
   }
 
   render() {

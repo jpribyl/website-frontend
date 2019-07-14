@@ -2,12 +2,14 @@
 //import Greeting from '../views/greeting'
 
 import Bio from '../views/bio'
-import Portfolio from '../views/portfolio'
+import Projects from '../views/projects'
 import Greeting from '../views/greeting'
-import Soop from '../views/greeting'
+import Soop from '../views/soop'
+import Skills from '../views/skills'
 
 var indexRoutes = [
     { 
+        sidebar: true,
         path: "/", 
         name: "greeting", 
         component: Greeting ,
@@ -15,15 +17,31 @@ var indexRoutes = [
         fastyle: 'regular'
     },
     { 
+        sidebar: true,
         path: "/bio", 
         name: "bio", 
         component: Bio,
         faicon: 'home'
     },
     { 
-        path: "/portfolio", 
-        name: "portfolio", 
-        component: Portfolio,
+        sidebar: true,
+        path: "/skills", 
+        name: "skills", 
+        component: Skills,
+        faicon: 'cogs'
+    },
+    { 
+        sidebar: true,
+        path: "/projects", 
+        name: "projects", 
+        component: Projects,
+        faicon: 'briefcase'
+    },
+    { 
+        sidebar: false,
+        path: "/soop", 
+        name: "soop", 
+        component: Soop,
         faicon: 'briefcase'
     },
 ];

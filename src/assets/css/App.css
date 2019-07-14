@@ -389,4 +389,10 @@ span.soopHeader {
     padding-left: 10px;
 }
 
+div.react-photo-gallery--gallery div img {
+    border-radius: 4px;
+}
 
+.modal-backdrop.in {
+    opacity: .85 !important;
+}

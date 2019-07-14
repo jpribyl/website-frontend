@@ -7,7 +7,6 @@ import {bindActionCreators} from 'redux';
 import indexRoutes from './routes';
 import {getAuthRead} from './actions/auth';
 import {getSoop} from './actions/soop';
-import portfolioRoutes from './routes/portfolio';
 
 //this component holds global state components which load with page
 class App extends React.Component {
@@ -37,17 +36,7 @@ class App extends React.Component {
               exact
               path={prop.path}
               component={prop.component}
-              key={'index_' + key}
-            />
-          );
-        })}
-        {portfolioRoutes.map((prop, key) => {
-          return (
-            <Route
-              exact
-              path={prop.path}
-              component={prop.component}
-              key={'portfolio_' + key}
+              key={'route_' + prop.name + key}
             />
           );
         })}

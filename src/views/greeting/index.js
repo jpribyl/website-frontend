@@ -10,6 +10,7 @@ import {Link} from 'react-router-dom';
 import Greeting from '../../components/organisms/d3/greeting';
 import UserGeneratedGreeting from '../../components/organisms/d3/userPickGreeting/';
 import {getAuthRead} from '../../actions/auth';
+import {name, title} from '../../objects/signature';
 
 export default class GreetingView extends Component {
   constructor(props) {
@@ -25,11 +26,11 @@ export default class GreetingView extends Component {
 
     this.state = {
       animate: true,
-      numPoints: 70,
-      duration: 10000,
+      numPoints: 80,
+      duration: 22000,
       width: width,
       height: height,
-      maxRadius: 50,
+      maxRadius: 40,
       margin: {
         top: 30,
         right: window.innerWidth * 0.02,
@@ -62,8 +63,8 @@ export default class GreetingView extends Component {
         <Row>
           <hr />
           <Col className="signature" lg={3} sm={4} xs={8}>
-            <h1 className="name">john pribyl</h1>
-            <h2 className="title">data scientist</h2>
+            <h1 className="name">{name}</h1>
+            <h2 className="title">{title}</h2>
           </Col>
           <Col lg={3} sm={4} xs={8}>
             <div id="enterSite">

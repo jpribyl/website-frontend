@@ -6,11 +6,15 @@ import Header from '../../components/organisms/d3/header';
 import Sidebar from '../../components/atoms/sidebar';
 import Card from '../../components/atoms/card';
 import Profile from '../../assets/img/profile.jpg';
-import TechStack from '../../components/molecules/techstack/';
-import TechStackTable from '../../components/molecules/techstacktable/';
-import ProfInterests from '../../components/molecules/profinterests/';
-import ProfInterestsTable from '../../components/molecules/profintereststable/';
-import {Helpers} from '../../utils.js';
+import ModalGallery from '../../components/molecules/modalgallery';
+import bioGalleryPhotos from '../../objects/biophotos';
+
+//import ExpandableTable from '../../components/atoms/expandabletable/';
+//import {
+//profInterestsColumns,
+//profInterestsData
+//} from '../../objects/professionalinterests';
+//import {Helpers} from '../../utils.js';
 
 class BioView extends Component {
   constructor(props) {
@@ -29,7 +33,8 @@ class BioView extends Component {
 
     this.state = {
       headerText: 'BIO',
-      animate: false,
+      duration: 50000,
+      animate: true,
       numPoints: numPoints,
       width: width,
       height: height,
@@ -44,10 +49,6 @@ class BioView extends Component {
       profInterestsExpanded: null
     };
   }
-  _togglAnimate = () => {
-    this.setState({animate: !this.state.animate});
-  };
-  _enterSite = () => {};
 
   render() {
     return (
@@ -95,64 +96,54 @@ class BioView extends Component {
                   <div className="padText">
                     <p>
                       I <b>grew up in Houston</b>, Texas before heading out to
-                      Montana for school. I got a <b>degree in Physics</b> from
-                      MSU Bozeman in 2018.
+                      Montana for school.
+                    </p>
+                    <p>
+                      I got a <b>degree in Physics</b> from MSU Bozeman in 2018.
                     </p>
 
                     <p>
                       My undergraduate research involved
                       <b> modeling Neutron stars</b> in alternate theories of
                       gravity and <b>training neural networks </b>
-                      to recognize glitches in gravitational wave data
+                      to recognize glitches in gravitational wave data.
                     </p>
 
                     <p>
-                      I am currently living in Bozeman with my dog, Fox and
-                      <b> working as a software developer</b> at The Business
-                      Garage
+                      I love to <b>automate workflows and analyze data</b>
                     </p>
 
-                    <p className="bigText">
-                      I am looking for part time work to supplement my current
-                      job.
+                    <p>
+                      Currently, I am <b>living in Bozeman with my dog, Fox.</b>
                     </p>
+
+                    {
+                      //<p className="bigText">
+                      //I am looking for part time work to supplement my current
+                      //job.
+                      //</p>
+                    }
                   </div>
                 }
               />
             </Row>
-            <Row className="padForGrid">
+            <Row>
               <Card
-                title="Technical Stack"
+                title="I prefer writing code to writing copy, but here are some places I've been:"
                 xs={12}
-                md={6}
+                md={12}
                 content={
-                  <TechStackTable
-                    expanded={this.state.techStackExpanded}
-                    handleExpand={row =>
-                      Helpers.handleExpand(this, row, 'techStackExpanded')
-                    }
-                  />
-                }
-              />
-              {
-                //<Card
-                //title="Other Interests"
-                //xs={12}
-                //md={6}
-                //content={<ProfInterests />}
-                ///>
-              }
-              <Card
-                title="Other Interests"
-                xs={12}
-                md={6}
-                content={
-                  <ProfInterestsTable
-                    expanded={this.state.profInterestsExpanded}
-                    handleExpand={row =>
-                      Helpers.handleExpand(this, row, 'profInterestsExpanded')
-                    }
-                  />
+                  <ModalGallery photos={bioGalleryPhotos} />
+                  //<ExpandableTable
+                  //expanded={this.state.profInterestsExpanded}
+                  //handleExpand={row => {
+                  //Helpers.handleExpand(this, row, 'profInterestsExpanded');
+                  //}}
+                  //columns={profInterestsColumns}
+                  //showPagination={false}
+                  //data={profInterestsData}
+                  //className={'profInterests'}
+                  ///>
                 }
               />
             </Row>

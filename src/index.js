@@ -8,7 +8,6 @@ import {createStore, applyMiddleware} from 'redux';
 import reduxThunk from 'redux-thunk';
 
 import indexRoutes from './routes';
-import portfolioRoutes from './routes/portfolio';
 import './assets/css/index.css';
 import './assets/css/App.css';
 import './assets/css/toggle-switch.css';
