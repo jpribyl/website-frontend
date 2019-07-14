@@ -11,41 +11,48 @@ class Sidebar extends React.Component {
   }
 
   render() {
-    const Menu1 = () => (
-      <div>
-        <u>Menu 1 View</u>
-      </div>
-    );
-    const Menu2 = () => (
-      <div>
-        <i>Menu 2 View</i>
-      </div>
-    );
-    const SubMenu = () => (
-      <div>
-        <s>SubMenu View</s>
+    const signature = (
+      <div id="sidebarSignature">
+        <h1 className="name">john pribyl</h1>
+        <h2 className="title">data scientist</h2>
+        <hr className="metisHr" />
       </div>
     );
 
-    let metisMenuItems = indexRoutes.map((route, index) => {
+    let metisMenuItems = [
+      {
+        label: signature,
+        id: 1
+      }
+    ];
+    metisMenuItems = [];
+    indexRoutes.map((route, index) => {
+      const icon = <FontAwesomeIcon icon={route.faicon} />;
+      const label = (
+        <div>
+          <i className="faicon">
+            <FontAwesomeIcon icon={route.faicon} />
+          </i>
+          <span className="metisRoute">{route.name}</span>
+        </div>
+      );
       const metisItem = {
-        icon: route.faicon,
-        label: route.name,
+        icon: icon,
+        label: label,
         to: '/#' + route.path
       };
-      return metisItem;
+      metisMenuItems.push(metisItem);
+      return route;
     });
     return (
       <>
         <div id="metisMenu">
+          <div id="metisSignature">{signature}</div>
           <MetisMenu content={metisMenuItems} activeLinkFromLocation />
         </div>
         <div id="slideMenu">
           <Menu width={'250px'}>
-            <div id="sidebarSignature">
-              <h1 className="name">john pribyl</h1>
-              <h2 className="title">data scientist</h2>
-            </div>
+            {signature}
             {indexRoutes.map((route, index) => {
               return (
                 <Link to={route.path} key={'sidebar_' + index}>

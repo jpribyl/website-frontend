@@ -13,9 +13,11 @@ class VerticallyCenteredModal extends React.Component {
         <Modal.Body>
                 {this.props.children}
         </Modal.Body>
-        <Modal.Footer>
-          <Button onClick={this.props.onHide}>Close</Button>
-        </Modal.Footer>
+        {
+        //<Modal.Footer>
+          //<Button onClick={this.props.onHide}>Close</Button>
+        //</Modal.Footer>
+        }
       </Modal>
     );
   }

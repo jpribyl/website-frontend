@@ -104,7 +104,7 @@ class SoopView extends Component {
     return (
       <div>
         <Sidebar />
-        <Grid fluid={true}>
+        <Grid fluid={true} className="metismenuGridPad">
           <Row>
             <div className="padForMenu">
               <Header

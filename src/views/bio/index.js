@@ -74,7 +74,7 @@ class BioView extends Component {
               <Card
                 shouldComponentUpdate={false}
                 xl={2}
-                md={3}
+                md={4}
                 xs={12}
                 no_separator
                 content={
@@ -89,7 +89,7 @@ class BioView extends Component {
               <Card
                 title="About Me"
                 xl={10}
-                md={9}
+                md={8}
                 xs={12}
                 content={
                   <div className="padText">

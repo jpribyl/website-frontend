@@ -39,10 +39,10 @@ class Canvas extends Component {
       let className;
       if (colorClass > 0.7) {
         className = 'greenStar';
-      } else if (colorClass > .4) {
-          className = 'blueStar'
-      } else if (colorClass > .2) {
-         className = 'yellowStar' 
+      } else if (colorClass > 0.4) {
+        className = 'blueStar';
+      } else if (colorClass > 0.2) {
+        className = 'yellowStar';
       } else if (colorClass > 0.001) {
         className = 'redStar';
       } else {
@@ -80,7 +80,7 @@ class Canvas extends Component {
     this._animate();
     d3.interval(() => {
       this._animate();
-    }, this.props.duration * 0.9);
+    }, this.props.duration * 0.99);
   }
 
   render() {

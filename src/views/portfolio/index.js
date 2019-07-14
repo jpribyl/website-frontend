@@ -137,7 +137,7 @@ class PortfolioView extends Component {
                 dim={false}
                 id={'canaryRls'}
                 category="Sometimes you only want to release a new feature to a small percentage of users. Here, we will use AWS's Route 53 to accomplish this through weighted DNS resolution."
-                title="Canary Releases in AWS"
+                title="Canary Releases"
                 xs={12}
                 md={4}
                 content={
@@ -160,7 +160,7 @@ class PortfolioView extends Component {
                 category="One project that I am working on features a video library. So, I built a simple recommendation engine to help users find videos matching their interests."
                 title="Recommending Videos"
                 xs={12}
-                md={4}
+                md={5}
                 content={
                   <Image
                     className="centered"
@@ -176,7 +176,7 @@ class PortfolioView extends Component {
                 category="During my time as an undergrad, I worked with Neil Cornish to build a convolutional neural network capable of classifying glitches in gravitational wave data."
                 title="CNN Glitch Classification"
                 xs={12}
-                md={8}
+                md={7}
                 content={
                   <Image className="centered" src={cnn} rounded responsive />
                 }
@@ -345,6 +345,22 @@ class PortfolioView extends Component {
           <Row className="well padForGrid">
             <Card
               dim={false}
+              id={'moreSophStars'}
+              category="We do not know exactly what physics contols the inner workings of neutron stars. However, people from around the world have tried to guess at the solutions to an unknown equation of state. This post highlights a collaboration with Princeton's Kent Yagi to model some ofthese solutions"
+              title="More Sophisticated Stars"
+              xs={12}
+              md={12}
+              content={
+                <Image
+                  className="centered"
+                  src={blackHole}
+                  rounded
+                  responsive
+                />
+              }
+            />
+            <Card
+              dim={false}
               id={'simpleNeutronStars'}
               category={
                 <div>
@@ -360,7 +376,7 @@ class PortfolioView extends Component {
               }
               title="Simple Neutron Stars"
               xs={12}
-              md={4}
+              md={7}
               content={
                 <Image
                   className="centered"
@@ -372,27 +388,11 @@ class PortfolioView extends Component {
             />
             <Card
               dim={false}
-              id={'moreSophStars'}
-              category="We do not know exactly what physics contols the inner workings of neutron stars. However, people from around the world have tried to guess at the solutions to an unknown equation of state. This post highlights a collaboration with Princeton's Kent Yagi to model some ofthese solutions"
-              title="More Sophisticated Stars"
-              xs={12}
-              md={4}
-              content={
-                <Image
-                  className="centered"
-                  src={blackHole}
-                  rounded
-                  responsive
-                />
-              }
-            />
-            <Card
-              dim={false}
               id={'neutronStarCore'}
               category="Even after guessing at the equations of state, we do not know what happens at the very center of a star. Our estimates break down more as we get closer and closer to the center. In order to avoid this problem, we may use a taylor expansion to estimate density and pressure."
               title="Neutron Star Core"
               xs={12}
-              md={4}
+              md={5}
               content={
                 <Image
                   className="centered"

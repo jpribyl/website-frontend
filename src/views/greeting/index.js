@@ -25,11 +25,11 @@ export default class GreetingView extends Component {
 
     this.state = {
       animate: true,
-      numPoints: 80,
-      duration: 25000,
+      numPoints: 70,
+      duration: 10000,
       width: width,
       height: height,
-      maxRadius: 20,
+      maxRadius: 50,
       margin: {
         top: 30,
         right: window.innerWidth * 0.02,
