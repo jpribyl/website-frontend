@@ -40,8 +40,15 @@ class Sidebar extends React.Component {
       .map((route, index) => {
         const icon = <FontAwesomeIcon icon={route.faicon} />;
 
-        let label;
+        let label, content;
         if (route.content) {
+          content = route.content.map(contentRoute => {
+            return {
+              label: contentRoute.label,
+              to: process.env.PUBLIC_URL + contentRoute.to
+            };
+          });
+
           label = (
             <div>
               <i className="faicon">
@@ -65,7 +72,7 @@ class Sidebar extends React.Component {
           icon: icon,
           label: label,
           to: process.env.PUBLIC_URL + '/#' + route.path,
-          content: route.content
+          content: content
         };
       });
 
