@@ -39,23 +39,28 @@ var indexRoutes = [
         content: [
             {
                 label: 'devops',
-                to: '/#/projects#devops',
+                to: '/projects#devops',
+                hash: '#devops'
             },
             {
                 label: 'data science',
-                to: '/#/projects#datascience',
+                to: '/projects#datascience',
+                hash: '#datascience'
             },
             {
                 label: 'free stuff',
-                to: '/#/projects#freestuff',
+                to: '/projects#freestuff',
+                hash: '#freestuff'
             },
             {
                 label: 'hardware',
-                to: '/#/projects#hardware',
+                to: '/projects#hardware',
+                hash: '#hardware'
             },
             {
                 label: 'physics',
-                to: '/#/projects#physics',
+                to: '/projects#physics',
+                hash: '#physics'
             },
         ],
     },

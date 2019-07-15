@@ -92,7 +92,9 @@ class ProjectsView extends Component {
               Here are some of the projects that I have worked on. I have
               separated them somewhat arbitrarily into categories.
             </h4>
-            <h2>Cloud Work & Dev Ops</h2>
+            <div id="devops">
+              <h2>Cloud Work & Dev Ops</h2>
+            </div>
             <Row className="well padForGrid">
               <Row>
                 <Card
@@ -151,7 +153,9 @@ class ProjectsView extends Component {
               </Row>
             </Row>
             <ScrollableAnchor id={'projects#datascience'}>
-              <h2>Data Science</h2>
+              <div id="datascience">
+                <h2>Data Science</h2>
+              </div>
               <Row className="well padForGrid">
                 <Row>
                   <Card
@@ -258,7 +262,9 @@ class ProjectsView extends Component {
               </Row>
             </ScrollableAnchor>
             <ScrollableAnchor id={'projects#freestuff'}>
-              <h2>Free Stuff</h2>
+              <div id="freestuff">
+                <h2>Free Stuff</h2>
+              </div>
               <Row className="well padForGrid">
                 <Card
                   dim={false}
@@ -313,7 +319,9 @@ class ProjectsView extends Component {
               </Row>
             </ScrollableAnchor>
             <ScrollableAnchor id={'projects#hardware'}>
-              <h2>Hardware</h2>
+              <div id="hardware">
+                <h2>Hardware</h2>
+              </div>
               <Row className="well padForGrid">
                 <Card
                   dim={false}
@@ -367,7 +375,9 @@ class ProjectsView extends Component {
               <Row />
             </ScrollableAnchor>
             <ScrollableAnchor id={'projects#physics'}>
-              <h2>Physics</h2>
+              <div id="physics">
+                <h2>Physics</h2>
+              </div>
               <Row className="well padForGrid">
                 <Card
                   dim={false}

@@ -6,6 +6,7 @@ import indexRoutes from '../../../routes';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 
 import {name, title} from '../../../objects/signature';
+import CustomLink from './CustomLink'
 
 class Sidebar extends React.Component {
   constructor(props) {
@@ -17,11 +18,15 @@ class Sidebar extends React.Component {
   }
   componentDidMount() {
     console.log('mount');
-    this.setState({activeLinkTo: '/' + window.location.hash});
+    this.setState({
+        activeLinkTo: window.location.hash.replace(/^#/,'')
+    });
   }
   componentWillReceiveProps() {
     console.log('props');
-    this.setState({activeLinkTo: '/' + window.location.hash});
+    this.setState({
+      activeLinkTo: window.location.hash.replace(/^#/,'')
+    });
   }
 
   render() {
@@ -45,7 +50,7 @@ class Sidebar extends React.Component {
           content = route.content.map(contentRoute => {
             return {
               label: contentRoute.label,
-              to: process.env.PUBLIC_URL + contentRoute.to
+              to:  contentRoute.to
             };
           });
 
@@ -71,7 +76,7 @@ class Sidebar extends React.Component {
         return {
           icon: icon,
           label: label,
-          to: process.env.PUBLIC_URL + '/#' + route.path,
+          to:  route.path,
           content: content
         };
       });
@@ -83,6 +88,7 @@ class Sidebar extends React.Component {
           <MetisMenu
             ref="metisMenu"
             content={metisMenuItems}
+            LinkComponent={CustomLink}
             activeLinkTo={this.state.activeLinkTo}
           />
         </div>
