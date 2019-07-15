@@ -5,11 +5,23 @@ import {Link} from 'react-router-dom';
 import indexRoutes from '../../../routes';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 
-import { name, title } from '../../../objects/signature'
+import {name, title} from '../../../objects/signature';
 
 class Sidebar extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {activeLinkTo: '/#'};
+  }
   showSettings(event) {
     event.preventDefault();
+  }
+  componentDidMount() {
+    console.log('mount');
+    this.setState({activeLinkTo: '/' + window.location.hash});
+  }
+  componentWillReceiveProps() {
+    console.log('props');
+    this.setState({activeLinkTo: '/' + window.location.hash});
   }
 
   render() {
@@ -27,18 +39,33 @@ class Sidebar extends React.Component {
       })
       .map((route, index) => {
         const icon = <FontAwesomeIcon icon={route.faicon} />;
-        const label = (
-          <div>
-            <i className="faicon">
-              <FontAwesomeIcon icon={route.faicon} />
-            </i>
-            <span className="metisRoute">{route.name}</span>
-          </div>
-        );
+
+        let label;
+        if (route.content) {
+          label = (
+            <div>
+              <i className="faicon">
+                <FontAwesomeIcon icon={route.faicon} />
+              </i>
+              <span className="metisRoute">{route.name}</span>
+            </div>
+          );
+        } else {
+          label = (
+            <div>
+              <i className="faicon">
+                <FontAwesomeIcon icon={route.faicon} />
+              </i>
+              <span className="metisRoute">{route.name}</span>
+            </div>
+          );
+        }
+
         return {
           icon: icon,
           label: label,
-          to: process.env.PUBLIC_URL + '/#' + route.path
+          to: process.env.PUBLIC_URL + '/#' + route.path,
+          content: route.content
         };
       });
 
@@ -46,7 +73,11 @@ class Sidebar extends React.Component {
       <>
         <div id="metisMenu">
           <div id="metisSignature">{signature}</div>
-          <MetisMenu content={metisMenuItems} activeLinkFromLocation />
+          <MetisMenu
+            ref="metisMenu"
+            content={metisMenuItems}
+            activeLinkTo={this.state.activeLinkTo}
+          />
         </div>
 
         <div id="slideMenu">

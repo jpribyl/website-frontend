@@ -98,20 +98,23 @@ class BioView extends Component {
                       I <b>grew up in Houston</b>, Texas before heading out to
                       Montana for school.
                     </p>
+                    <hr style={{width: '70%'}} />
                     <p>
                       I got a <b>degree in Physics</b> from MSU Bozeman in 2018.
                     </p>
-
+                    <hr style={{width: '80%'}} />
                     <p>
                       My undergraduate research involved
                       <b> modeling Neutron stars</b> in alternate theories of
                       gravity and <b>training neural networks </b>
                       to recognize glitches in gravitational wave data.
                     </p>
-
+                    <hr style={{width: '70%'}} />
                     <p>
-                      I love to <b>automate workflows and analyze data</b>
+                      I really enjoy{' '}
+                      <b>math, statistics, and automating the boring stuff.</b>
                     </p>
+                    <hr style={{width: '80%'}} />
 
                     <p>
                       Currently, I am <b>living in Bozeman with my dog, Fox.</b>

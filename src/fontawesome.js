@@ -15,7 +15,7 @@ import {
   faStore,
   faDatabase,
   faStoreAlt,
-    faCogs,
+  faCogs,
   faCalendarAlt,
   faBirthdayCake,
   faChartLine,
@@ -27,12 +27,13 @@ import {
   faQuestionCircle,
   faCaretSquareDown,
   faCaretDown,
+  faCaretLeft,
   faCreditCard,
   faGlobeAsia,
   faUserCircle,
   faUserPlus,
   faBeer,
-    faDotCircle
+  faDotCircle
 } from '@fortawesome/free-solid-svg-icons';
 
 //import { faCircle } from '@fortawesome/free-regular-svg-icons';
@@ -42,7 +43,7 @@ library.add(
   faGhost,
   faBook,
   faDatabase,
-    faCogs,
+  faCogs,
   faHome,
   faBriefcase,
   faStore,
@@ -61,6 +62,7 @@ library.add(
   faQuestionCircle,
   faCaretSquareDown,
   faCaretDown,
+  faCaretLeft,
   faUserPlus,
   faBeer,
   faDotCircle

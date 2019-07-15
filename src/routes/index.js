@@ -35,7 +35,29 @@ var indexRoutes = [
         path: "/projects", 
         name: "projects", 
         component: Projects,
-        faicon: 'briefcase'
+        faicon: 'briefcase',
+        content: [
+            {
+                label: 'devops',
+                to: '/#/projects#devops',
+            },
+            {
+                label: 'data science',
+                to: '/#/projects#datascience',
+            },
+            {
+                label: 'free stuff',
+                to: '/#/projects#freestuff',
+            },
+            {
+                label: 'hardware',
+                to: '/#/projects#hardware',
+            },
+            {
+                label: 'physics',
+                to: '/#/projects#physics',
+            },
+        ],
     },
     { 
         sidebar: false,

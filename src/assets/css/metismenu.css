@@ -14,7 +14,7 @@
 .metismenu {
   position: fixed;
   width: var(--side-menu-width);
-  padding: 35px;
+  padding: 25px;
   padding-top: 120px;
   bottom: 0;
   left: 0;
@@ -52,19 +52,32 @@ div#sidebarSignature hr{
 }
 
 li.metismenu-item {
-    padding-top: 10px;
+    /*padding-top: 10px;*/
+}
+html body div#root div div div#metisMenu div.metismenu ul.metismenu-container li.metismenu-item a.metismenu-link.has-active-child {
+    color: white;
+    background-color: #07a64b;
+    border-radius: 4px;
 }
 
+html body div#root div div#metisMenu div.metismenu ul.metismenu-container li.metismenu-item ul.metismenu-container.visible li.metismenu-item a.metismenu-link.has-active-child {
+    color: white;
+    background-color: #07a64b;
+    border-radius: 4px;
+}
 html body div#root div div#metisMenu div.metismenu ul.metismenu-container li.metismenu-item a.metismenu-link.active {
     background-color: #ff3333;
     background-color: #a64b07;
     background-color: #07a69b;
     background-color: #07a64b;
-    border-radius: 5px;
-    padding-top: 8px;
-    padding-left: 5px;
+    border-radius: 4px;
+    /*padding-top: 8px;*/
+    /*padding-left: 5px;*/
 }
 
+div.metismenu {
+    overflow: auto
+}
 }
 
 
