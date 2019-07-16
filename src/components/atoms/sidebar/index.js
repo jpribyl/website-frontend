@@ -75,6 +75,7 @@ class Sidebar extends React.Component {
 
         return {
           icon: icon,
+            firstChild: route.firstChild,
           label: label,
           to:  route.path,
           content: content

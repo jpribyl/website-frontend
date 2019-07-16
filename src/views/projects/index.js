@@ -70,6 +70,7 @@ class ProjectsView extends Component {
   render() {
     return (
       <ScrollableAnchor id={'projects#devops'}>
+        <div id="devops" />
         <div>
           <Sidebar />
           <Grid fluid={true} className="metismenuGridPad">
@@ -92,9 +93,7 @@ class ProjectsView extends Component {
               Here are some of the projects that I have worked on. I have
               separated them somewhat arbitrarily into categories.
             </h4>
-            <div id="devops">
-              <h2>Cloud Work & Dev Ops</h2>
-            </div>
+            <h2>Cloud Work & Dev Ops</h2>
             <Row className="well padForGrid">
               <Row>
                 <Card

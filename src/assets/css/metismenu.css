@@ -14,7 +14,7 @@
 .metismenu {
   position: fixed;
   width: var(--side-menu-width);
-  padding: 25px;
+  padding: 20px;
   padding-top: 120px;
   bottom: 0;
   left: 0;
@@ -73,6 +73,25 @@ html body div#root div div#metisMenu div.metismenu ul.metismenu-container li.met
     border-radius: 4px;
     /*padding-top: 8px;*/
     /*padding-left: 5px;*/
+}
+html body div#root div div div#metisMenu div.metismenu ul.metismenu-container li.metismenu-item ul.metismenu-container.visible {
+ box-shadow: 0px 8px 8px 2px #0754a6;
+ border-radius: 4px;
+}
+html body div#root div div#metisMenu div.metismenu ul.metismenu-container li.metismenu-item ul.metismenu-container.visible {
+ box-shadow: 0px 8px 8px 2px #0754a6;
+ border-radius: 4px;
+}
+
+html body div#root div div div#metisMenu div.metismenu ul.metismenu-container li.metismenu-item ul.metismenu-container.visible li.metismenu-item a.metismenu-link.active {
+ box-shadow: 0px 4px 8px 0px #145dab;
+ border-radius: 4px;
+}
+html body div#root div div#metisMenu div.metismenu ul.metismenu-container li.metismenu-item ul.metismenu-container.visible li.metismenu-item a.metismenu-link {
+    padding-left: 40px;
+}
+html body div#root div div#metisMenu div.metismenu ul.metismenu-container li.metismenu-item a.metismenu-link div {
+    padding-top: 8px;
 }
 
 div.metismenu {

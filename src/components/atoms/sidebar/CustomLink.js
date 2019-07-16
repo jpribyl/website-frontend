@@ -8,9 +8,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import {HashLink} from 'react-router-hash-link';
+import {withRouter} from 'react-router-dom';
 
 const DefaultLink = ({
+  history,
   className,
+  firstChild,
   classNameActive,
   classNameHasActiveChild,
   active,
@@ -21,29 +24,42 @@ const DefaultLink = ({
   toggleSubMenu,
   activateMe,
   children
-}) => (
-  <HashLink
-    className={classnames(
-      className,
-      active && classNameActive,
-      hasActiveChild && classNameHasActiveChild
-    )}
-    onClick={hasSubMenu ? toggleSubMenu : activateMe}
-    style={{color: 'white'}}
-    to={to}>
-    <a
+}) => {
+
+  if (firstChild == null) {
+    firstChild = '';
+  }
+
+  if (window.location.hash != '#' + to + firstChild) {
+    to = to + firstChild;
+  }
+
+  let onClick;
+  if (hasSubMenu) {
+    onClick = async e => {
+      const event = e.persist();
+      toggleSubMenu(event);
+    };
+  } else {
+    onClick = e => {
+      activateMe(e);
+    };
+  }
+
+  return (
+    <HashLink
       className={classnames(
         className,
         active && classNameActive,
         hasActiveChild && classNameHasActiveChild
       )}
-      href={to}
-      onClick={hasSubMenu ? toggleSubMenu : activateMe}
-      target={externalLink ? '_blank' : undefined}>
+      onClick={onClick}
+      style={{color: 'white'}}
+      to={to}>
       {children}
-    </a>
-  </HashLink>
-);
+    </HashLink>
+  );
+};
 
 DefaultLink.defaultProps = {
   externalLink: false,
@@ -64,4 +80,4 @@ DefaultLink.propTypes = {
   children: PropTypes.oneOfType([PropTypes.element, PropTypes.array]).isRequired
 };
 
-export default DefaultLink;
+export default withRouter(DefaultLink);

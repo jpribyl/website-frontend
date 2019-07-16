@@ -33,8 +33,10 @@ var indexRoutes = [
     { 
         sidebar: true,
         path: "/projects", 
+        firstChild: '#devops',
         name: "projects", 
         component: Projects,
+        openSubMenuPage: true,
         faicon: 'briefcase',
         content: [
             {
