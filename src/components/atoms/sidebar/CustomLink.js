@@ -26,17 +26,15 @@ const DefaultLink = ({
   children
 }) => {
 
-  if (firstChild == null) {
-    firstChild = '';
-  }
-
-  if (window.location.hash != '#' + to + firstChild) {
+    //ie if we are not already nav'd to the first submenu item
+  if (window.location.hash !== '#' + to + firstChild) {
     to = to + firstChild;
   }
 
   let onClick;
   if (hasSubMenu) {
     onClick = async e => {
+      //necessary to allow default action (react-metismenu prevents it)
       const event = e.persist();
       toggleSubMenu(event);
     };
@@ -63,7 +61,8 @@ const DefaultLink = ({
 
 DefaultLink.defaultProps = {
   externalLink: false,
-  toggleSubMenu: null
+  toggleSubMenu: null,
+  firstChild: '',
 };
 
 DefaultLink.propTypes = {
@@ -74,6 +73,7 @@ DefaultLink.propTypes = {
   hasActiveChild: PropTypes.bool.isRequired,
   to: PropTypes.string.isRequired,
   externalLink: PropTypes.bool,
+  firstChild: PropTypes.string,
   hasSubMenu: PropTypes.bool.isRequired,
   toggleSubMenu: PropTypes.func,
   activateMe: PropTypes.func.isRequired,
