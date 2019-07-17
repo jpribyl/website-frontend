@@ -50,9 +50,9 @@ var indexRoutes = [
                 hash: '#datascience'
             },
             {
-                label: 'free stuff',
-                to: '/projects#freestuff',
-                hash: '#freestuff'
+                label: 'open source',
+                to: '/projects#opensource',
+                hash: '#opensource'
             },
             {
                 label: 'hardware',

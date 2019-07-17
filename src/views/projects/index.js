@@ -260,9 +260,9 @@ class ProjectsView extends Component {
                 </Row>
               </Row>
             </ScrollableAnchor>
-            <ScrollableAnchor id={"projects#freestuff"}>
-              <div id="freestuff">
-                <h2>Free Stuff</h2>
+            <ScrollableAnchor id={"projects#opensource"}>
+              <div id="opensource">
+                <h2>Open Source</h2>
               </div>
               <Row className="well padForGrid">
                 <Card
