@@ -341,7 +341,7 @@ span.soopHeader {
 #dimOverlay.active {
     transition-property: background, visibility;
     transition-duration: 1s, 1s;
-    transition-delay: .5s, .5s;
+    transition-delay: .8s, .8s;
     width: 100%;
     height: 100%;
     z-index: 1;

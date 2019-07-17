@@ -43,9 +43,9 @@ export class Card extends Component {
                   //cursor already navigated away
                 }
               }
-            }, 970);
+            }, 999);
           }
-        }, 30);
+        }, 1);
       };
     }
 
