@@ -15,40 +15,6 @@ export class Card extends Component {
       separator = <span />;
     }
 
-    let _dim, _undim;
-    if (this.props.dim) {
-      _dim = i => {
-        let target = i.currentTarget.id;
-        let overlay = document.getElementById('dimOverlay').classList;
-        overlay.add(target);
-        overlay.add('active');
-
-        document.getElementById(target).classList.add('hoveringOnTopOfDimmer');
-      };
-
-      _undim = i => {
-        let target = i.currentTarget.id;
-        let overlay = document.getElementById('dimOverlay').classList;
-        overlay.remove('active');
-        overlay.remove(target);
-        setTimeout(() => {
-          if (!overlay.contains('active') || !overlay.contains(target)) {
-            setTimeout(() => {
-              if (!overlay.contains('active') || !overlay.contains(target)) {
-                try {
-                  document
-                    .getElementById(target)
-                    .classList.remove('hoveringOnTopOfDimmer');
-                } catch (e) {
-                  //cursor already navigated away
-                }
-              }
-            }, 999);
-          }
-        }, 1);
-      };
-    }
-
     const ConditionalWrap = ({condition, wrap, children}) =>
       condition ? wrap(children) : children;
 
@@ -59,8 +25,6 @@ export class Card extends Component {
           condition={this.props.to != null}
           wrap={children => <Link to={this.props.to}>{children}</Link>}>
           <Col
-            onMouseOver={_dim}
-            onMouseOut={_undim}
             id={this.props.id}
             xl={this.props.xl}
             lg={this.props.lg}
