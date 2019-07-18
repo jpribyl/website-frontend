@@ -4,12 +4,12 @@
     display: none
 }
 
-.blueStar {
-    fill: #ffffff;
-    fill-opacity: 0;
-    stroke: #337dff;
-    stroke-width: 5
-}
+/*.blueStar {*/
+    /*fill: #ffffff;*/
+    /*fill-opacity: 0;*/
+    /*stroke: #337dff;*/
+    /*stroke-width: 5*/
+/*}*/
 
 .metismenu {
   position: fixed;
@@ -105,11 +105,11 @@ div.metismenu {
     display: none
 }
 
-.blueStar {
-    fill: #ffffff;
-    fill-opacity: 0;
-    stroke: #763d7c;
-    stroke-width: 5
-}
+/*.blueStar {*/
+    /*fill: #ffffff;*/
+    /*fill-opacity: 0;*/
+    /*stroke: #763d7c;*/
+    /*stroke-width: 5*/
+/*}*/
 }
 

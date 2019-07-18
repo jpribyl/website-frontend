@@ -6,6 +6,7 @@
   text-decoration: none;
   margin-bottom: 10px;
   color: #337dff;
+  color: white !important;
   transition: color 0.2s;
 }
 
@@ -15,7 +16,7 @@
   color: #00ad57;
   color: #ffb533;
   color: #ffac1a;
-  color: #ffa300;
+  color: #ffa300 !important;
 }
 
 /* The rest copied directly from react-burger-menu docs */
@@ -33,7 +34,8 @@
 .bm-burger-bars {
   /*background: #00ad57;*/
     /*background: #47a607*/
-    background: #337dff
+    /*background: #337dff;*/
+    background: #6b6bdf;
     /*background: black;*/
 }
 
@@ -55,6 +57,7 @@
 .bm-menu {
   /*background: #2a3143;*/
   background: #f8f8ff;
+  background: #0762a6;
   padding: 2.5em 1.5em 0;
   font-size: 1.15em;
 }
@@ -77,7 +80,7 @@
 }
 
 #sidebarSignature {
-    color: black;
+    color: white;
     margin-left: 10px;
     margin-top: -20px;
     user-select: none;

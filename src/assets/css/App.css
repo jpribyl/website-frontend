@@ -63,6 +63,13 @@ div.d3svg {
     stroke-width: 5
 }
 
+.blueStar {
+    fill: #ffffff;
+    fill-opacity: 0;
+    stroke: #337dff;
+    stroke-width: 5
+}
+
 .redStar {
     fill: #ffffff;
     fill-opacity: 0;
