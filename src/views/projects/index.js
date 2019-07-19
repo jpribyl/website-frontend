@@ -30,6 +30,11 @@ import k8s from '../../assets/img/icons/kubernetes.png';
 import route53 from '../../assets/img/icons/route53.png';
 import sentiment from '../../assets/img/icons/sentimentanalysis.png';
 import rpi from '../../assets/img/icons/rpi.png';
+import react from '../../assets/img/icons/react.png';
+import adonis from '../../assets/img/icons/adonisjs.png';
+import docker from '../../assets/img/icons/docker.png';
+import loadtest from '../../assets/img/icons/loadtest.png';
+
 import Latex from 'react-latex';
 import ScrollableAnchor from '../../components/atoms/scrollableanchor';
 
@@ -91,7 +96,7 @@ class ProjectsView extends Component {
               Here are some of the projects that I have worked on. I have
               separated them somewhat arbitrarily into categories.
             </h4>
-            <h2>Cloud Work & Dev Ops</h2>
+            <h2>Cloud Work & Devops</h2>
             <Row className="well padForGrid">
               <Row className="padForGrid">
                 <Card
@@ -100,7 +105,37 @@ class ProjectsView extends Component {
                   title="Bare Metal Kubernetes"
                   xs={12}
                   content={
-                    <Image className="centered" src={rpi} rounded responsive />
+                    <Image className="centered" src={k8s} rounded responsive />
+                  }
+                />
+                <Card
+                  id={'dockerdeploy'}
+                  category="This looks using automated builds, tests, and webhooks to kick off a robust deployment to the kubernetes cluster with a git push. Different repositories correspond to different pipelines."
+                  title="Dockerized Deployments"
+                  xs={12}
+                  md={7}
+                  content={
+                    <Image
+                      className="centered"
+                      src={docker}
+                      rounded
+                      responsive
+                    />
+                  }
+                />
+                <Card
+                  id={'distloadtest'}
+                  category="Armed with a small budget and a lot of grit, I wrote an open source, distributed load test. It works by automatically spinning up ec2 servers, provisioning them with the Locust framework, simulating user behavior, and plotting the results."
+                  title="Distributed Load Testing"
+                  xs={12}
+                  md={5}
+                  content={
+                    <Image
+                      className="centered"
+                      src={loadtest}
+                      rounded
+                      responsive
+                    />
                   }
                 />
                 <Card
@@ -108,7 +143,7 @@ class ProjectsView extends Component {
                   category="VPN providers are notoriously nefarious. However, VPNs are incredibly useful. For this project, I followed an arstechnica guide on rolling out an OpenVPN server to a Digital Ocean Droplet"
                   title="Roll Your Own VPN"
                   xs={12}
-                  md={4}
+                  md={5}
                   content={
                     <Image
                       className="centered"
@@ -119,21 +154,11 @@ class ProjectsView extends Component {
                   }
                 />
                 <Card
-                  id={'k8sDeployment'}
-                  category="This looks using automated builds, tests, and webhooks to kick off a bare metal kubernetes deployment with a git push. Different repositories may correspond to different pipelines."
-                  title="Kubernetes Pipelines"
-                  xs={12}
-                  md={4}
-                  content={
-                    <Image className="centered" src={k8s} rounded responsive />
-                  }
-                />
-                <Card
                   id={'canaryRls'}
                   category="Sometimes you only want to release a new feature to a small percentage of users. Here, we will use AWS's Route 53 to accomplish this through weighted DNS resolution."
                   title="Canary Releases"
                   xs={12}
-                  md={4}
+                  md={7}
                   content={
                     <Image
                       className="centered"
@@ -254,6 +279,36 @@ class ProjectsView extends Component {
               </div>
               <Row className="well padForGrid">
                 <Card
+                  id={'reactmetismenu'}
+                  category="The sidebar nav on this site uses react-metismenu. However, the component did not support navigating to the first element of a menu item with sub-items without requiring two clicks. So, I added this functionality and opened a PR."
+                  title="React-MetisMenu"
+                  xs={12}
+                  md={6}
+                  content={
+                    <Image
+                      className="centered"
+                      src={react}
+                      rounded
+                      responsive
+                    />
+                  }
+                />
+                <Card
+                  id={'adonisjsairtable'}
+                  category="One of our projects uses a newer node framework called Adonis and required an Airtable integration. Because the framework is relatively new, no one had written a provider for the integration so I wrote one and published it to npm."
+                  title="Adonisjs Airtable Provider"
+                  xs={12}
+                  md={6}
+                  content={
+                    <Image
+                      className="centered"
+                      src={adonis}
+                      rounded
+                      responsive
+                    />
+                  }
+                />
+                <Card
                   id={'homeNetwork'}
                   category="Coupling a long range antenna with a raspberry pi, a Digital Ocean droplet running openVPN and Pi-Hole, and a local Squid caching proxy makes it possible to have a reliable, secure, and free home network."
                   title="Free WiFi"
@@ -363,15 +418,15 @@ class ProjectsView extends Component {
               </div>
               <Row className="well padForGrid">
                 <Card
-                  id={'moreSophStars'}
-                  category="We do not know exactly what physics contols the inner workings of neutron stars. However, people from around the world have tried to guess at the solutions to an unknown equation of state. This post highlights a collaboration with Princeton's Kent Yagi to model some ofthese solutions"
-                  title="More Sophisticated Stars"
+                  id={'neutronStarCore'}
+                  category="Even after guessing at the equations of state, we do not know what happens at the very center of a star. Our estimates break down more as we get closer and closer to the center. In order to avoid this problem, we may use a taylor expansion to estimate density and pressure."
+                  title="Neutron Star Core"
                   xs={12}
                   md={12}
                   content={
                     <Image
                       className="centered"
-                      src={blackHole}
+                      src={taylorExpand}
                       rounded
                       responsive
                     />
@@ -393,7 +448,7 @@ class ProjectsView extends Component {
                   }
                   title="Simple Neutron Stars"
                   xs={12}
-                  md={7}
+                  md={6}
                   content={
                     <Image
                       className="centered"
@@ -404,15 +459,15 @@ class ProjectsView extends Component {
                   }
                 />
                 <Card
-                  id={'neutronStarCore'}
-                  category="Even after guessing at the equations of state, we do not know what happens at the very center of a star. Our estimates break down more as we get closer and closer to the center. In order to avoid this problem, we may use a taylor expansion to estimate density and pressure."
-                  title="Neutron Star Core"
+                  id={'moreSophStars'}
+                  category="We do not know exactly what physics contols the inner workings of neutron stars. However, people from around the world have tried to guess at the solutions to an unknown equation of state. This post highlights a collaboration with Princeton's Kent Yagi to model some ofthese solutions"
+                  title="More Sophisticated Stars"
                   xs={12}
-                  md={5}
+                  md={6}
                   content={
                     <Image
                       className="centered"
-                      src={taylorExpand}
+                      src={blackHole}
                       rounded
                       responsive
                     />

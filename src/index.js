@@ -19,6 +19,7 @@ import './assets/css/sidebar.css';
 import './assets/css/card.css';
 import './assets/css/metismenu.css';
 import './fontawesome';
+import 'react-tippy/dist/tippy.css';
 
 import reducers from './reducers';
 import * as serviceWorker from './serviceWorker';

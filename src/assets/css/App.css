@@ -404,3 +404,7 @@ div.react-photo-gallery--gallery div img {
 .modal-backdrop.in {
     opacity: .85 !important;
 }
+
+.technologyButton {
+    margin: 5px;
+}

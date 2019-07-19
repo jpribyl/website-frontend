@@ -1,5 +1,6 @@
 import React from 'react';
 import {Image} from 'react-bootstrap';
+import {AwesomeButton} from 'react-awesome-button';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import Python from '../../assets/img/icons/800px-Python-logo-notext.png';
 import Bash from '../../assets/img/icons/bash.png';
@@ -8,6 +9,7 @@ import Aws from '../../assets/img/icons/2000px-Amazon_Web_Services_Logo.png';
 import Mathematica from '../../assets/img/icons/2000px-Mathematica_Logo.png';
 import Javascript from '../../assets/img/icons/JavaScript-logo.png';
 import Sql from '../../assets/img/icons/1200px-Postgresql_elephant.png';
+import {Tooltip} from 'react-tippy';
 
 export const techStackColumns = [
   {
@@ -43,16 +45,55 @@ export const techStackData = [
           design and data science. These are some of my favorite libraries.
         </p>
         <hr />
-        <p>
-          When collecting unstructured data, I have found data scraping to be
-          incredibly helpful. These libraries help turn anything into usable
-          data:
-        </p>
         <ul>
-          <li>
-            <b>Selenium</b> is a webdriver which lets you programatically
-            collect everything from the IoT that you could ever want.
-          </li>
+          <Tooltip title="Scraping websites heavy on javascript" arrow={true} size="big">
+            <a href="https://www.seleniumhq.org/docs/">
+              <span className="technologyButton">
+                <AwesomeButton type="primary" bubbles={true}>
+                  Selenium
+                </AwesomeButton>
+              </span>
+            </a>
+          </Tooltip>
+          <Tooltip title="Parsing html into dictionaries" arrow={true} size="big">
+            <a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/">
+              <span className="technologyButton">
+                <AwesomeButton
+                  className="technologyButton"
+                  type="primary"
+                  bubbles={true}>
+                  BeautifulSoup
+                </AwesomeButton>
+              </span>
+            </a>
+          </Tooltip>
+          <Tooltip title="My all time favorite library, a real life data panacea" arrow={true} size="big">
+            <a href="https://pandas.pydata.org/pandas-docs/stable/">
+              <span className="technologyButton">
+                <AwesomeButton type="primary" bubbles={true}>
+                  Pandas
+                </AwesomeButton>
+              </span>
+            </a>
+          </Tooltip>
+          <Tooltip title="Welcome to React" arrow={true} size="big">
+            <a href="https://www.google.com">
+              <span className="technologyButton">
+                <AwesomeButton type="primary" bubbles={true}>
+                  Numpy
+                </AwesomeButton>
+              </span>
+            </a>
+          </Tooltip>
+          <Tooltip title="Welcome to React" arrow={true} size="big">
+            <a href="https://www.google.com">
+              <span className="technologyButton">
+                <AwesomeButton type="primary" bubbles={true}>
+                  NLTK
+                </AwesomeButton>
+              </span>
+            </a>
+          </Tooltip>
           <li>
             <b>BeautifulSoup</b> is able to parse websites that are not too
             heavy on javascript. It greatly facilitates reading them into
