@@ -34,6 +34,8 @@ import react from '../../assets/img/icons/react.png';
 import adonis from '../../assets/img/icons/adonisjs.png';
 import docker from '../../assets/img/icons/docker.png';
 import loadtest from '../../assets/img/icons/loadtest.png';
+import lambda from '../../assets/img/icons/lambda.png';
+import redis from '../../assets/img/icons/redis.png';
 
 import Latex from 'react-latex';
 import ScrollableAnchor from '../../components/atoms/scrollableanchor';
@@ -154,15 +156,47 @@ class ProjectsView extends Component {
                   }
                 />
                 <Card
-                  id={'canaryRls'}
+                  id={'becanaryRls'}
                   category="Sometimes you only want to release a new feature to a small percentage of users. Here, we will use AWS's Route 53 to accomplish this through weighted DNS resolution."
-                  title="Canary Releases"
+                  title="Canary Releases (Backend Only)"
                   xs={12}
                   md={7}
                   content={
                     <Image
                       className="centered"
                       src={route53}
+                      rounded
+                      responsive
+                    />
+                  }
+                />
+              </Row>
+              <Row className="padForGrid">
+                <Card
+                  id={'fecanaryRls'}
+                  category="Although sufficient for backend canary releases, DNS based solutions have a few shortcomings when A/B testing. To solve them, we will use a newer technology. Lambda@edge allows a lambda function to sit at the edge of your cloudfront and direct traffic intelligently."
+                  title="A / B Testing"
+                  xs={12}
+                  md={6}
+                  content={
+                    <Image
+                      className="centered"
+                      src={lambda}
+                      rounded
+                      responsive
+                    />
+                  }
+                />
+                <Card
+                  id={'redisCache'}
+                  category="When load times for a production dashboard started getting a little high, I was able to cut them down by 75% with the introduction of a redis cache. Additionally, I introduced a queue to handle long running processes like push notifications."
+                  title="Redis Cache / Queue"
+                  xs={12}
+                  md={6}
+                  content={
+                    <Image
+                      className="centered"
+                      src={redis}
                       rounded
                       responsive
                     />
@@ -261,6 +295,36 @@ class ProjectsView extends Component {
                     title="Sentiment Analysis"
                     xs={12}
                     md={6}
+                    content={
+                      <Image
+                        className="centered"
+                        src={sentiment}
+                        rounded
+                        responsive
+                      />
+                    }
+                  />
+                  <Card
+                    id={'sntAnlysis'}
+                    category="There are some very large open datasets containing categorized free form text. I used SKLearn to train a simple model on one of these datasets and used it to categorize text inputs collected from a production app."
+                    title="Sentiment Analysis"
+                    xs={12}
+                    md={5}
+                    content={
+                      <Image
+                        className="centered"
+                        src={sentiment}
+                        rounded
+                        responsive
+                      />
+                    }
+                  />
+                  <Card
+                    id={'sntAnlysis'}
+                    category="There are some very large open datasets containing categorized free form text. I used SKLearn to train a simple model on one of these datasets and used it to categorize text inputs collected from a production app."
+                    title="Sentiment Analysis"
+                    xs={12}
+                    md={7}
                     content={
                       <Image
                         className="centered"

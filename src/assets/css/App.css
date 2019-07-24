@@ -405,6 +405,6 @@ div.react-photo-gallery--gallery div img {
     opacity: .85 !important;
 }
 
-.technologyButton {
+button.aws-btn {
     margin: 5px;
 }

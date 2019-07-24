@@ -2,13 +2,22 @@ import React from 'react';
 import {Image} from 'react-bootstrap';
 import {AwesomeButton} from 'react-awesome-button';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import Python from '../../assets/img/icons/800px-Python-logo-notext.png';
-import Bash from '../../assets/img/icons/bash.png';
-import Tux from '../../assets/img/icons/220px-Tux.png';
-import Aws from '../../assets/img/icons/2000px-Amazon_Web_Services_Logo.png';
-import Mathematica from '../../assets/img/icons/2000px-Mathematica_Logo.png';
-import Javascript from '../../assets/img/icons/JavaScript-logo.png';
-import Sql from '../../assets/img/icons/1200px-Postgresql_elephant.png';
+//import Python from '../../assets/img/icons/800px-Python-logo-notext.png';
+import Python from '../../assets/img/icons/Python_logo-512.png';
+//import Bash from '../../assets/img/icons/bash.png';
+import Bash from '../../assets/img/icons/bash-bw.png';
+//import Tux from '../../assets/img/icons/220px-Tux.png';
+import Tux from '../../assets/img/icons/Tux_Mono.svg.png';
+//import Aws from '../../assets/img/icons/2000px-Amazon_Web_Services_Logo.png';
+import Aws from '../../assets/img/icons/aws-bw.png';
+//import Mathematica from '../../assets/img/icons/2000px-Mathematica_Logo.png';
+import Mathematica from '../../assets/img/icons/mathematica-bw.png';
+//import Javascript from '../../assets/img/icons/JavaScript-logo.png';
+import Javascript from '../../assets/img/icons/js-bw.png';
+//import Kubernetes from '../../assets/img/icons/Kubernetes_color.png'
+import Kubernetes from '../../assets/img/icons/kubernetes-50.png'
+//import Sql from '../../assets/img/icons/1200px-Postgresql_elephant.png';
+import Sql from '../../assets/img/icons/postgres-bw.png';
 import {Tooltip} from 'react-tippy';
 
 export const techStackColumns = [
@@ -42,11 +51,143 @@ export const techStackData = [
       <div>
         <p>
           I have used python quite extensively over the past few years for web
-          design and data science. These are some of my favorite libraries.
+          design and data science. These are some of my favorite libraries:
         </p>
         <hr />
-        <ul>
-          <Tooltip title="Scraping websites heavy on javascript" arrow={true} size="big">
+        <ul
+          style={{
+            display: 'flex',
+            flexWrap: 'wrap',
+            justifyContent: 'center',
+            marginLeft: '-30px'
+          }}>
+          <Tooltip title="You are what you test" arrow={true} size="big">
+            <a href="https://docs.pytest.org/en/latest/contents.html">
+              <span className="technologyButton">
+                <AwesomeButton type="primary" bubbles={true}>
+                  Pytest
+                </AwesomeButton>
+              </span>
+            </a>
+          </Tooltip>
+          <Tooltip
+            title="Now with better docs and a user friendly API"
+            arrow={true}
+            size="big">
+            <a href="https://www.tensorflow.org/api_docs">
+              <span className="technologyButton">
+                <AwesomeButton type="primary" bubbles={true}>
+                  TensorFlow
+                </AwesomeButton>
+              </span>
+            </a>
+          </Tooltip>
+          <Tooltip
+            title="In case you need a neural net, but can only afford to write 11 lines of code"
+            arrow={true}
+            size="big">
+            <a href="https://keras.io/">
+              <span className="technologyButton">
+                <AwesomeButton type="primary" bubbles={true}>
+                  Keras
+                </AwesomeButton>
+              </span>
+            </a>
+          </Tooltip>
+          <Tooltip
+            title="My all time favorite library, a real life data panacea"
+            arrow={true}
+            size="big">
+            <a href="https://pandas.pydata.org/pandas-docs/stable/">
+              <span className="technologyButton">
+                <AwesomeButton type="primary" bubbles={true}>
+                  Pandas
+                </AwesomeButton>
+              </span>
+            </a>
+          </Tooltip>
+          <Tooltip
+            title="Without it, we wouldn't have pandas"
+            arrow={true}
+            size="big">
+            <a href="https://docs.scipy.org/doc/numpy/reference/">
+              <span className="technologyButton">
+                <AwesomeButton type="primary" bubbles={true}>
+                  Numpy
+                </AwesomeButton>
+              </span>
+            </a>
+          </Tooltip>
+          <Tooltip
+            title="Chop and scratch free text inputs"
+            arrow={true}
+            size="big">
+            <a href="https://www.nltk.org/api/nltk.html">
+              <span className="technologyButton">
+                <AwesomeButton type="primary" bubbles={true}>
+                  NLTK
+                </AwesomeButton>
+              </span>
+            </a>
+          </Tooltip>
+          <Tooltip title="curve_fit everything" arrow={true} size="big">
+            <a href="https://www.scipy.org/docs.html">
+              <span className="technologyButton">
+                <AwesomeButton type="primary" bubbles={true}>
+                  SciPy
+                </AwesomeButton>
+              </span>
+            </a>
+          </Tooltip>
+          <Tooltip
+            title="For when you want to build models before you understand the theory"
+            arrow={true}
+            size="big">
+            <a href="https://scikit-learn.org/stable/documentation.html">
+              <span className="technologyButton">
+                <AwesomeButton type="primary" bubbles={true}>
+                  SKLearn
+                </AwesomeButton>
+              </span>
+            </a>
+          </Tooltip>
+          <Tooltip title="Kernels for life" arrow={true} size="big">
+            <a href="https://ipython.org/documentation.html">
+              <span className="technologyButton">
+                <AwesomeButton type="primary" bubbles={true}>
+                  Ipython
+                </AwesomeButton>
+              </span>
+            </a>
+          </Tooltip>
+          <Tooltip
+            title="Easing the transition from Mathematica"
+            arrow={true}
+            size="big">
+            <a href="https://jupyter.readthedocs.io/en/latest/">
+              <span className="technologyButton">
+                <AwesomeButton type="primary" bubbles={true}>
+                  Jupyter
+                </AwesomeButton>
+              </span>
+            </a>
+          </Tooltip>
+          <Tooltip
+            title="For when a Flask won't cut it"
+            arrow={true}
+            size="big">
+            <a href="https://docs.djangoproject.com/en/2.2/">
+              <span className="technologyButton">
+                <AwesomeButton type="primary" bubbles={true}>
+                  Django
+                </AwesomeButton>
+              </span>
+            </a>
+          </Tooltip>
+          <Tooltip
+            title="Scraping websites heavy on javascript"
+            arrow={true}
+            size="big">
             <a href="https://www.seleniumhq.org/docs/">
               <span className="technologyButton">
                 <AwesomeButton type="primary" bubbles={true}>
@@ -55,7 +196,10 @@ export const techStackData = [
               </span>
             </a>
           </Tooltip>
-          <Tooltip title="Parsing html into dictionaries" arrow={true} size="big">
+          <Tooltip
+            title="Parsing html into dictionaries"
+            arrow={true}
+            size="big">
             <a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/">
               <span className="technologyButton">
                 <AwesomeButton
@@ -67,179 +211,189 @@ export const techStackData = [
               </span>
             </a>
           </Tooltip>
-          <Tooltip title="My all time favorite library, a real life data panacea" arrow={true} size="big">
-            <a href="https://pandas.pydata.org/pandas-docs/stable/">
+          <Tooltip
+            title="Everyone's favorite plotting library"
+            arrow={true}
+            size="big">
+            <a href="https://matplotlib.org/3.1.1/contents.html">
               <span className="technologyButton">
                 <AwesomeButton type="primary" bubbles={true}>
-                  Pandas
+                  Matplotlib
                 </AwesomeButton>
               </span>
             </a>
           </Tooltip>
-          <Tooltip title="Welcome to React" arrow={true} size="big">
-            <a href="https://www.google.com">
+          <Tooltip
+            title="Matplotlib, but with sane defaults"
+            arrow={true}
+            size="big">
+            <a href="https://seaborn.pydata.org/">
               <span className="technologyButton">
                 <AwesomeButton type="primary" bubbles={true}>
-                  Numpy
+                  Seaborn
                 </AwesomeButton>
               </span>
             </a>
           </Tooltip>
-          <Tooltip title="Welcome to React" arrow={true} size="big">
-            <a href="https://www.google.com">
+          <Tooltip
+            title="Gorgeous, interactive charts that are not quite production ready"
+            arrow={true}
+            size="big">
+            <a href="https://bokeh.pydata.org/en/latest/docs/reference.html">
               <span className="technologyButton">
                 <AwesomeButton type="primary" bubbles={true}>
-                  NLTK
+                  Bokeh
                 </AwesomeButton>
               </span>
             </a>
           </Tooltip>
-          <li>
-            <b>BeautifulSoup</b> is able to parse websites that are not too
-            heavy on javascript. It greatly facilitates reading them into
-            primitive python data types.
-          </li>
+          <Tooltip title="HTTP for Humans™" arrow={true} size="big">
+            <a href="https://2.python-requests.org/en/master/">
+              <span className="technologyButton">
+                <AwesomeButton type="primary" bubbles={true}>
+                  Requests
+                </AwesomeButton>
+              </span>
+            </a>
+          </Tooltip>
+          <Tooltip title="Making classes fun again" arrow={true} size="big">
+            <a href="http://www.attrs.org/en/stable/api.html">
+              <span className="technologyButton">
+                <AwesomeButton type="primary" bubbles={true}>
+                  Attrs
+                </AwesomeButton>
+              </span>
+            </a>
+          </Tooltip>
         </ul>
         <hr />
-        <p>
-          After collecting data, it typically needs to be cleaned and
-          re-structured. This often seems to be true even when collecting data
-          from a database which already ought to be clean.
-        </p>
-        <ul>
-          <li>
-            <b>Pandas</b> is my all time favorite python library. If you are
-            only going to learn one thing, make it pandas.
-          </li>
-          <li>
-            <b>Numpy</b> pandas wouldn't exist without numpy. Sometimes working
-            at a lower level can be worthwhile.
-          </li>
-          <li>
-            <b>NLTK</b> is hard to beat for any kind of natural language
-            processing. I have found the punkt tokenizer especially helpful.
-          </li>
-        </ul>
-        <hr />
-        <p>Once the data has been cleaned the real fun begins...</p>
-        <ul>
-          <li>
-            <b>SciPy</b> has an excellent curve_fit function as well as support
-            for fourier transforms, interpolations, numerical integration, etc.
-          </li>
-          <li>
-            <b>SKLearn</b> operates a bit higher than SciPy and lets you cut out
-            a lot of the boilerplate for common models (naive bayes,
-            regressions, word vectorizers, etc).
-          </li>
-          <li>
-            <b>TensorFlow</b> run of the mill neural network library outfitted
-            with lots of pre-trained networks to ease your pain.
-          </li>
-          <li>
-            <b>Keras</b> sits on top of TF and lets you quickly bootstrap
-            different network architectures.
-          </li>
-        </ul>
-        <hr />
-        <p>
-          Humans are typically much better at recognizing patterns through
-          images than they are at wading through enormous multi-dimensional
-          matrices. These libraries help turn numbers into interactive,
-          exploratory graphics.
-        </p>
-        <ul>
-          <li>
-            <b>Matplotlib</b> is everyone's favorite plotting library. The
-            syntax mirrors that of Matlab and the default styles are fresh out
-            of the 1980s. What's not to like?
-          </li>
-          <li>
-            <b>Seaborn</b> works very well with matplotlib and allows for easy
-            modern visual styling.
-          </li>
-          <li>
-            <b>Bokeh</b> is a python wrapper for the popular JS library D3.
-            Honestly, I prefer d3.. but for rapid prototyping of interactive
-            diagrams in a browser, it's hard to beat.
-          </li>
-        </ul>
-        <hr />
-        <p>
-          Lately, I have actually shifted away from python for web development.
-          It often seems cleaner and more performant to link a javascript
-          frontend directly into the database by way of lambda functions. But,
-          in the past I have had a lot of fun running websevers with these two
-          libraries.
-        </p>
-        <ul>
-          <li>
-            <b>Django</b> is essential for any full stack python developer.
-            Class based views have the potential to cut out tons of boilerplate.
-            Plus, management tends to like the dashboard access.
-          </li>
-          <li>
-            <b>Bokeh</b> is not an entirely production-ready solution on its
-            own, but spinning up a server will let you build an interactive
-            dashboard in very little time
-          </li>
-        </ul>
-        <hr />
-        <p>
-          Last but not least, I am a firm believer in test driven development.
-          Although deadlines can make it difficult, it is much harder to operate
-          at scale if you never took the time to write tests. Some of my
-          production projects have fallen victim to this fate, but I am militant
-          about it on personal projects.
-        </p>
-        <ul>
-          <li>
-            <b>Pytest</b> is my favorite python testing library. I have paired
-            it with the requests library to test api's and selenium to test
-            webapps.{' '}
-            <a href="https://blog.daftcode.pl/the-cleaning-hand-of-pytest-28f434f4b684">
-              This
-            </a>{' '}
-            article compares a couple of different testing frameworks in python.
-            I found it very helpful when selecting a library for my own
-            projects.
-          </li>
-        </ul>
       </div>
     )
   },
   {
-    title: 'SQL',
-    logo: Sql,
+    title: 'Amazon Web Services',
+    logo: Aws,
     subcomponent: (
       <div>
         <p>
-          I took several SQL courses on Udemy when I was learning to code.
-          Although most of the production projects that I have worked on lately
-          are using some form of nosql, I LOVE writing sql for personal
-          projects. Plus, the newest version of pgAdmin (4) has an awesome
-          interface.
+          I have experience with Heroku, Digital Ocean, and AWS. Out of those, I
+          have found AWS to typically feature the lowest server cost as well as
+          the most customizability. This comes with the price of more
+          maintenance and (sometimes) longer implementation. The AWS ecosystem
+          is immense, but here are some of the services I have used:
         </p>
         <hr />
-        <p>So far, I have worked with these flavors of relational databases:</p>
-        <ul>
-          <li>
-            <b>PostgreSQL</b>
-          </li>
-          <li>
-            <b>MySQL</b>
-          </li>
-          <li>
-            <b>SQLite</b>
-          </li>
+        <ul
+          style={{
+            display: 'flex',
+            flexWrap: 'wrap',
+            justifyContent: 'center',
+            marginLeft: '-30px'
+          }}>
+          <Tooltip title="Works greath with λ" arrow={true} size="big">
+            <a href="https://docs.aws.amazon.com/apigateway/index.html">
+              <span className="technologyButton">
+                <AwesomeButton type="primary" bubbles={true}>
+                  Api Gateway
+                </AwesomeButton>
+              </span>
+            </a>
+          </Tooltip>
+          <Tooltip title="Don't worry about hardware" arrow={true} size="big">
+            <a href="https://docs.aws.amazon.com/lambda/index.html">
+              <span className="technologyButton">
+                <AwesomeButton type="primary" bubbles={true}>
+                  Lambda
+                </AwesomeButton>
+              </span>
+            </a>
+          </Tooltip>
+          <Tooltip title="Remember hardware?" arrow={true} size="big">
+            <a href="https://docs.aws.amazon.com/elastic-beanstalk/index.html">
+              <span className="technologyButton">
+                <AwesomeButton type="primary" bubbles={true}>
+                  Elastic Beanstalk (EBS)
+                </AwesomeButton>
+              </span>
+            </a>
+          </Tooltip>
+          <Tooltip title="A fancy way to EC2" arrow={true} size="big">
+            <a href="https://docs.aws.amazon.com/rds/index.html">
+              <span className="technologyButton">
+                <AwesomeButton type="primary" bubbles={true}>
+                  Relational Database Service (RDS)
+                </AwesomeButton>
+              </span>
+            </a>
+          </Tooltip>
+          <Tooltip
+            title="If this were a lego, it would be the 2x4"
+            arrow={true}
+            size="big">
+            <a href="https://docs.aws.amazon.com/ec2/index.html">
+              <span className="technologyButton">
+                <AwesomeButton type="primary" bubbles={true}>
+                  Elastic Compute Cloud (EC2)
+                </AwesomeButton>
+              </span>
+            </a>
+          </Tooltip>
+          <Tooltip
+            title="Directing requests since 2010"
+            arrow={true}
+            size="big">
+            <a href="https://docs.aws.amazon.com/route53/index.html">
+              <span className="technologyButton">
+                <AwesomeButton type="primary" bubbles={true}>
+                  Route 53
+                </AwesomeButton>
+              </span>
+            </a>
+          </Tooltip>
+          <Tooltip
+            title="High availability around the world"
+            arrow={true}
+            size="big">
+            <a href="https://docs.aws.amazon.com/cloudfront/index.html">
+              <span className="technologyButton">
+                <AwesomeButton type="primary" bubbles={true}>
+                  CloudFront
+                </AwesomeButton>
+              </span>
+            </a>
+          </Tooltip>
+          <Tooltip
+            title="IAM me, but who are you? (sorry)"
+            arrow={true}
+            size="big">
+            <a href="https://docs.aws.amazon.com/iam/index.html">
+              <span className="technologyButton">
+                <AwesomeButton type="primary" bubbles={true}>
+                  Identity and Access Management (IAM)
+                </AwesomeButton>
+              </span>
+            </a>
+          </Tooltip>
+          <Tooltip title="Just forget about oauth2" arrow={true} size="big">
+            <a href="https://docs.aws.amazon.com/cognito/index.html">
+              <span className="technologyButton">
+                <AwesomeButton type="primary" bubbles={true}>
+                  Cognito
+                </AwesomeButton>
+              </span>
+            </a>
+          </Tooltip>
+          <Tooltip title="Keep your devs in check" arrow={true} size="big">
+            <a href="https://docs.aws.amazon.com/singlesignon/index.html">
+              <span className="technologyButton">
+                <AwesomeButton type="primary" bubbles={true}>
+                  Single Sign On (SSO)
+                </AwesomeButton>
+              </span>
+            </a>
+          </Tooltip>
         </ul>
         <hr />
-        <p>
-          I have the most experience with basic CRUD and joins, but I did get
-          into stored procedures and transactions while taking the Udemy
-          courses. I would really enjoy picking up where I left off on those if
-          there was a professional need.
-        </p>
       </div>
     )
   },
@@ -249,173 +403,370 @@ export const techStackData = [
     subcomponent: (
       <div>
         <p>
-          Javascript is a language which has really grown on me in the last
-          year. It has a lot of quirks, but it also has an elegance. I have used
-          too many npm modules to count, but here is a highlight reel.
+          Javascript is a language which has really grown on me. It has a lot of
+          quirks, but it also has an elegance. I have used too many npm modules
+          to count, but here is a highlight reel:
         </p>
         <hr />
-        <p>
-          When designing the look and feel of a web app, these two libraries
-          have come in super handy:
-        </p>
-        <ul>
-          <li>
-            <b>D3</b> is the most fun that I have ever had building graphics. It
-            is so much more than a plotting library. I have used it in
-            production as well as personal projects.
-          </li>
-          <li>
-            <b>Bootstrap</b> paved the way for much of the modern web. Although
-            many bootstrap sites have a cookie-cutter feel to them, it continues
-            to be one of the libraries that I could not live without.
-          </li>
+        <ul
+          style={{
+            display: 'flex',
+            flexWrap: 'wrap',
+            justifyContent: 'center',
+            marginLeft: '-30px'
+          }}>
+          <Tooltip
+            title="More than just a plotting library"
+            arrow={true}
+            size="big">
+            <a href="https://github.com/d3/d3/wiki">
+              <span className="technologyButton">
+                <AwesomeButton type="primary" bubbles={true}>
+                  D3
+                </AwesomeButton>
+              </span>
+            </a>
+          </Tooltip>
+          <Tooltip
+            title="The modern web, brought to you by bootstrap"
+            arrow={true}
+            size="big">
+            <a href="https://getbootstrap.com/docs/4.1/getting-started/introduction/">
+              <span className="technologyButton">
+                <AwesomeButton type="primary" bubbles={true}>
+                  Bootstrap
+                </AwesomeButton>
+              </span>
+            </a>
+          </Tooltip>
+          <Tooltip
+            title="Let's not fight about frameworks"
+            arrow={true}
+            size="big">
+            <a href="https://reactjs.org/docs/getting-started.html">
+              <span className="technologyButton">
+                <AwesomeButton type="primary" bubbles={true}>
+                  React
+                </AwesomeButton>
+              </span>
+            </a>
+          </Tooltip>
+          <Tooltip title="What state are you in?" arrow={true} size="big">
+            <a href="https://redux.js.org/introduction/getting-started">
+              <span className="technologyButton">
+                <AwesomeButton type="primary" bubbles={true}>
+                  Redux
+                </AwesomeButton>
+              </span>
+            </a>
+          </Tooltip>
+          <Tooltip title="Might cause side effects" arrow={true} size="big">
+            <a href="https://redux-saga.js.org/docs/introduction/BeginnerTutorial.html">
+              <span className="technologyButton">
+                <AwesomeButton type="primary" bubbles={true}>
+                  Redux-Saga
+                </AwesomeButton>
+              </span>
+            </a>
+          </Tooltip>
+          <Tooltip
+            title="I'm not sure javascript would exist without it"
+            arrow={true}
+            size="big">
+            <a href="https://nodejs.org/en/docs/">
+              <span className="technologyButton">
+                <AwesomeButton type="primary" bubbles={true}>
+                  Node
+                </AwesomeButton>
+              </span>
+            </a>
+          </Tooltip>
+          <Tooltip title="A feel good node wrapper" arrow={true} size="big">
+            <a href="https://hapijs.com/tutorials">
+              <span className="technologyButton">
+                <AwesomeButton type="primary" bubbles={true}>
+                  Hapi
+                </AwesomeButton>
+              </span>
+            </a>
+          </Tooltip>
+          <Tooltip
+            title="They prioritize developer happiness, just like me!"
+            arrow={true}
+            size="big">
+            <a href="https://adonisjs.com/docs/4.1/installation">
+              <span className="technologyButton">
+                <AwesomeButton type="primary" bubbles={true}>
+                  Adonis
+                </AwesomeButton>
+              </span>
+            </a>
+          </Tooltip>
+          <Tooltip title="Don't reinvent the wheel" arrow={true} size="big">
+            <a href="https://lodash.com/docs/4.17.11">
+              <span className="technologyButton">
+                <AwesomeButton type="primary" bubbles={true}>
+                  Lodash
+                </AwesomeButton>
+              </span>
+            </a>
+          </Tooltip>
+          <Tooltip title="Keep your promises" arrow={true} size="big">
+            <a href="http://bluebirdjs.com/docs/api-reference.html">
+              <span className="technologyButton">
+                <AwesomeButton type="primary" bubbles={true}>
+                  Bluebird
+                </AwesomeButton>
+              </span>
+            </a>
+          </Tooltip>
+          <Tooltip title="Less necessary these days" arrow={true} size="big">
+            <a href="https://caolan.github.io/async/v3/">
+              <span className="technologyButton">
+                <AwesomeButton type="primary" bubbles={true}>
+                  Async
+                </AwesomeButton>
+              </span>
+            </a>
+          </Tooltip>
+          <Tooltip title="Even better than requests.py" arrow={true} size="big">
+            <a href="https://github.com/axios/axios">
+              <span className="technologyButton">
+                <AwesomeButton type="primary" bubbles={true}>
+                  Axios
+                </AwesomeButton>
+              </span>
+            </a>
+          </Tooltip>
         </ul>
-        <hr />
-        <p>Designing a production web app:</p>
-        <ul>
-          <li>
-            <b>React</b> is my framework of choice. I have never been on a
-            project that used Angular or Vue, so I can't speak to those two --
-            however, I really like the information flow in react.
-          </li>
-          <li>
-            <b>Redux</b> allows for simple state management and almost feels
-            like a part of react at this point. There are lots of awesome
-            middleware options to make it even better.
-          </li>
-        </ul>
-        <hr />
-        <p>Full stack javascript requires a few backend tools as well:</p>
-        <ul>
-          <li>
-            <b>Node</b> is node. Without node there is no javascript. Although I
-            have never written an app entirely in node, it is the foundation of
-            almost every javascript project that I have done.
-          </li>
-          <li>
-            <b>Hapi</b> provides the server framework for node. It lets you skip
-            out on a lot of boiler plate code and focus on the logic.
-          </li>
-        </ul>
-        <hr />
-        <p>
-          Although vanilla js has come a long way, there are some basic utility
-          libraries that it has not fully replaced:
-        </p>
-        <ul>
-          <li>
-            <b>Lodash</b> I am actually a big fan of the native filter map and
-            reduce methods for taming objects in js.. but every once in a while
-            you can save yourself a lot of effort with something like lodash's
-            array chunk method.
-          </li>
-          <li>
-            <b>Bluebird</b> lets you turn almost anything into a promise.
-          </li>
-          <li>
-            <b>Async</b> is now part of vanilla js, but some of the projects
-            that I have worked on are old enough that it had to be imported. I
-            still find the auto method incredibly helpful for making lots of
-            http requests efficiently.
-          </li>
-          <li>
-            <b>Axios</b> is my go to for making promise based http requests.
-            It's similar to the requests library in python
-          </li>
-          <li>
-            <b>Webpack</b> for bundling and delivering content. I am still
-            shocked that this actually works.
-          </li>
-        </ul>
+          <hr />
       </div>
     )
   },
   {
-    title: 'Mathematica',
-    logo: Mathematica,
+    title: 'Kubernetes',
+    logo: Kubernetes,
     subcomponent: (
       <div>
         <p>
-          I do not use Mathematica very much anymore, but it will always hold a
-          special place in my heart. It was the first introduction to
-          programming that I ever had. It was incredibly valuable during my
-          undergraduate physics program.
+          Javascript is a language which has really grown on me. It has a lot of
+          quirks, but it also has an elegance. I have used too many npm modules
+          to count, but here is a highlight reel:
         </p>
         <hr />
-        <ul>
-          <li>
-            <b>NDSolve</b> might be the most powerful tool in Mathematica. It is
-            a numerical differential equation solver that has support for
-            several different methods and types of problem (shooting, ivps, etc)
-          </li>
-          <li>
-            <b>Taylor Expansions</b> were one of the things that I did almost
-            daily during my undergraduate studies. Mathematica makes them much
-            less painful.
-          </li>
-          <li>
-            <b>Data import/export/manipulation</b> When I was collaborating with
-            Princeton for research, we had to pass data sets back and forth.
-            Nothing too serious, but I did start to think about I/O early in my
-            programming career
-          </li>
-          <li>
-            <b>Plotting</b> Before I learned how to use more powerful plotting
-            libraries, I LOVED mathematica's plotting. It is incredibly easy to
-            bootstrap a graphical representation to your solution for a problem.
-            This can help determine it's validity (IE does it pass the smell
-            test)
-          </li>
+        <ul
+          style={{
+            display: 'flex',
+            flexWrap: 'wrap',
+            justifyContent: 'center',
+            marginLeft: '-30px'
+          }}>
+          <Tooltip
+            title="More than just a plotting library"
+            arrow={true}
+            size="big">
+            <a href="https://github.com/d3/d3/wiki">
+              <span className="technologyButton">
+                <AwesomeButton type="primary" bubbles={true}>
+                  D3
+                </AwesomeButton>
+              </span>
+            </a>
+          </Tooltip>
         </ul>
+          <hr />
       </div>
     )
   },
   {
-    title: 'Linux Ecosystem ',
+    title: 'SQL',
+    logo: Sql,
+    subcomponent: (
+      <div>
+        <p>
+          I love writing sql. Every office needs one, right? So far, I have
+          worked with these flavors of relational databases:
+        </p>
+        <hr />
+        <ul
+          style={{
+            display: 'flex',
+            flexWrap: 'wrap',
+            justifyContent: 'center',
+            marginLeft: '-30px'
+          }}>
+          <a href="https://dev.mysql.com/doc/">
+            <span className="technologyButton">
+              <AwesomeButton type="primary" bubbles={true}>
+                MySQL
+              </AwesomeButton>
+            </span>
+          </a>
+          <a href="https://www.postgresql.org/docs/">
+            <span className="technologyButton">
+              <AwesomeButton type="primary" bubbles={true}>
+                PostgreSQL
+              </AwesomeButton>
+            </span>
+          </a>
+          <a href="https://www.sqlite.org/docs.html">
+            <span className="technologyButton">
+              <AwesomeButton type="primary" bubbles={true}>
+                SQLite
+              </AwesomeButton>
+            </span>
+          </a>
+        </ul>
+        <hr />
+        <p>
+          I have the most experience with basic CRUD and joins, but I did get
+          into stored procedures and transactions a couple years back. I would
+          really enjoy picking up where I left off on those if there was a
+          professional need.
+        </p>
+      </div>
+    )
+  },
+  {
+    title: '*Nix',
     logo: Tux,
     subcomponent: (
       <div>
         <p>
-          I am very passionate about open source software and I can't get enough
-          of linux. Watching my computer boot into Arch still gives me
-          goosebumps.
+          I am very passionate about open source software and can't get enough
+          of linux. On a good day, I never have to leave the terminal. These are
+          some of my favorite *nix tools
         </p>
         <hr />
-        <p>General Tools</p>
-        <ul>
-          <li>
-            <b>Arch linux</b> I have been running arch on all of my machines for
-            a while now and outside of the context of iOS app development, I do
-            not think that I will ever use another OS. I LOVE the rolling
-            release structure and being close enough to my computer to
-            understand why things aren't working.
-          </li>
-          <li>
-            <b>Vim</b> I adore vim. I have spent more time than was strictly
-            necessary reading blog posts and watching vimcasts. My top plugins
-            are jedi, ale, vim-surround, vimux, and ranger.vim. I love vim
-            enough to install vimium on my girlfriend's computer and to
-            read/write emails in neomutt.
-          </li>
-          <li>
-            <b>I3wm</b> tiling window managers are lots of fun. I3 has a very
-            straightforward conf file that lets you control almost everything
-            about how your computer functions.
-          </li>
-          <li>
-            <b>Xfce</b> Although I don't load very many of xfce's features I do
-            appreciate letting a lightweight version of it control my power
-            settings.
-          </li>
-          <li>
-            <b>Ranger</b> There has never been a better file browser.
-          </li>
-          <li>
-            <b>LibreOffice</b> Without the hard work that these guys have done,
-            it would be much more difficult to use linux as a primary operating
-            system
-          </li>
+        <ul
+          style={{
+            display: 'flex',
+            flexWrap: 'wrap',
+            justifyContent: 'center',
+            marginLeft: '-30px'
+          }}>
+          <Tooltip
+            title="[SOLVED]"
+            arrow={true}
+            size="big">
+            <a href="https://wiki.archlinux.org/">
+              <span className="technologyButton">
+                <AwesomeButton type="primary" bubbles={true}>
+                  Arch Linux
+                </AwesomeButton>
+              </span>
+            </a>
+          </Tooltip>
+          <Tooltip
+            title="hjkl"
+            arrow={true}
+            size="big">
+            <a href="https://www.vim.org/docs.php">
+              <span className="technologyButton">
+                <AwesomeButton type="primary" bubbles={true}>
+                  Vim
+                </AwesomeButton>
+              </span>
+            </a>
+          </Tooltip>
+          <Tooltip
+              title="finger food > eye candy"
+            arrow={true}
+            size="big">
+            <a href="https://i3wm.org/docs/userguide.html">
+              <span className="technologyButton">
+                <AwesomeButton type="primary" bubbles={true}>
+                  I3wm
+                </AwesomeButton>
+              </span>
+            </a>
+          </Tooltip>
+          <Tooltip
+            title="Gnome is cool too"
+            arrow={true}
+            size="big">
+            <a href="https://docs.xfce.org/">
+              <span className="technologyButton">
+                <AwesomeButton type="primary" bubbles={true}>
+                  Xfce
+                </AwesomeButton>
+              </span>
+            </a>
+          </Tooltip>
+          <Tooltip
+            title="The file manager of champions"
+            arrow={true}
+            size="big">
+            <a href="https://github.com/ranger/ranger/wiki/Official-user-guide">
+              <span className="technologyButton">
+                <AwesomeButton type="primary" bubbles={true}>
+                  Ranger
+                </AwesomeButton>
+              </span>
+            </a>
+          </Tooltip>
+          <Tooltip
+            title="Less laggy than google sheets"
+            arrow={true}
+            size="big">
+            <a href="https://www.libreoffice.org/community/docs-team/">
+              <span className="technologyButton">
+                <AwesomeButton type="primary" bubbles={true}>
+                  LibreOffice
+                </AwesomeButton>
+              </span>
+            </a>
+          </Tooltip>
+          <Tooltip
+            title="Saving me from myself"
+            arrow={true}
+            size="big">
+            <a href="http://anamnesis.sourceforge.net/">
+              <span className="technologyButton">
+                <AwesomeButton type="primary" bubbles={true}>
+                  Anamnesis
+                </AwesomeButton>
+              </span>
+            </a>
+          </Tooltip>
+          <Tooltip
+            title="A beautiful *nix mail client"
+            arrow={true}
+            size="big">
+            <a href="https://getmailspring.com/">
+              <span className="technologyButton">
+                <AwesomeButton type="primary" bubbles={true}>
+                  Mailspring
+                </AwesomeButton>
+              </span>
+            </a>
+          </Tooltip>
+          <Tooltip
+            title="Use it with compton for bonus points"
+            arrow={true}
+            size="big">
+            <a href="https://guake.readthedocs.io/en/stable/">
+              <span className="technologyButton">
+                <AwesomeButton type="primary" bubbles={true}>
+                  Guake Terminal
+                </AwesomeButton>
+              </span>
+            </a>
+          </Tooltip>
+          <Tooltip
+            title="Spotlight search for the minimalist"
+            arrow={true}
+            size="big">
+            <a href="https://dmenu.readthedocs.io/en/latest/">
+              <span className="technologyButton">
+                <AwesomeButton type="primary" bubbles={true}>
+                  Dmenu
+                </AwesomeButton>
+              </span>
+            </a>
+          </Tooltip>
         </ul>
+        <hr />
       </div>
     )
   },
@@ -426,6 +777,7 @@ export const techStackData = [
       <div>
         <p>
           Along with the linux ecosystem, I really enjoy writing bash scripts.
+          Here are some of the friends that I have made along the way:
         </p>
         <hr />
         <p>Text Manipulation</p>
@@ -518,96 +870,40 @@ export const techStackData = [
     )
   },
   {
-    title: 'Cloud Infrastructure',
-    logo: Aws,
+    title: 'Mathematica',
+    logo: Mathematica,
     subcomponent: (
       <div>
         <p>
-          I have experience with Heroku, Digital Ocean, and AWS. Out of those, I
-          have found AWS to typically feature the lowest server cost as well as
-          the most customizability. This comes at the cost of more maintenance
-          and (sometimes) longer implementation.
+          I do not use Mathematica very much anymore, but it will always hold a
+          special place in my heart. It was the first introduction to
+          programming that I ever had. It was incredibly valuable during my
+          undergraduate physics program.
         </p>
         <hr />
-        <p>Here are some of the AWS tools that I have found the most helpful</p>
         <ul>
           <li>
-            <b>api gateway</b> functions very nicely with lambda. I recently
-            learned about the lambda proxy integration which will let you almost
-            fake a server by assigning a lambda listener that directs incoming
-            requests
+            <b>NDSolve</b> might be the most powerful tool in Mathematica. It is
+            a numerical differential equation solver that has support for
+            several different methods and types of problem (shooting, ivps, etc)
           </li>
           <li>
-            <b>lambda</b> is the future. Or at least, that's what everyone says.
-            Sometimes it can be harder to test, and if you're not careful it
-            will return 200s when it should return 500s but in the right setting
-            server costs can drop by 90% or more. And, once you write a decent
-            deploy script it is not very hard to get your app online.
+            <b>Taylor Expansions</b> were one of the things that I did almost
+            daily during my undergraduate studies. Mathematica makes them much
+            less painful.
           </li>
           <li>
-            <b>cognito</b> is a remarkably low hassel way to handle
-            authentication. In the past I have struggled with implementing an
-            auth sequence that is simple but not insecure, but now I don't even
-            have to think about it!
+            <b>Data import/export/manipulation</b> When I was collaborating with
+            Princeton for research, we had to pass data sets back and forth.
+            Nothing too serious, but I did start to think about I/O early in my
+            programming career
           </li>
           <li>
-            <b>ebs</b> Before learning how to use lambda functions, I deployed
-            several personal web apps through elastic beanstalk.
-          </li>
-          <li>
-            <b>rds</b> Even when going serverless, it is often still very
-            helpful (or even essential) to have a server running your database.
-            For my personal projects I tend to use one free tier rds instance
-            running a postgres server.
-          </li>
-          <li>
-            <b>ec2</b> is useful for just about everything! I have even used it
-            in conjunction with Bees With Machine Guns (look it up) to run an
-            open source load test on our production app prior to launch.
-          </li>
-          <li>
-            <b>s3</b> is another essential piece of the infrastructure. Without
-            s3, it would be much more difficult to run a static site able to
-            render content in a timely fashion.
-          </li>
-        </ul>
-        <hr />
-        <p>And, some of the things that I have done on heroku</p>
-        <ul>
-          <li>
-            <b>Webpack Integration</b> In order to save some money on server
-            costs, I was able to bundle the application logic and the frontend
-            for one of our production dashboards. This means that I only needed
-            one server to handle frontend and backend for a django/react web
-            app.
-          </li>
-          <li>
-            <b>Redis Cache/Queue</b> When load times for our production
-            dashboard started getting a little high, I was able to cut them down
-            by 75% or more with the introduction of a redis cache. Additionally,
-            I introduced a queue to handle long running processes (like push
-            notifications).
-          </li>
-          <li>
-            <b>Deploy Hooks</b> Although we have yet to fully complete our test
-            suite / deploy hooks - it is possible to link heroku into a github
-            account. Then, you can require all tests to pass before
-            automatically deploying a rolling upate to the app.
-          </li>
-        </ul>
-        <hr />
-        <p>
-          I have the least amount of experience with digital ocean, but it is
-          also the only server for which I am currently paying.
-        </p>
-        <ul>
-          <li>
-            <b>OpenVPN</b> VPN providers have a terrible history with regards to
-            user privacy. So, I decided to spin up my own homebrewed VPN server
-            in the cloud. I chose digital ocean because their entry level
-            droplet costs $5 a month and allows up to 1Tb of throughput. This is
-            incredibly cheap. The same amount of bandwidth on AWS would cost
-            around $150!
+            <b>Plotting</b> Before I learned how to use more powerful plotting
+            libraries, I loved mathematica's plotting. It is incredibly easy to
+            bootstrap a graphical representation to your solution for a problem.
+            This can help determine it's validity (IE does it pass the smell
+            test)
           </li>
         </ul>
       </div>
