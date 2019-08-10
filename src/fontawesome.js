@@ -12,6 +12,7 @@ import {
   faBook,
   faHome,
   faBriefcase,
+  faServer,
   faStore,
   faDatabase,
   faStoreAlt,
@@ -33,6 +34,8 @@ import {
   faUserCircle,
   faUserPlus,
   faBeer,
+  faClipboard,
+  faBookOpen,
   faDotCircle
 } from '@fortawesome/free-solid-svg-icons';
 
@@ -46,6 +49,7 @@ library.add(
   faCogs,
   faHome,
   faBriefcase,
+  faServer,
   faStore,
   faStoreAlt,
   faChartLine,
@@ -65,5 +69,7 @@ library.add(
   faCaretLeft,
   faUserPlus,
   faBeer,
+  faClipboard,
+  faBookOpen,
   faDotCircle
 );

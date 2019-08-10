@@ -6,6 +6,7 @@ import Projects from '../views/projects'
 import Greeting from '../views/greeting'
 import Soop from '../views/soop'
 import Skills from '../views/skills'
+import Resume from '../views/resume'
 
 var indexRoutes = [
     { 
@@ -37,7 +38,7 @@ var indexRoutes = [
         name: "projects", 
         component: Projects,
         openSubMenuPage: true,
-        faicon: 'briefcase',
+        faicon: 'server',
         content: [
             {
                 label: 'devops',
@@ -71,6 +72,13 @@ var indexRoutes = [
         path: "/soop", 
         name: "soop", 
         component: Soop,
+        faicon: 'book-open'
+    },
+    { 
+        sidebar: true,
+        path: "/resume", 
+        name: "resume", 
+        component: Resume,
         faicon: 'briefcase'
     },
 ];

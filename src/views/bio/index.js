@@ -1,16 +1,16 @@
 //@format
-import React, { Component } from "react"
-import { Grid, Row, Col, Image } from "react-bootstrap"
-import { Link } from "react-router-dom"
+import React, {Component} from 'react';
+import {Grid, Row, Col, Image} from 'react-bootstrap';
+import {Link} from 'react-router-dom';
 
-import Header from "../../components/organisms/d3/header"
-import Sidebar from "../../components/atoms/sidebar"
-import Card from "../../components/atoms/card"
-import Profile from "../../assets/img/profile.jpg"
-import ModalGallery from "../../components/molecules/modalgallery"
-import bioGalleryPhotos from "../../objects/biophotos"
-import { AwesomeButton } from "react-awesome-button"
-import { Tooltip } from "react-tippy"
+import Header from '../../components/organisms/d3/header';
+import Sidebar from '../../components/atoms/sidebar';
+import Card from '../../components/atoms/card';
+import Profile from '../../assets/img/profile.jpg';
+import ModalGallery from '../../components/molecules/modalgallery';
+import bioGalleryPhotos from '../../objects/biophotos';
+import {AwesomeButton} from 'react-awesome-button';
+import {Tooltip} from 'react-tippy';
 
 //import ExpandableTable from '../../components/atoms/expandabletable/';
 //import {
@@ -21,21 +21,21 @@ import { Tooltip } from "react-tippy"
 
 class BioView extends Component {
   constructor(props) {
-    super()
+    super();
 
-    let height, width, numPoints
+    let height, width, numPoints;
     if (window.innerWidth > 800) {
-      height = window.innerHeight * 0.2
-      width = (window.innerWidth - 200) * 0.88
-      numPoints = 40
+      height = window.innerHeight * 0.2;
+      width = (window.innerWidth - 200) * 0.88;
+      numPoints = 40;
     } else {
-      height = window.innerHeight * 0.1
-      width = window.innerWidth * 0.7
-      numPoints = 15
+      height = window.innerHeight * 0.1;
+      width = window.innerWidth * 0.7;
+      numPoints = 15;
     }
 
     this.state = {
-      headerText: "BIO",
+      headerText: 'BIO',
       duration: 50000,
       animate: true,
       numPoints: numPoints,
@@ -50,7 +50,7 @@ class BioView extends Component {
       },
       techStackExpanded: null,
       profInterestsExpanded: null
-    }
+    };
   }
 
   render() {
@@ -101,28 +101,28 @@ class BioView extends Component {
                       I <b>grew up in Houston</b>, Texas before heading out to
                       Montana for school.
                     </p>
-                    <hr style={{ width: "70%" }} />
+                    <hr style={{width: '70%'}} />
                     <p>
                       I got a <b>degree in Physics</b> from MSU Bozeman in 2018.
                     </p>
-                    <hr style={{ width: "80%" }} />
+                    <hr style={{width: '80%'}} />
                     <p>
                       My undergraduate research involved
                       <b> modeling Neutron stars</b> in alternate theories of
                       gravity and <b>training neural networks </b>
                       to recognize glitches in gravitational wave data.
                     </p>
-                    <hr style={{ width: "70%" }} />
+                    <hr style={{width: '70%'}} />
                     <p>
-                      I really enjoy{" "}
+                      I really enjoy{' '}
                       <b>math, statistics, and automating the boring stuff.</b>
                     </p>
-                    <hr style={{ width: "80%" }} />
+                    <hr style={{width: '80%'}} />
 
                     <p>
                       Currently, I am <b>living in Bozeman with my dog, Fox.</b>
                     </p>
-                    <hr style={{ width: "70%" }} />
+                    <hr style={{width: '70%'}} />
                     <p>
                       My favorite fictional character is <b>Kilgore Trout.</b>
                     </p>
@@ -159,7 +159,7 @@ class BioView extends Component {
             </Row>
             <Row className="padForGrid">
               <Card
-                title="When I'm not writing code, I enjoy hiking, climbing, rafting, and watching movies."
+                no_separator
                 xs={12}
                 md={12}
                 content={
@@ -168,8 +168,11 @@ class BioView extends Component {
                     arrow={true}
                     size="big">
                     <Link to="/skills">
-                      <span className="technologyButton centerJustify">
-                        <AwesomeButton type="primary" bubbles={true}>
+                      <span className="technologyButton centerJustifyNoMargin">
+                        <AwesomeButton
+                          style={{width: '100%'}}
+                          type="primary"
+                          bubbles={true}>
                           Continue to Skills
                         </AwesomeButton>
                       </span>
@@ -181,7 +184,7 @@ class BioView extends Component {
           </div>
         </Grid>
       </div>
-    )
+    );
   }
 }
-export default BioView
+export default BioView;

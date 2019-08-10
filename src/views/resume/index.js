@@ -1,24 +1,26 @@
 //@format
 import React, {Component} from 'react';
-import Switch from 'react-toggle-switch';
-import {AwesomeButton} from 'react-awesome-button';
-import {Grid, Row, Col} from 'react-bootstrap';
-import * as d3 from 'd3';
-
-import Header from '../../components/organisms/d3/header';
-import UserGeneratedGreeting from '../../components/organisms/d3/userPickGreeting/';
+import {Grid, Row, Col, Image} from 'react-bootstrap';
 import {Link} from 'react-router-dom';
 
+import Header from '../../components/organisms/d3/header';
 import Sidebar from '../../components/atoms/sidebar';
+import Card from '../../components/atoms/card';
+import Profile from '../../assets/img/profile.jpg';
+import ModalGallery from '../../components/molecules/modalgallery';
+import bioGalleryPhotos from '../../objects/biophotos';
+import {AwesomeButton} from 'react-awesome-button';
+import {Tooltip} from 'react-tippy';
+import PDF from '../../components/atoms/pdf';
 
-class BioView extends Component {
+class ResumeView extends Component {
   constructor(props) {
     super();
 
     let height, width, numPoints;
     if (window.innerWidth > 800) {
       height = window.innerHeight * 0.2;
-      width = window.innerWidth * 0.89;
+      width = (window.innerWidth - 200) * 0.88;
       numPoints = 40;
     } else {
       height = window.innerHeight * 0.1;
@@ -27,30 +29,29 @@ class BioView extends Component {
     }
 
     this.state = {
-      headerText: 'BIO',
-      animate: false,
+      headerText: 'RESUME',
+      duration: 50000,
+      animate: true,
       numPoints: numPoints,
       width: width,
       height: height,
       maxRadius: 20,
       margin: {
         top: 30,
-        right: window.innerWidth * 0.02,
+        right: (window.innerWidth - 200) * 0.02,
         bottom: 30,
-        left: window.innerWidth * 0.02
-      }
+        left: (window.innerWidth - 200) * 0.02
+      },
+      techStackExpanded: null,
+      profInterestsExpanded: null
     };
   }
-  _togglAnimate = () => {
-    this.setState({animate: !this.state.animate});
-  };
-  _enterSite = () => {};
 
   render() {
     return (
       <div>
         <Sidebar />
-        <Grid fluid={true}>
+        <Grid fluid={true} className="metismenuGridPad">
           <Row>
             <div className="padForMenu">
               <Header
@@ -63,12 +64,70 @@ class BioView extends Component {
                 margin={this.state.margin}
                 animate={this.state.animate}
               />
-              <hr />
             </div>
+            <hr className="hrLarge" />
           </Row>
+          <div className="well">
+            <Row className="padForGrid">
+              <Card
+                no_separator
+                xs={12}
+                md={12}
+                content={
+                  <Tooltip
+                    title="Scratch here to reveal prize"
+                    arrow={true}
+                    size="big">
+                    <a href="mailto:pribylsnbits@gmail.com">
+                      <span className="technologyButton centerJustifyNoMargin">
+                        <AwesomeButton
+                          style={{width: '100%'}}
+                          type="primary"
+                          bubbles={true}>
+                          Get in touch
+                        </AwesomeButton>
+                      </span>
+                    </a>
+                  </Tooltip>
+                }
+              />
+              <Card
+                no_separator
+                xs={12}
+                md={12}
+                content={
+                  <PDF
+                    className="resumePdf"
+                    src={
+                      'https://raw.githubusercontent.com/jpribyl/resume/master/resume.pdf'
+                    }
+                  />
+                }
+              />
+              <Card
+                no_separator
+                xs={12}
+                md={12}
+                content={
+                  <Tooltip title="Made you look!" arrow={true} size="big">
+                    <a href="mailto:pribylsnbits@gmail.com">
+                      <span className="technologyButton centerJustifyNoMargin">
+                        <AwesomeButton
+                          style={{width: '100%'}}
+                          type="primary"
+                          bubbles={true}>
+                          Get in touch
+                        </AwesomeButton>
+                      </span>
+                    </a>
+                  </Tooltip>
+                }
+              />
+            </Row>
+          </div>
         </Grid>
       </div>
     );
   }
 }
-export default BioView;
+export default ResumeView;

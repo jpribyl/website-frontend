@@ -1,34 +1,34 @@
 //@format
-import React, { Component } from "react"
-import { Grid, Row, Image } from "react-bootstrap"
-import Header from "../../components/organisms/d3/header"
-import Sidebar from "../../components/atoms/sidebar"
-import Card from "../../components/atoms/card"
-import Profile from "../../assets/img/profile.jpg"
-import { techStackColumns, techStackData } from "../../objects/techstack"
-import ExpandableTable from "../../components/atoms/expandabletable/"
-import { Helpers } from "../../utils.js"
-import { Link } from "react-router-dom"
-import { AwesomeButton } from "react-awesome-button"
-import { Tooltip } from "react-tippy"
+import React, {Component} from 'react';
+import {Grid, Row, Image} from 'react-bootstrap';
+import Header from '../../components/organisms/d3/header';
+import Sidebar from '../../components/atoms/sidebar';
+import Card from '../../components/atoms/card';
+import Profile from '../../assets/img/profile.jpg';
+import {techStackColumns, techStackData} from '../../objects/techstack';
+import ExpandableTable from '../../components/atoms/expandabletable/';
+import {Helpers} from '../../utils.js';
+import {Link} from 'react-router-dom';
+import {AwesomeButton} from 'react-awesome-button';
+import {Tooltip} from 'react-tippy';
 
 class SkillsView extends Component {
   constructor(props) {
-    super()
+    super();
 
-    let height, width, numPoints
+    let height, width, numPoints;
     if (window.innerWidth > 800) {
-      height = window.innerHeight * 0.2
-      width = (window.innerWidth - 200) * 0.88
-      numPoints = 40
+      height = window.innerHeight * 0.2;
+      width = (window.innerWidth - 200) * 0.88;
+      numPoints = 40;
     } else {
-      height = window.innerHeight * 0.1
-      width = window.innerWidth * 0.7
-      numPoints = 15
+      height = window.innerHeight * 0.1;
+      width = window.innerWidth * 0.7;
+      numPoints = 15;
     }
 
     this.state = {
-      headerText: "SKILLS",
+      headerText: 'SKILLS',
       animate: true,
       duration: 50000,
       numPoints: numPoints,
@@ -43,7 +43,7 @@ class SkillsView extends Component {
       },
       techStackExpanded: null,
       profInterestsExpanded: null
-    }
+    };
   }
 
   render() {
@@ -69,7 +69,7 @@ class SkillsView extends Component {
           <div className="well">
             <Row className="padForGrid">
               <Card
-                title="Some of the technologies I have encountered during my career"
+                no_separator
                 xs={12}
                 content={
                   <div className="padText">
@@ -89,10 +89,10 @@ class SkillsView extends Component {
                   <ExpandableTable
                     expanded={this.state.techStackExpanded}
                     handleExpand={row =>
-                      Helpers.handleExpand(this, row, "techStackExpanded")
+                      Helpers.handleExpand(this, row, 'techStackExpanded')
                     }
                     showPagination={false}
-                    className={"techStack"}
+                    className={'techStack'}
                     data={techStackData}
                     columns={techStackColumns}
                   />
@@ -101,14 +101,17 @@ class SkillsView extends Component {
             </Row>
             <Row className="padForGrid">
               <Card
-                title="Ask me for a fun fact about giraffes"
+                no_separator
                 xs={12}
                 md={12}
                 content={
                   <Tooltip title="As seen on TV" arrow={true} size="big">
                     <Link to="/projects">
-                      <span className="technologyButton centerJustify">
-                        <AwesomeButton type="primary" bubbles={true}>
+                      <span className="technologyButton centerJustifyNoMargin">
+                        <AwesomeButton
+                          style={{width: '100%'}}
+                          type="primary"
+                          bubbles={true}>
                           Continue to Projects
                         </AwesomeButton>
                       </span>
@@ -120,7 +123,7 @@ class SkillsView extends Component {
           </div>
         </Grid>
       </div>
-    )
+    );
   }
 }
-export default SkillsView
+export default SkillsView;

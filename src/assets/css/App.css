@@ -415,3 +415,21 @@ button.aws-btn {
             justify-content: center;
             margin-left: -30px;
 }
+
+.centerJustifyNoMargin {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+}
+
+.resumePdf {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.react-pdf__Page__canvas {
+    width: 100% !important;
+    min-width: 480px !important;
+    overflow: scroll;
+    border: 10px;
+}
