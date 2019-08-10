@@ -1,24 +1,24 @@
-import React from 'react';
-import {Image} from 'react-bootstrap';
-import {AwesomeButton} from 'react-awesome-button';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import React from "react"
+import { Image } from "react-bootstrap"
+import { AwesomeButton } from "react-awesome-button"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 //import Python from '../../assets/img/icons/800px-Python-logo-notext.png';
-import Python from '../../assets/img/icons/Python_logo-512.png';
+import Python from "../../assets/img/icons/Python_logo-512.png"
 //import Bash from '../../assets/img/icons/bash.png';
-import Bash from '../../assets/img/icons/bash-bw.png';
+import Bash from "../../assets/img/icons/bash-bw.png"
 //import Tux from '../../assets/img/icons/220px-Tux.png';
-import Tux from '../../assets/img/icons/Tux_Mono.svg.png';
+import Tux from "../../assets/img/icons/Tux_Mono.svg.png"
 //import Aws from '../../assets/img/icons/2000px-Amazon_Web_Services_Logo.png';
-import Aws from '../../assets/img/icons/aws-bw.png';
+import Aws from "../../assets/img/icons/aws-bw.png"
 //import Mathematica from '../../assets/img/icons/2000px-Mathematica_Logo.png';
-import Mathematica from '../../assets/img/icons/mathematica-bw.png';
+import Mathematica from "../../assets/img/icons/mathematica-bw.png"
 //import Javascript from '../../assets/img/icons/JavaScript-logo.png';
-import Javascript from '../../assets/img/icons/js-bw.png';
+import Javascript from "../../assets/img/icons/js-bw.png"
 //import Kubernetes from '../../assets/img/icons/Kubernetes_color.png'
-import Kubernetes from '../../assets/img/icons/kubernetes-50.png'
+import Kubernetes from "../../assets/img/icons/kubernetes-50.png"
 //import Sql from '../../assets/img/icons/1200px-Postgresql_elephant.png';
-import Sql from '../../assets/img/icons/postgres-bw.png';
-import {Tooltip} from 'react-tippy';
+import Sql from "../../assets/img/icons/postgres-bw.png"
+import { Tooltip } from "react-tippy"
 
 export const techStackColumns = [
   {
@@ -26,26 +26,26 @@ export const techStackColumns = [
     sortable: false,
     width: 75,
     Cell: u => {
-      return <Image src={u.original.logo} rounded responsive />;
+      return <Image src={u.original.logo} rounded responsive />
     }
   },
   {
     //Header: 'Title',
-    accessor: 'title',
+    accessor: "title",
     sortable: false
   },
   {
     Cell: u => {
-      return <FontAwesomeIcon className="dropdownIcon" icon="caret-down" />;
+      return <FontAwesomeIcon className="dropdownIcon" icon="caret-down" />
     },
     sortable: false,
     width: 40
   }
-];
+]
 
 export const techStackData = [
   {
-    title: 'Python',
+    title: "Python",
     logo: Python,
     subcomponent: (
       <div>
@@ -56,10 +56,10 @@ export const techStackData = [
         <hr />
         <ul
           style={{
-            display: 'flex',
-            flexWrap: 'wrap',
-            justifyContent: 'center',
-            marginLeft: '-30px'
+            display: "flex",
+            flexWrap: "wrap",
+            justifyContent: "center",
+            marginLeft: "-30px"
           }}>
           <Tooltip title="You are what you test" arrow={true} size="big">
             <a href="https://docs.pytest.org/en/latest/contents.html">
@@ -271,7 +271,7 @@ export const techStackData = [
     )
   },
   {
-    title: 'Amazon Web Services',
+    title: "Amazon Web Services",
     logo: Aws,
     subcomponent: (
       <div>
@@ -285,10 +285,10 @@ export const techStackData = [
         <hr />
         <ul
           style={{
-            display: 'flex',
-            flexWrap: 'wrap',
-            justifyContent: 'center',
-            marginLeft: '-30px'
+            display: "flex",
+            flexWrap: "wrap",
+            justifyContent: "center",
+            marginLeft: "-30px"
           }}>
           <Tooltip title="Works greath with λ" arrow={true} size="big">
             <a href="https://docs.aws.amazon.com/apigateway/index.html">
@@ -398,7 +398,7 @@ export const techStackData = [
     )
   },
   {
-    title: 'Javascript',
+    title: "Javascript",
     logo: Javascript,
     subcomponent: (
       <div>
@@ -410,10 +410,10 @@ export const techStackData = [
         <hr />
         <ul
           style={{
-            display: 'flex',
-            flexWrap: 'wrap',
-            justifyContent: 'center',
-            marginLeft: '-30px'
+            display: "flex",
+            flexWrap: "wrap",
+            justifyContent: "center",
+            marginLeft: "-30px"
           }}>
           <Tooltip
             title="More than just a plotting library"
@@ -539,47 +539,109 @@ export const techStackData = [
             </a>
           </Tooltip>
         </ul>
-          <hr />
+        <hr />
       </div>
     )
   },
   {
-    title: 'Kubernetes',
+    title: "Kubernetes",
     logo: Kubernetes,
     subcomponent: (
       <div>
         <p>
-          Javascript is a language which has really grown on me. It has a lot of
-          quirks, but it also has an elegance. I have used too many npm modules
-          to count, but here is a highlight reel:
+          My fascination with kubernetes is fairly recent. Currently, I am
+          looking into running apache spark on the bare metal raspberry pi
+          cluster I built in my laundry room. So far I have configured the basic
+          cluster to run a stateless web app. Along the way I have gained
+          exposure to much of the kubernetes ecosystem:
         </p>
         <hr />
         <ul
           style={{
-            display: 'flex',
-            flexWrap: 'wrap',
-            justifyContent: 'center',
-            marginLeft: '-30px'
+            display: "flex",
+            flexWrap: "wrap",
+            justifyContent: "center",
+            marginLeft: "-30px"
           }}>
           <Tooltip
-            title="More than just a plotting library"
+            title="Currently using weave"
             arrow={true}
             size="big">
-            <a href="https://github.com/d3/d3/wiki">
+            <a href="https://kubernetes.io/docs/concepts/cluster-administration/networking/">
               <span className="technologyButton">
                 <AwesomeButton type="primary" bubbles={true}>
-                  D3
+                  Cluster Networking
+                </AwesomeButton>
+              </span>
+            </a>
+          </Tooltip>
+          <Tooltip
+            title="Traeffik works well on ARM builds"
+            arrow={true}
+            size="big">
+            <a href="https://kubernetes.io/docs/concepts/services-networking/ingress/">
+              <span className="technologyButton">
+                <AwesomeButton type="primary" bubbles={true}>
+                  Ingress
+                </AwesomeButton>
+              </span>
+            </a>
+          </Tooltip>
+          <Tooltip
+            title="exposing apps"
+            arrow={true}
+            size="big">
+            <a href="https://kubernetes.io/docs/concepts/services-networking/service/">
+              <span className="technologyButton">
+                <AwesomeButton type="primary" bubbles={true}>
+                  Services
+                </AwesomeButton>
+              </span>
+            </a>
+          </Tooltip>
+          <Tooltip
+            title="rolling updates, testing & deployment pipelines using docker webhooks and a simple web listener"
+            arrow={true}
+            size="big">
+            <a href="https://docs.docker.com/docker-hub/webhooks/">
+              <span className="technologyButton">
+                <AwesomeButton type="primary" bubbles={true}>
+                        CI / CD
+                </AwesomeButton>
+              </span>
+            </a>
+          </Tooltip>
+          <Tooltip
+            title="Using RBAC"
+            arrow={true}
+            size="big">
+            <a href="https://kubernetes.io/docs/concepts/policy/pod-security-policy/">
+              <span className="technologyButton">
+                <AwesomeButton type="primary" bubbles={true}>
+                        Security Policies
+                </AwesomeButton>
+              </span>
+            </a>
+          </Tooltip>
+          <Tooltip
+            title="Easey peasey"
+            arrow={true}
+            size="big">
+            <a href="https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale">
+              <span className="technologyButton">
+                <AwesomeButton type="primary" bubbles={true}>
+                        Horizontal Autoscaling
                 </AwesomeButton>
               </span>
             </a>
           </Tooltip>
         </ul>
-          <hr />
+        <hr />
       </div>
     )
   },
   {
-    title: 'SQL',
+    title: "SQL",
     logo: Sql,
     subcomponent: (
       <div>
@@ -590,10 +652,10 @@ export const techStackData = [
         <hr />
         <ul
           style={{
-            display: 'flex',
-            flexWrap: 'wrap',
-            justifyContent: 'center',
-            marginLeft: '-30px'
+            display: "flex",
+            flexWrap: "wrap",
+            justifyContent: "center",
+            marginLeft: "-30px"
           }}>
           <a href="https://dev.mysql.com/doc/">
             <span className="technologyButton">
@@ -628,7 +690,7 @@ export const techStackData = [
     )
   },
   {
-    title: '*Nix',
+    title: "*Nix",
     logo: Tux,
     subcomponent: (
       <div>
@@ -640,15 +702,12 @@ export const techStackData = [
         <hr />
         <ul
           style={{
-            display: 'flex',
-            flexWrap: 'wrap',
-            justifyContent: 'center',
-            marginLeft: '-30px'
+            display: "flex",
+            flexWrap: "wrap",
+            justifyContent: "center",
+            marginLeft: "-30px"
           }}>
-          <Tooltip
-            title="[SOLVED]"
-            arrow={true}
-            size="big">
+          <Tooltip title="[SOLVED]" arrow={true} size="big">
             <a href="https://wiki.archlinux.org/">
               <span className="technologyButton">
                 <AwesomeButton type="primary" bubbles={true}>
@@ -657,10 +716,7 @@ export const techStackData = [
               </span>
             </a>
           </Tooltip>
-          <Tooltip
-            title="hjkl"
-            arrow={true}
-            size="big">
+          <Tooltip title="hjkl" arrow={true} size="big">
             <a href="https://www.vim.org/docs.php">
               <span className="technologyButton">
                 <AwesomeButton type="primary" bubbles={true}>
@@ -669,10 +725,7 @@ export const techStackData = [
               </span>
             </a>
           </Tooltip>
-          <Tooltip
-              title="finger food > eye candy"
-            arrow={true}
-            size="big">
+          <Tooltip title="finger food > eye candy" arrow={true} size="big">
             <a href="https://i3wm.org/docs/userguide.html">
               <span className="technologyButton">
                 <AwesomeButton type="primary" bubbles={true}>
@@ -681,10 +734,7 @@ export const techStackData = [
               </span>
             </a>
           </Tooltip>
-          <Tooltip
-            title="Gnome is cool too"
-            arrow={true}
-            size="big">
+          <Tooltip title="Gnome is cool too" arrow={true} size="big">
             <a href="https://docs.xfce.org/">
               <span className="technologyButton">
                 <AwesomeButton type="primary" bubbles={true}>
@@ -717,10 +767,7 @@ export const techStackData = [
               </span>
             </a>
           </Tooltip>
-          <Tooltip
-            title="Saving me from myself"
-            arrow={true}
-            size="big">
+          <Tooltip title="Saving me from myself" arrow={true} size="big">
             <a href="http://anamnesis.sourceforge.net/">
               <span className="technologyButton">
                 <AwesomeButton type="primary" bubbles={true}>
@@ -729,10 +776,7 @@ export const techStackData = [
               </span>
             </a>
           </Tooltip>
-          <Tooltip
-            title="A beautiful *nix mail client"
-            arrow={true}
-            size="big">
+          <Tooltip title="A beautiful *nix mail client" arrow={true} size="big">
             <a href="https://getmailspring.com/">
               <span className="technologyButton">
                 <AwesomeButton type="primary" bubbles={true}>
@@ -771,7 +815,7 @@ export const techStackData = [
     )
   },
   {
-    title: 'Bash',
+    title: "Bash",
     logo: Bash,
     subcomponent: (
       <div>
@@ -789,7 +833,7 @@ export const techStackData = [
           </li>
           <li>
             <b>sed</b> functions very nicely with grep. I love to pipe `grep
-            -ril` into `sed -s` for a quick recursive renaming of variables.{' '}
+            -ril` into `sed -s` for a quick recursive renaming of variables.{" "}
             <a href="https://devpost.com/software/sed-pathfinder">Here</a> is a
             fun article about a maze-solver written entirely in sed.
           </li>
@@ -870,7 +914,7 @@ export const techStackData = [
     )
   },
   {
-    title: 'Mathematica',
+    title: "Mathematica",
     logo: Mathematica,
     subcomponent: (
       <div>
@@ -909,4 +953,4 @@ export const techStackData = [
       </div>
     )
   }
-];
+]

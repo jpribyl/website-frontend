@@ -1,6 +1,7 @@
 //@format
 import React, { Component } from "react"
 import { Grid, Row, Col, Image } from "react-bootstrap"
+import { Link } from "react-router-dom"
 
 import Header from "../../components/organisms/d3/header"
 import Sidebar from "../../components/atoms/sidebar"
@@ -8,6 +9,8 @@ import Card from "../../components/atoms/card"
 import Profile from "../../assets/img/profile.jpg"
 import ModalGallery from "../../components/molecules/modalgallery"
 import bioGalleryPhotos from "../../objects/biophotos"
+import { AwesomeButton } from "react-awesome-button"
+import { Tooltip } from "react-tippy"
 
 //import ExpandableTable from '../../components/atoms/expandabletable/';
 //import {
@@ -119,6 +122,10 @@ class BioView extends Component {
                     <p>
                       Currently, I am <b>living in Bozeman with my dog, Fox.</b>
                     </p>
+                    <hr style={{ width: "70%" }} />
+                    <p>
+                      My favorite fictional character is <b>Kilgore Trout.</b>
+                    </p>
 
                     {
                       //<p className="bigText">
@@ -147,6 +154,27 @@ class BioView extends Component {
                   //data={profInterestsData}
                   //className={'profInterests'}
                   ///>
+                }
+              />
+            </Row>
+            <Row className="padForGrid">
+              <Card
+                title="When I'm not writing code, I enjoy hiking, climbing, rafting, and watching movies."
+                xs={12}
+                md={12}
+                content={
+                  <Tooltip
+                    title="Made From 100% Recycled Pixels"
+                    arrow={true}
+                    size="big">
+                    <Link to="/skills">
+                      <span className="technologyButton centerJustify">
+                        <AwesomeButton type="primary" bubbles={true}>
+                          Continue to Skills
+                        </AwesomeButton>
+                      </span>
+                    </Link>
+                  </Tooltip>
                 }
               />
             </Row>
