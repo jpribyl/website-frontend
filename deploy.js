@@ -5,6 +5,7 @@ shell.exec("npm run build")
 process.argv.forEach(function(val, index, array) {
   if (val === 'dev') {
     ghpages.publish('build', {
+      add: true,
       branch: 'gh-pages',
       repo: 'git@github.com:jpribyl/website-frontend-dev.git'
     });
