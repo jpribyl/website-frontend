@@ -99,6 +99,7 @@ class ResumeView extends Component {
                 content={
                   <>
                     <PDF
+                      loading="Loading Resume..."
                       className="resumePdf"
                       src={
                         "https://raw.githubusercontent.com/jpribyl/resume/master/resume.pdf"

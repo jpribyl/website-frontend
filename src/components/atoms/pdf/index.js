@@ -32,6 +32,7 @@ class PDF extends Component {
     return (
       <div className={this.props.className} style={{ ...this.props.style }}>
         <Document
+          loading={this.props.loading}
           file={this.props.src}
           onLoadSuccess={this.onDocumentLoadSuccess}
           onLoadError={console.error}>
