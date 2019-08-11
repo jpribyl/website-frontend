@@ -79,7 +79,8 @@ class BioView extends Component {
                 shouldComponentUpdate={false}
                 xl={2}
                 md={4}
-                xs={12}
+                sm={4}
+                xs={4}
                 no_separator
                 content={
                   <Image
@@ -94,7 +95,8 @@ class BioView extends Component {
                 title="About Me"
                 xl={10}
                 md={8}
-                xs={12}
+                sm={8}
+                xs={8}
                 content={
                   <div className="padText">
                     <p>

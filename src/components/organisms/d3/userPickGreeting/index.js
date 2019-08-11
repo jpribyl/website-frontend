@@ -139,6 +139,21 @@ class UserGeneratedGreeting extends Component {
     });
   };
 
+  componentDidMount() {
+    window.addEventListener('resize', this.resize);
+  }
+
+  resize = () => {
+    let width = window.innerWidth * 0.89;
+    let height;
+    if (window.innerWidth > 800) {
+      height = window.innerHeight * 0.75;
+    } else {
+      height = window.innerHeight * 0.6;
+    }
+    this.setState({width: width, height: height});
+  };
+
   componentDidUpdate() {
     let d = d3.selectAll('.clickable.canvas');
     if (this.state.waitForApply || !this.props.animate) {

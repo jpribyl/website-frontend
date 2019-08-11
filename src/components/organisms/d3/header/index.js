@@ -16,7 +16,7 @@ const styles = {
 //min radius
 //color list
 
-class Greeting extends Component {
+class Header extends Component {
   constructor(props) {
     super();
     let width = window.innerWidth * 0.89;
@@ -36,6 +36,22 @@ class Greeting extends Component {
       margin: props.margin
     };
   }
+
+  componentDidMount() {
+    window.addEventListener('resize', this.resize);
+  }
+
+  resize = () => {
+    let height, width, numPoints;
+    if (window.innerWidth > 800) {
+      height = window.innerHeight * 0.2;
+      width = (window.innerWidth - 200) * 0.88;
+    } else {
+      height = window.innerHeight * 0.1;
+      width = window.innerWidth * 0.7;
+    }
+    this.setState({width: width, height: height});
+  };
 
   componentWillReceiveProps(props) {
     try {
@@ -82,4 +98,4 @@ class Greeting extends Component {
     );
   }
 }
-export default Greeting;
+export default Header;
