@@ -93,10 +93,10 @@
     --button-primary-color-hover: #007a3d;
     --button-primary-color-active: #2a3143;
     --button-primary-border: none;
-    --button-secondary-color: #fffc6c;
-    --button-secondary-color-dark: #b9b500;
-    --button-secondary-color-light: #6c6a00;
-    --button-secondary-color-hover: #fffb3e;
+    --button-secondary-color: #6b6bdf;
+    --button-secondary-color-dark: #4a4a9c;
+    --button-secondary-color-light: #ffffff;
+    --button-secondary-color-hover: #4a4a9c;
     --button-secondary-border: none;
     --button-anchor-color: #f3c8ad;
     --button-anchor-color-dark: #734922;

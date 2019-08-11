@@ -1,5 +1,5 @@
 // import the library
-import {library} from '@fortawesome/fontawesome-svg-core';
+import { library } from "@fortawesome/fontawesome-svg-core"
 
 //example usage:
 //import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
@@ -11,6 +11,7 @@ import {
   faGhost,
   faBook,
   faHome,
+  faDownload,
   faBriefcase,
   faServer,
   faStore,
@@ -37,7 +38,7 @@ import {
   faClipboard,
   faBookOpen,
   faDotCircle
-} from '@fortawesome/free-solid-svg-icons';
+} from "@fortawesome/free-solid-svg-icons"
 
 //import { faCircle } from '@fortawesome/free-regular-svg-icons';
 //import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -48,6 +49,7 @@ library.add(
   faDatabase,
   faCogs,
   faHome,
+  faDownload,
   faBriefcase,
   faServer,
   faStore,
@@ -72,4 +74,4 @@ library.add(
   faClipboard,
   faBookOpen,
   faDotCircle
-);
+)
