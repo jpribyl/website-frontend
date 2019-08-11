@@ -33,15 +33,15 @@ git push origin master
 ```
 will build and deploy
 
-Or, if running on gh-pages, then ensure that you have set up ssh access to git. Then link this repo to "origin" and the jpribyl.github.io repo to "prod". Once you have done that, set up your local gh-pages branch to track the remote one with:
+Or, if running on gh-pages ensure that you have access to the production repo
+jpribyl.github.io and then deploy with either
 ```
-git checkout origin/gh-pages -b gh-pages
+npm run deploy:dev
 ```
-once you have setup the gh-pages branch you should be able to use
+or 
 ```
-npm run deploy
+npm run deploy:prod
 ```
-to deploy
 
 
 
