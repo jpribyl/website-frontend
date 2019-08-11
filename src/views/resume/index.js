@@ -1,36 +1,36 @@
 //@format
-import React, { Component } from "react"
-import { Grid, Row, Col, Image } from "react-bootstrap"
-import { Link } from "react-router-dom"
+import React, {Component} from 'react';
+import {Grid, Row, Col, Image} from 'react-bootstrap';
+import {Link} from 'react-router-dom';
 
-import Header from "../../components/organisms/d3/header"
-import Sidebar from "../../components/atoms/sidebar"
-import Card from "../../components/atoms/card"
-import Profile from "../../assets/img/profile.jpg"
-import ModalGallery from "../../components/molecules/modalgallery"
-import bioGalleryPhotos from "../../objects/biophotos"
-import { AwesomeButton } from "react-awesome-button"
-import { Tooltip } from "react-tippy"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import PDF from "../../components/atoms/pdf"
+import Header from '../../components/organisms/d3/header';
+import Sidebar from '../../components/atoms/sidebar';
+import Card from '../../components/atoms/card';
+import Profile from '../../assets/img/profile.jpg';
+import ModalGallery from '../../components/molecules/modalgallery';
+import bioGalleryPhotos from '../../objects/biophotos';
+import {AwesomeButton} from 'react-awesome-button';
+import {Tooltip} from 'react-tippy';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import PDF from '../../components/atoms/pdf';
 
 class ResumeView extends Component {
   constructor(props) {
-    super()
+    super();
 
-    let height, width, numPoints
+    let height, width, numPoints;
     if (window.innerWidth > 800) {
-      height = window.innerHeight * 0.2
-      width = (window.innerWidth - 200) * 0.88
-      numPoints = 40
+      height = window.innerHeight * 0.2;
+      width = (window.innerWidth - 200) * 0.88;
+      numPoints = 40;
     } else {
-      height = window.innerHeight * 0.1
-      width = window.innerWidth * 0.7
-      numPoints = 15
+      height = window.innerHeight * 0.1;
+      width = window.innerWidth * 0.7;
+      numPoints = 15;
     }
 
     this.state = {
-      headerText: "RESUME",
+      headerText: 'RESUME',
       duration: 50000,
       animate: true,
       numPoints: numPoints,
@@ -45,7 +45,7 @@ class ResumeView extends Component {
       },
       techStackExpanded: null,
       profInterestsExpanded: null
-    }
+    };
   }
 
   render() {
@@ -82,7 +82,7 @@ class ResumeView extends Component {
                     <a href="mailto:pribylsnbits@gmail.com">
                       <span className="technologyButton centerJustifyNoMargin">
                         <AwesomeButton
-                          style={{ width: "100%" }}
+                          style={{width: '100%'}}
                           type="primary"
                           bubbles={true}>
                           Get in touch
@@ -99,23 +99,23 @@ class ResumeView extends Component {
                 content={
                   <>
                     <PDF
+                      style={{width: '100%', overflow: 'scroll'}}
                       loading="Loading Resume..."
                       className="resumePdf"
                       src={
-                        "https://raw.githubusercontent.com/jpribyl/resume/master/resume.pdf"
+                        'https://raw.githubusercontent.com/jpribyl/resume/master/resume.pdf'
                       }
                     />
                     <a href="https://github.com/jpribyl/resume/raw/master/resume.pdf">
                       <span className="technologyButton centerJustifyNoMargin">
                         <AwesomeButton
                           style={{
-                            width: "100%",
-                            minWidth: "480px",
-                            maxWidth: "600px"
+                            width: '100%',
+                            maxWidth: '600px'
                           }}
                           type="secondary"
                           bubbles={true}>
-                          <FontAwesomeIcon icon={"download"} /> Download PDF
+                          <FontAwesomeIcon icon={'download'} /> Download PDF
                         </AwesomeButton>
                       </span>
                     </a>
@@ -131,7 +131,7 @@ class ResumeView extends Component {
                     <a href="mailto:pribylsnbits@gmail.com">
                       <span className="technologyButton centerJustifyNoMargin">
                         <AwesomeButton
-                          style={{ width: "100%" }}
+                          style={{width: '100%'}}
                           type="primary"
                           bubbles={true}>
                           Get in touch
@@ -145,7 +145,7 @@ class ResumeView extends Component {
           </div>
         </Grid>
       </div>
-    )
+    );
   }
 }
-export default ResumeView
+export default ResumeView;

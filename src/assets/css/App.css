@@ -422,14 +422,25 @@ button.aws-btn {
             justify-content: center;
 }
 
+
+
+@media only screen and (min-width: 700px) {
 .resumePdf {
     display: flex;
     align-items: center;
     justify-content: center;
 }
+}
+
+@media only screen and (max-width: 700px) {
+.resumePdf {
+    align-items: center;
+    justify-content: center;
+}
+}
 .react-pdf__Page__canvas {
     width: 100% !important;
-    min-width: 480px !important;
+    min-width: 600px !important;
     overflow: scroll;
     border: 10px;
 }
