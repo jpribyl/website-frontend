@@ -33,7 +33,7 @@ git push origin master
 will build and deploy
 
 Or, if running on gh-pages, then use
-````
+```
 npm run deploy
 ```
 to deploy
