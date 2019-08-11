@@ -30,14 +30,14 @@
     "react-tippy": "^1.2.3",
     "react-toggle-switch": "^3.0.4",
     "redux": "^4.0.1",
-    "redux-thunk": "^2.3.0"
+    "redux-thunk": "^2.3.0",
+    "shelljs": "^0.8.3"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "node deploy.js",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
