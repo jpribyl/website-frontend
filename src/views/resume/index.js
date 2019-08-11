@@ -75,11 +75,11 @@ class ResumeView extends Component {
                 xs={12}
                 md={12}
                 content={
-                  <Tooltip
-                    title="Scratch here to reveal prize"
-                    arrow={true}
-                    size="big">
-                    <a href="mailto:pribylsnbits@gmail.com">
+                  <a href="mailto:pribylsnbits@gmail.com">
+                    <Tooltip
+                      title="Scratch here to reveal prize"
+                      arrow={true}
+                      size="big">
                       <span className="technologyButton centerJustifyNoMargin">
                         <AwesomeButton
                           style={{width: '100%'}}
@@ -88,8 +88,8 @@ class ResumeView extends Component {
                           Get in touch
                         </AwesomeButton>
                       </span>
-                    </a>
-                  </Tooltip>
+                    </Tooltip>
+                  </a>
                 }
               />
               <Card
@@ -127,8 +127,8 @@ class ResumeView extends Component {
                 xs={12}
                 md={12}
                 content={
-                  <Tooltip title="Made you look!" arrow={true} size="big">
-                    <a href="mailto:pribylsnbits@gmail.com">
+                  <a href="mailto:pribylsnbits@gmail.com">
+                    <Tooltip title="Made you look!" arrow={true} size="big">
                       <span className="technologyButton centerJustifyNoMargin">
                         <AwesomeButton
                           style={{width: '100%'}}
@@ -137,8 +137,8 @@ class ResumeView extends Component {
                           Get in touch
                         </AwesomeButton>
                       </span>
-                    </a>
-                  </Tooltip>
+                    </Tooltip>
+                  </a>
                 }
               />
             </Row>

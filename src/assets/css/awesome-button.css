@@ -55,8 +55,8 @@
   --button-placeholder-border: none;
   --button-mail-color: #cfcfcf;
   --button-mail-color-dark: #9c9c9c;
-  --button-facebook-color: #4868ad;
-  --button-facebook-color-dark: #324877;
+  --button-facebook-color: #eb9600;
+  --button-facebook-color-dark: #b17100;
   --button-messenger-color: #3186f6;
   --button-messenger-color-dark: #0960d1;
   --button-twitter-color: #00aced;
@@ -73,8 +73,8 @@
   --button-pinterest-color-dark: #740611;
   --button-gplus-color: #ce5b4e;
   --button-gplus-color-dark: #a3392d;
-  --button-youtube-color: #cc181e;
-  --button-youtube-color-dark: #881014;
+  --button-youtube-color: #337dff;
+  --button-youtube-color-dark: #2357b2;
   --button-instagram-radial-color: radial-gradient(circle at 25% 110%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
   --button-instagram-radial-color-dark: radial-gradient(circle at 25% 110%, #b9a800 0%, #938500 5%, #b10f00 45%, #8c0061 60%, #002ca9 90%); }
 
@@ -375,9 +375,9 @@ button.aws-btn .aws-btn__wrapper {
   .aws-btn--placeholder.aws-btn--progress .aws-btn__progress:before, .aws-btn--placeholder.aws-btn--progress .aws-btn__progress:after {
     color: var(--button-placeholder-color-light); }
   .aws-btn--facebook .aws-btn__wrapper:before {
-    background: #324877; }
+    background: #b17100; }
   .aws-btn--facebook .aws-btn__content {
-    background: #4868ad;
+    background: #eb9600;
     color: #FFFFFF; }
   .aws-btn--facebook.aws-btn--progress .aws-btn__content > span {
     display: -webkit-box;
@@ -546,9 +546,9 @@ button.aws-btn .aws-btn__wrapper {
   .aws-btn--gplus.aws-btn--progress .aws-btn__progress:before, .aws-btn--gplus.aws-btn--progress .aws-btn__progress:after {
     color: #FFFFFF; }
   .aws-btn--youtube .aws-btn__wrapper:before {
-    background: #881014; }
+    background: #2357b2; }
   .aws-btn--youtube .aws-btn__content {
-    background: #cc181e;
+    background: #337dff;
     color: #FFFFFF; }
   .aws-btn--youtube.aws-btn--progress .aws-btn__content > span {
     display: -webkit-box;

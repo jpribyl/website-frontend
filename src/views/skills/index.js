@@ -105,8 +105,8 @@ class SkillsView extends Component {
                 xs={12}
                 md={12}
                 content={
-                  <Tooltip title="As seen on TV" arrow={true} size="big">
-                    <Link to="/projects">
+                  <Link to="/projects">
+                    <Tooltip title="As seen on TV" arrow={true} size="big">
                       <span className="technologyButton centerJustifyNoMargin">
                         <AwesomeButton
                           style={{width: '100%'}}
@@ -115,8 +115,8 @@ class SkillsView extends Component {
                           Continue to Projects
                         </AwesomeButton>
                       </span>
-                    </Link>
-                  </Tooltip>
+                    </Tooltip>
+                  </Link>
                 }
               />
             </Row>

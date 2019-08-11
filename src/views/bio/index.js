@@ -165,11 +165,11 @@ class BioView extends Component {
                 xs={12}
                 md={12}
                 content={
-                  <Tooltip
-                    title="Made From 100% Recycled Pixels"
-                    arrow={true}
-                    size="big">
-                    <Link to="/skills">
+                  <Link to="/skills">
+                    <Tooltip
+                      title="Made From 100% Recycled Pixels"
+                      arrow={true}
+                      size="big">
                       <span className="technologyButton centerJustifyNoMargin">
                         <AwesomeButton
                           style={{width: '100%'}}
@@ -178,8 +178,8 @@ class BioView extends Component {
                           Continue to Skills
                         </AwesomeButton>
                       </span>
-                    </Link>
-                  </Tooltip>
+                    </Tooltip>
+                  </Link>
                 }
               />
             </Row>

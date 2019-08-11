@@ -440,7 +440,7 @@ button.aws-btn {
 }
 .react-pdf__Page__canvas {
     width: 100% !important;
-    min-width: 600px !important;
+    min-width: 570px !important;
     overflow: scroll;
     border: 10px;
 }
