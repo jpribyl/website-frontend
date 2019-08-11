@@ -3,7 +3,8 @@
 In order to deploy, this script is pipelined from gh-->dh-->k8s.  Because we
 are using an arm image and docker hub uses amd, we need to virtualize the
 docker hub environment or the build will fail. We can do this with qemu. If the
-image is not available, pull it with this and keep it in the home directory:
+image is not available, pull it with this and keep it in the home directory of 
+the project:
 
 ```
 curl -L https://github.com/balena-io/qemu/releases/download/v3.0.0%2Bresin/qemu-3.0.0+resin-arm.tar.gz | tar zxvf - -C . && mv qemu-3.0.0+resin-arm/qemu-arm-static .
@@ -32,7 +33,11 @@ git push origin master
 ```
 will build and deploy
 
-Or, if running on gh-pages, then use
+Or, if running on gh-pages, then ensure that you have set up ssh access to git. Then link this repo to "origin" and the jpribyl.github.io repo to "prod". Once you have done that, set up your local gh-pages branch to track the remote one with:
+```
+git checkout origin/gh-pages -b gh-pages
+```
+once you have setup the gh-pages branch you should be able to use
 ```
 npm run deploy
 ```
