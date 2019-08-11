@@ -1,5 +1,5 @@
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 900px) {
 #slideMenu {
     display: none
 }
@@ -100,7 +100,7 @@ div.metismenu {
 }
 
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 900px) {
 #metisMenu{
     display: none
 }
