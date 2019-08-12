@@ -106,7 +106,7 @@ class SkillsView extends Component {
                 md={12}
                 content={
                   <Link to="/projects">
-                    <Tooltip title="As seen on TV" arrow={true} size="big">
+                    <Tooltip title="Wubba lubba dub dub!" arrow={true} size="big">
                       <span className="technologyButton centerJustifyNoMargin">
                         <AwesomeButton
                           style={{width: '100%'}}
