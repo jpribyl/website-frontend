@@ -62,7 +62,7 @@ export default class GreetingView extends Component {
         </Row>
         <Row>
           <hr />
-          <Col className="signature" lg={3} sm={4} xs={8}>
+          <Col className="signature" lg={3} sm={4} xs={10}>
             <h1 className="name">{name}</h1>
             <h3 className="title">{title}</h3>
           </Col>
