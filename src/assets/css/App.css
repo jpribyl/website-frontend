@@ -133,21 +133,21 @@ div.switch {
     margin-top: -10px;
 }
 
-@media only screen and (min-width: 900px) {
+@media only screen and (min-width: 767px) {
     .animation.toggle {
         margin-top: -15px;
         float: right;
     }
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 767px) {
     .animation.toggle {
-        margin-top: -100px;
+        margin-top: -180px;
         float: right;
     }
 }
 
-@media only screen and (min-width: 900px) {
+@media only screen and (min-width: 767px) {
     #enterSite {
         float: left;
         margin-top: 15px;
@@ -155,9 +155,9 @@ div.switch {
     }
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 767px) {
     #enterSite {
-        float: left;
+        float: right;
         margin-top: -5px;
         margin-bottom: 15px;
     }

@@ -1,27 +1,27 @@
 //@format
-import React, {Component} from 'react';
-import Switch from 'react-toggle-switch';
-import {AwesomeButton} from 'react-awesome-button';
-import {Grid, Row, Col} from 'react-bootstrap';
-import {connect} from 'react-redux';
-import {bindActionCreators} from 'redux';
-import {Link} from 'react-router-dom';
+import React, { Component } from "react"
+import Switch from "react-toggle-switch"
+import { AwesomeButton } from "react-awesome-button"
+import { Grid, Row, Col } from "react-bootstrap"
+import { connect } from "react-redux"
+import { bindActionCreators } from "redux"
+import { Link } from "react-router-dom"
 
-import Greeting from '../../components/organisms/d3/greeting';
-import UserGeneratedGreeting from '../../components/organisms/d3/userPickGreeting/';
-import {getAuthRead} from '../../actions/auth';
-import {name, title} from '../../objects/signature';
+import Greeting from "../../components/organisms/d3/greeting"
+import UserGeneratedGreeting from "../../components/organisms/d3/userPickGreeting/"
+import { getAuthRead } from "../../actions/auth"
+import { name, title } from "../../objects/signature"
 
 export default class GreetingView extends Component {
   constructor(props) {
-    super();
+    super()
 
-    let width = window.innerWidth * 0.89;
-    let height;
+    let width = window.innerWidth * 0.89
+    let height
     if (window.innerWidth > 800) {
-      height = window.innerHeight * 0.7;
+      height = window.innerHeight * 0.7
     } else {
-      height = window.innerHeight * 0.59;
+      height = window.innerHeight * 0.59
     }
 
     this.state = {
@@ -37,14 +37,14 @@ export default class GreetingView extends Component {
         bottom: 30,
         left: window.innerWidth * 0.02
       }
-    };
+    }
   }
 
   _togglAnimate = () => {
-    this.setState({animate: !this.state.animate});
-  };
+    this.setState({ animate: !this.state.animate })
+  }
 
-  _enterSite = () => {};
+  _enterSite = () => {}
 
   render() {
     return (
@@ -64,9 +64,9 @@ export default class GreetingView extends Component {
           <hr />
           <Col className="signature" lg={3} sm={4} xs={8}>
             <h1 className="name">{name}</h1>
-            <h2 className="title">{title}</h2>
+            <h3 className="title">{title}</h3>
           </Col>
-          <Col lg={3} sm={4} xs={8}>
+          <Col lg={3} sm={4} xs={12}>
             <div id="enterSite">
               <Link to="/bio">
                 <AwesomeButton
@@ -87,7 +87,7 @@ export default class GreetingView extends Component {
             duration={this.state.duration}
             animate={this.state.animate}
           />
-          <Col lg={2} sm={4} xs={4}>
+          <Col lg={2} sm={4} xs={12}>
             <div className="animation toggle">
               <h3>animate</h3>
               <Switch
@@ -99,6 +99,6 @@ export default class GreetingView extends Component {
           </Col>
         </Row>
       </Grid>
-    );
+    )
   }
 }
