@@ -10,7 +10,8 @@ WORKDIR /app
 
 # add `/app/node_modules/.bin` to $PATH
 ENV PATH /app/node_modules/.bin:$PATH
-ENV PUBLIC_URL /jpribyl/
+#ENV PUBLIC_URL /jpribyl/ # if you are sharing domains and it's living on a subpath
+ENV PUBLIC_URL /
 
 # install and cache app dependencies
 COPY package.json /app/package.json
