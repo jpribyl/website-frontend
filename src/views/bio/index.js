@@ -92,7 +92,7 @@ class BioView extends Component {
                 }
               />
               <Card
-                title="About Me (test)"
+                title="About Me"
                 xl={10}
                 md={8}
                 sm={8}
