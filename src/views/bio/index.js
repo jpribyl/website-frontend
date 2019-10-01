@@ -1,16 +1,16 @@
 //@format
-import React, {Component} from 'react';
-import {Grid, Row, Col, Image} from 'react-bootstrap';
-import {Link} from 'react-router-dom';
+import React, { Component } from "react";
+import { Grid, Row, Col, Image } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
-import Header from '../../components/organisms/d3/header';
-import Sidebar from '../../components/atoms/sidebar';
-import Card from '../../components/atoms/card';
-import Profile from '../../assets/img/profile.jpg';
-import ModalGallery from '../../components/molecules/modalgallery';
-import bioGalleryPhotos from '../../objects/biophotos';
-import {AwesomeButton} from 'react-awesome-button';
-import {Tooltip} from 'react-tippy';
+import Header from "../../components/organisms/d3/header";
+import Sidebar from "../../components/atoms/sidebar";
+import Card from "../../components/atoms/card";
+import Profile from "../../assets/img/profile.jpg";
+import ModalGallery from "../../components/molecules/modalgallery";
+import bioGalleryPhotos from "../../objects/biophotos";
+import { AwesomeButton } from "react-awesome-button";
+import { Tooltip } from "react-tippy";
 
 //import ExpandableTable from '../../components/atoms/expandabletable/';
 //import {
@@ -35,7 +35,7 @@ class BioView extends Component {
     }
 
     this.state = {
-      headerText: 'BIO',
+      headerText: "BIO",
       duration: 50000,
       animate: true,
       numPoints: numPoints,
@@ -92,7 +92,7 @@ class BioView extends Component {
                 }
               />
               <Card
-                title="About Me"
+                title="About Me (test)"
                 xl={10}
                 md={8}
                 sm={8}
@@ -103,28 +103,28 @@ class BioView extends Component {
                       I <b>grew up in Houston</b>, Texas before heading out to
                       Montana for school.
                     </p>
-                    <hr style={{width: '70%'}} />
+                    <hr style={{ width: "70%" }} />
                     <p>
                       I got a <b>degree in Physics</b> from MSU Bozeman in 2018.
                     </p>
-                    <hr style={{width: '80%'}} />
+                    <hr style={{ width: "80%" }} />
                     <p>
                       My undergraduate research involved
                       <b> modeling Neutron stars</b> in alternate theories of
                       gravity and <b>training neural networks </b>
                       to recognize glitches in gravitational wave data.
                     </p>
-                    <hr style={{width: '70%'}} />
+                    <hr style={{ width: "70%" }} />
                     <p>
-                      I really enjoy{' '}
+                      I really enjoy{" "}
                       <b>math, statistics, and automating the boring stuff.</b>
                     </p>
-                    <hr style={{width: '80%'}} />
+                    <hr style={{ width: "80%" }} />
 
                     <p>
                       Currently, I am <b>living in Bozeman with my dog, Fox.</b>
                     </p>
-                    <hr style={{width: '70%'}} />
+                    <hr style={{ width: "70%" }} />
                     <p>
                       My favorite fictional character is <b>Kilgore Trout.</b>
                     </p>
@@ -169,12 +169,14 @@ class BioView extends Component {
                     <Tooltip
                       title="Made From 100% Recycled Pixels"
                       arrow={true}
-                      size="big">
+                      size="big"
+                    >
                       <span className="technologyButton centerJustifyNoMargin">
                         <AwesomeButton
-                          style={{width: '100%'}}
+                          style={{ width: "100%" }}
                           type="primary"
-                          bubbles={true}>
+                          bubbles={true}
+                        >
                           Continue to Skills
                         </AwesomeButton>
                       </span>
